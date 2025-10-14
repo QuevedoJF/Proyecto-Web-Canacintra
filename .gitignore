@@ -1,0 +1,27 @@
+# Entorno virtual
+venv/
+env/
+.venv
+
+# Archivos de Django
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Archivos estáticos y media (si se generan localmente)
+staticfiles/
+media/
+
+# Configuración local
+*.log
+*.pot
+*.mo
+*.env
+.env
+.DS_Store
+
+# Archivos de IDEs
+.vscode/
+.idea/
