@@ -3,7 +3,7 @@
 Dirgirse en la carpeta donde quiera el proyecto y ejecutar:
 
 ```bash
-git clone https://github.com/VicRa2004/python-django-prueba.git
+git clone https://github.com/QuevedoJF/Proyecto-Web-Canacintra.git
 ```
 
 ## 2. Crear entorno virtual
