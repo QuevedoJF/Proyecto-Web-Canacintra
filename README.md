@@ -36,3 +36,4 @@ pip install -r requirements.txt
 python manage.py runserver
 ```# Proyecto-Web
 # Proyecto-Web-Canacintra
+# Proyecto-Meb-Canacintra
