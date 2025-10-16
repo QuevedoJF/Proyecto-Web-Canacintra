@@ -1,107 +1,229 @@
 <!-- Este es el footer(base de abajo) de la pagina --> 
 {% load static %}
-<footer class="site-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="widget">
-                    <h3 class="mb-4">About</h3>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts.</p>
-                </div> <!-- /.widget -->
-                <div class="widget">
-                    <h3>Social</h3>
-                    <ul class="list-unstyled social">
-                        <li><a href="#"><span class="icon-instagram"></span></a></li>
-                        <li><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                        <li><a href="#"><span class="icon-pinterest"></span></a></li>
-                        <li><a href="#"><span class="icon-dribbble"></span></a></li>
-                    </ul>
-                </div> <!-- /.widget -->
-            </div> <!-- /.col-lg-4 -->
-            <div class="col-lg-4 ps-lg-5">
-                <div class="widget">
-                    <h3 class="mb-4">Company</h3>
-                    <ul class="list-unstyled float-start links">
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Vision</a></li>
-                        <li><a href="#">Mission</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Privacy</a></li>
-                    </ul>
-                    <ul class="list-unstyled float-start links">
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="#">Business</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Creative</a></li>
-                    </ul>
-                </div> <!-- /.widget -->
-            </div> <!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <div class="widget">
-                    <h3 class="mb-4">Recent Post Entry</h3>
-                    <div class="post-entry-footer">
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <img src="{% static 'images/img_1_sq.jpg' %}" alt="Image placeholder"
-                                        class="me-4 rounded">
-                                    <div class="text">
-                                        <h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-                                        <div class="post-meta">
-                                            <span class="mr-2">March 15, 2018 </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="{% static 'images/img_2_sq.jpg' %}" alt="Image placeholder"
-                                        class="me-4 rounded">
-                                    <div class="text">
-                                        <h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-                                        <div class="post-meta">
-                                            <span class="mr-2">March 15, 2018 </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="{%static 'images/img_3_sq.jpg' %}" alt="Image placeholder"
-                                        class="me-4 rounded">
-                                    <div class="text">
-                                        <h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-                                        <div class="post-meta">
-                                            <span class="mr-2">March 15, 2018 </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div> <!-- /.widget -->
-            </div> <!-- /.col-lg-4 -->
-        </div> <!-- /.row -->
-        <div class="row mt-5">
-            <div class="col-12 text-center">
-                <!--
-                **==========
-            NOTE: 
-            Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
-              **========== -->
-                <p>Copyright &copy;
-                    <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed
-                    with love by <a href="https://untree.co">Untree.co</a> Distributed by <a
-                        href="https://themewagon.com">ThemeWagon</a>
-                    <!-- License information: https://untree.co/license/ -->
-                </p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer Mejorado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ESTILOS CSS PARA EL FOOTER */
+        .main-footer {
+            background-color: #263238; /* Color de fondo ligeramente más oscuro y moderno */
+            color: #eceff1; /* Blanco hueso para el texto principal */
+            padding: 70px 0 30px; /* Más espacio vertical */
+            font-family: 'Poppins', sans-serif; /* Nueva tipografía */
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex-wrap: wrap; /* Para hacerlo responsive en pantallas pequeñas */
+        }
+
+        .footer-col {
+            margin-bottom: 40px;
+            min-width: 250px; /* Ancho mínimo para las columnas */
+            padding-right: 20px;
+        }
+
+        /* Títulos de las secciones */
+        .footer-col h4 {
+            color: #00bcd4; /* Color de acento moderno (cyan) */
+            font-size: 1.1em;
+            font-weight: 700; /* Resalta el título */
+            margin-bottom: 25px;
+            border-bottom: 2px solid #00bcd4; /* Subrayado sutil */
+            display: inline-block; /* Para que el subrayado se ajuste al texto */
+            padding-bottom: 5px;
+        }
+
+        /* Texto de la columna "Acerca de" */
+        .footer-col p {
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #b0bec5; /* Color sutil para el texto descriptivo */
+            font-weight: 300;
+        }
+
+        /* Lista de enlaces (Compañía) */
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #b0bec5;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s ease, padding-left 0.3s ease; /* Transición para el hover */
+            display: block;
+        }
+
+        .footer-col ul li a:hover {
+            color: #00bcd4; /* Color de acento en hover */
+            padding-left: 5px; /* Pequeño desplazamiento a la derecha en hover */
+        }
+
+        /* Iconos Sociales */
+        .social-icons a {
+            display: inline-flex; /* Usamos flex para centrar mejor el icono */
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #37474f; /* Un fondo para los iconos */
+            color: #eceff1;
+            border-radius: 50%; /* Iconos circulares */
+            margin-right: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .social-icons a:hover {
+            background-color: #00bcd4; /* Color de acento en hover */
+            color: #263238; /* Texto oscuro en hover */
+        }
+        
+        /* Contenido de Entradas Recientes */
+        .post-entry {
+            display: flex;
+            margin-bottom: 20px;
+            text-decoration: none; /* Quitamos el subrayado del enlace del post */
+        }
+
+        .post-entry img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            margin-right: 15px;
+            border-radius: 4px; /* Bordes suaves */
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .post-entry:hover img {
+             opacity: 1; /* Imagen se vuelve más opaca en hover */
+        }
+
+        .post-info span {
+            display: block;
+            color: #b0bec5;
+            font-size: 0.8em;
+            font-weight: 300;
+            margin-top: 5px;
+        }
+
+        .post-info strong {
+            color: #eceff1;
+            font-size: 0.95em;
+            line-height: 1.3;
+            transition: color 0.3s ease;
+        }
+
+        .post-entry:hover strong {
+            color: #00bcd4; /* Título del post en color de acento en hover */
+        }
+
+        /* Seccion de Copyright */
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 20px 0;
+            border-top: 1px solid #37474f; /* Separador sutil */
+            text-align: center;
+            font-size: 0.8em;
+            color: #78909c; /* Color más discreto */
+        }
+        
+        /* Media query básico para mejor responsividad */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-col {
+                min-width: 100%;
+                padding-right: 0;
+            }
+            .footer-col h4 {
+                display: block; /* Para centrar */
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<footer class="main-footer">
+    <div class="footer-content">
+
+        <div class="footer-col footer-about">
+            <h4>ABOUT</h4>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <div class="social-icons" style="margin-top: 25px;">
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook-f"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
             </div>
         </div>
-    </div> <!-- /.container -->
-</footer> <!-- /.site-footer -->
+
+        <div class="footer-col footer-company">
+            <h4>COMPANY</h4>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Vision</a></li>
+                <li><a href="#">Mission</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col footer-posts">
+            <h4>RECENT POST ENTRY</h4>
+
+            <a href="#" class="post-entry">
+                <img src="{% static 'images/post-image-1.jpg' %}" alt="Cool Way to Wear Socks and Sandals">
+                <div class="post-info">
+                    <strong>There's a Cool New Way for Men to Wear Socks and Sandals</strong>
+                    <span>March 15, 2018</span>
+                </div>
+            </a>
+
+            <a href="#" class="post-entry">
+                <img src="{% static 'images/post-image-2.jpg' %}" alt="Cool Way to Wear Socks and Sandals">
+                <div class="post-info">
+                    <strong>There's a Cool New Way for Men to Wear Socks and Sandals</strong>
+                    <span>March 15, 2018</span>
+                </div>
+            </a>
+            
+            <a href="#" class="post-entry">
+                <img src="{% static 'images/post-image-3.jpg' %}" alt="Cool Way to Wear Socks and Sandals">
+                <div class="post-info">
+                    <strong>There's a Cool New Way for Men to Wear Socks and Sandals</strong>
+                    <span>March 15, 2018</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Copyright © 2025. All Rights Reserved — Designed with love by <a href="#" style="color: #00bcd4; text-decoration: none;">Untree.co</a>. Distributed by <a href="#" style="color: #00bcd4; text-decoration: none;">ThemeWagon</a></p>
+    </div>
+</footer>
+</body>
+</html>

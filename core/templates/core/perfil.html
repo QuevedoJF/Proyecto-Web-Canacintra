@@ -1,0 +1,28 @@
+{% extends 'partials/base.html' %} 
+
+{% load static %}
+
+{% block title %}Perfil{% endblock %} 
+
+{# 1. BLOQUE PARA INSERTAR EL MENÚ LATERAL #}
+{% block sidebar %}
+    {# Aquí se incluye el HTML del menú que está en partials/menuds.html #}
+    {% include 'partials/menuds.html' %}
+{% endblock sidebar %}
+
+{# 2. BLOQUE PARA EL CONTENIDO PRINCIPAL #}
+{% block content %}
+    {# AÑADE AQUÍ EL CONTENIDO VISIBLE DE LA PÁGINA #}
+    <h1>Bienvenido al Dashboard</h1>
+    <p>Este es el contenido principal de la página de Perfil.</p>
+    
+    <section class="profile-details">
+        <h2>Detalles del Usuario</h2>
+        <ul>
+            <li>Nombre: Ejemplo</li>
+            <li>Email: ejemplo@correo.com</li>
+        </ul>
+    </section>
+
+{% endblock content %}
+{# 3. ¡ES FUNDAMENTAL CERRAR EL BLOQUE CONTENT! #}
