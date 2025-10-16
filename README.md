@@ -1,14 +1,20 @@
 ## 1. Descargar proyecto
 
-Dirgirse en la carpeta donde quiera el proyecto y ejecutar:
+Dirgirse en la carpeta donde quiera el proyecto y ejecutar en la terminal:
 
 ```bash
 git clone https://github.com/QuevedoJF/Proyecto-Web-Canacintra.git
 ```
 
+Y entrar dentro de la carpeta:
+
+```bash
+cd Proyecto-Web-Canacintra
+```
+
 ## 2. Crear entorno virtual
 
-Ejecutar lo siguiente para crear el entorno virtual
+Ejecutar dentro del proyecto lo siguiente para crear el entorno virtual
 
 ```bash
 python -m venv venv
@@ -24,7 +30,13 @@ venv\Scripts\activate
 
 Asegurarse de instalarlo en el entorno virtual.
 
-Instalar con:
+```shell
+pip list
+```
+
+Deberia de solo aparecer pip.
+
+Luego instalar con:
 
 ```bash
 pip install -r requirements.txt
