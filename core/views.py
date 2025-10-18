@@ -18,8 +18,13 @@ def carrusel_view(request):
         {"url": "https://picsum.photos/id/1025/1600/900", "descripcion": "Paisaje 3"},
         {"url": "https://picsum.photos/id/1039/1600/900", "descripcion": "Paisaje 4"},
     ]
-    return render(request, "main/carrusel.html", {"imagenes": imagenes})
+    return render(request, "core/partials/carrusel.html", {"imagenes": imagenes})
+
 
 
 def perfil(request):
     return render(request, 'core/perfil.html')
+
+def login(request):
+    return render(request, 'core/login.html')
+
