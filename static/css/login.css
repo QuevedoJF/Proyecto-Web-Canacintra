@@ -1,0 +1,194 @@
+/* --- Base y Fuentes --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1f293a; /* Fondo oscuro principal */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+/* --- Contenedor Principal --- */
+.container {
+    background-color: #2c3e50; /* Fondo del formulario */
+    border-radius: 10px;
+    position: relative;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    overflow: hidden;
+    /* Sin borde neón */
+}
+
+/* --- Estilos Comunes de Formulario --- */
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    /* CLAVE: Transición para la animación de deslizamiento */
+    transition: all 0.6s ease-in-out; 
+}
+
+.form-container form {
+    background-color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-container h1 {
+    color: #fff;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+.form-container input {
+    background-color: #3b506b;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    color: #fff;
+    border-radius: 5px;
+}
+.form-container input::placeholder {
+    color: #aebfd0;
+}
+
+/* --- Botones --- */
+button {
+    border-radius: 20px;
+    border: 1px solid #ff4b2b;
+    background-color: #ff4b2b; /* Color principal */
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button.hidden {
+    background-color: transparent;
+    border-color: #ffffff;
+}
+
+/* Enlace de "Olvidaste tu contraseña" */
+.login-container a {
+    color: #aebfd0;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+/* --- POSICIÓN INICIAL: LOGIN A LA IZQUIERDA --- */
+
+.login-container {
+    left: 0;
+    width: 50%;
+    z-index: 2; /* Formulario visible */
+}
+
+.register-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1; /* Formulario oculto */
+}
+
+.side-panel-container {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Panel a la derecha */
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.side-panel {
+    background: linear-gradient(to right, #ff4b2b, #ff416c); /* Gradiente */
+    color: #ffffff;
+    position: relative;
+    left: -100%; /* Mueve el panel interno hacia la izquierda */
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.side-panel-left, .side-panel-right {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    transition: transform 0.6s ease-in-out;
+}
+
+.side-panel-left {
+    transform: translateX(0); /* Contenido "BIENVENIDO DE VUELTA" inicialmente no visible */
+}
+.side-panel-right {
+    right: 0;
+    transform: translateX(0); /* Contenido "HOLA" visible */
+}
+
+/* --- ANIMACIÓN: CLASE 'active' (CAMBIO A REGISTRO) --- */
+
+/* 1. Mover el panel lateral a la izquierda */
+.container.active .side-panel-container {
+    transform: translateX(-100%);
+}
+
+/* 2. Mover el contenido interno del panel */
+.container.active .side-panel {
+    transform: translateX(50%); 
+}
+
+/* 3. Animación de los paneles de texto (intercambio de bienvenida) */
+.container.active .side-panel-left {
+    transform: translateX(0); /* Muestra BIENVENIDO DE VUELTA */
+}
+.container.active .side-panel-right {
+    transform: translateX(20%); /* Oculta un poco HOLA */
+}
+
+/* 4. Mover el formulario de Login fuera de la vista (a la izquierda) */
+.container.active .login-container {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+/* 5. Mover y mostrar el formulario de Registro (a la izquierda, ocupando el lugar del Login) */
+.container.active .register-container {
+    transform: translateX(-100%);
+    opacity: 1;
+    z-index: 5;
+}
+
+/* --- Estilos Adicionales --- */
+.mobile-switch {
+    display: none;
+}
