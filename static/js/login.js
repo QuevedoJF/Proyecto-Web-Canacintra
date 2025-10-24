@@ -1,15 +1,11 @@
-const container = document.getElementById('container');
-const registerBtn = document.getElementById('register');
-const loginBtn = document.getElementById('login');
+const container = document.querySelector(".container");
+const btnSignIn = document.getElementById("btn-sign-in");
+const btnSignUp = document.getElementById("btn-sign-up");
 
-// Esto se activa al presionar el botón "Registrarse"
-registerBtn.addEventListener('click', () => {
-    // Añade la clase 'active' para mover el contenedor y los elementos
-    container.classList.add("active");
+btnSignIn.addEventListener("click",()=>{
+    container.classList.remove("toggle");
 });
 
-// Esto se activa al presionar el botón "Iniciar Sesión"
-loginBtn.addEventListener('click', () => {
-    // Quita la clase 'active' para volver a la posición inicial
-    container.classList.remove("active");
+btnSignUp.addEventListener("click",()=>{
+    container.classList.add("toggle");
 });

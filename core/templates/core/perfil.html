@@ -1,209 +1,97 @@
+{% extends 'partials/base.html' %}
+
 {% load static %}
-{% block title %}Perfil{% endblock %} 
-{# 2. BLOQUE PARA EL CONTENIDO PRINCIPAL #}
+
+{% block title %}Mi Perfil{% endblock %}
+
 {% block content %}
-    {# AÑADE AQUÍ EL CONTENIDO VISIBLE DE LA PÁGINA #}
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panel de Administración - Perfil</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background-color: #1b2a32;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
 
-    /* SIDEBAR */
-    .sidebar {
-      width: 250px;
-      background-color: #111;
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      overflow-y: auto;
-      transition: 0.3s;
-      padding-top: 20px;
-    }
+<section class="section">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar izquierdo -->
+      <div class="col-lg-2 bg-light p-4">
+        <h5 class="mb-4">Panel de Perfil</h5>
+        
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <a href="{% url 'perfil' %}" class="d-flex align-items-center text-dark">
+              <i class="bi bi-person-circle me-2"></i>
+              <span>Mi perfil</span>
+            </a>
+          </li>
+          <li class="mb-3">
+          
+              <i class="bi bi-newspaper me-2"></i>
+              <span>Noticias</span>
+            </a>
+          </li>
+          <li class="mb-3">
+              <i class="bi bi-chat-left-text me-2"></i>
+              <span>Comentarios</span>
+            </a>
+          </li>
+          <li class="mb-3">
+              <i class="bi bi-folder me-2"></i>
+              <a href="{% url 'cambiarcontrasena' %}" class="d-flex align-items-center text-dark">
+              <span>Cambiar Contraseña</span>
+            </a>
+          </li>
+          <li class="mb-3">
+              <i class="bi bi-key me-2"></i>
+              <span>Usuarios</span>
+            </a>
+          </li>
+        </ul>
 
-    .sidebar h2 {
-      color: #00d8ff;
-      text-align: center;
-      margin-bottom: 20px;
-    }
+        <hr class="my-4">
+        <li><a href="{% url 'logout' %}">
+          <i class="bi bi-box-arrow-right me-2"></i>
+          CERRAR SESIÓN
+          </a></li>
+        </a>
+      </div>
 
-    .sidebar a {
-      padding: 12px 20px;
-      display: block;
-      color: #ccc;
-      text-decoration: none;
-      transition: 0.2s;
-    }
+      <!-- Contenido principal -->
+      <div class="col-lg-10 p-5">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-5">
+            <!-- Foto de perfil centrada -->
+            <div class="text-center mb-4">
+              {% if user.foto_perfil %}
+                <img src="{{ user.foto_perfil.url }}" alt="Foto de perfil" class="rounded-circle" style="width: 120px; height: 120px; object-fit: cover;">
+              {% else %}
+                <div class="rounded-circle bg-secondary d-inline-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
+                  <i class="bi bi-person-fill text-white" style="font-size: 60px;"></i>
+                </div>
+              {% endif %}
+            </div>
 
-    .sidebar a:hover {
-      background-color: #00d8ff;
-      color: #111;
-    }
+            <!-- Información del perfil -->
+            <div class="mb-4">
+              <h3 class="mb-2">Nombre:</h3>
+              <p class="text-muted fs-5">{{ user.username }}</p>
+            </div>
 
-    /* CONTENIDO */
-    .main-content {
-      margin-left: 250px;
-      padding: 20px;
-      flex: 1;
-    }
+            <div class="mb-5">
+              <h3 class="mb-2">Correo electrónico:</h3>
+              <p class="text-muted fs-5">{{ user.email }}</p>
+            </div>
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .card {
-      background-color: #22333b;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .card h3 {
-      color: #00d8ff;
-      margin-bottom: 10px;
-    }
-
-    /* FOOTER */
-    footer {
-      background-color: #22333b;
-      color: #ccc;
-      padding: 20px;
-      text-align: center;
-      border-top: 1px solid #333;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-      }
-      .main-content {
-        margin-left: 0;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <h2>Admin</h2>
-    <a href="#"><i class="fa-solid fa-user"></i> Perfil</a>
-    <a href="#"><i class="fa-solid fa-gear"></i> Configuración</a>
-    <a href="#"><i class="fa-solid fa-book"></i> Capacitaciones</a>
-    <a href="#"><i class="fa-solid fa-users"></i> Usuarios</a>
-    <a href="#"><i class="fa-solid fa-chart-line"></i> Estadísticas</a>
-    <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a>
-  </div>
-
-  <!-- CONTENIDO PRINCIPAL -->
-  <div class="main-content">
-    <h1>Panel de Administración</h1>
-    <p>Bienvenido al panel, aquí puedes gestionar tu perfil, configuraciones y más.</p>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Usuarios registrados</h3>
-        <p>Actualmente hay 154 usuarios activos.</p>
-      </div>
-      <div class="card">
-        <h3>Últimas actividades</h3>
-        <p>Se realizaron 23 cambios hoy.</p>
-      </div>
-      <div class="card">
-        <h3>Notificaciones</h3>
-        <p>Tienes 5 mensajes sin leer.</p>
-      </div>
-      <div class="card">
-        <h3>Reportes</h3>
-        <p>Genera o descarga reportes mensuales.</p>
-      </div>
-      <div class="card">
-        <h3>Progreso de cursos</h3>
-        <p>Completaste el 80% del curso actual.</p>
-      </div>
-      <div class="card">
-        <h3>Capacitaciones activas</h3>
-        <p>Tienes 3 capacitaciones en curso.</p>
-      </div>
-      <div class="card">
-        <h3>Proyectos</h3>
-        <p>Hay 12 proyectos activos en desarrollo.</p>
-      </div>
-      <div class="card">
-        <h3>Mensajes internos</h3>
-        <p>Recibiste 2 mensajes nuevos.</p>
-      </div>
-      <div class="card">
-        <h3>Rendimiento del sistema</h3>
-        <p>El servidor se encuentra estable (99% uptime).</p>
-      </div>
-      <div class="card">
-        <h3>Visitas al sitio</h3>
-        <p>Se registraron 3,245 visitas esta semana.</p>
-      </div>
-      <div class="card">
-        <h3>Soporte técnico</h3>
-        <p>2 tickets pendientes por resolver.</p>
-      </div>
-      <div class="card">
-        <h3>Inventario</h3>
-        <p>Existen 47 productos en stock.</p>
-      </div>
-      <div class="card">
-        <h3>Empleados activos</h3>
-        <p>Actualmente hay 25 empleados activos.</p>
-      </div>
-      <div class="card">
-        <h3>Ventas</h3>
-        <p>Ingresos de este mes: $12,340 MXN.</p>
-      </div>
-      <div class="card">
-        <h3>Eventos próximos</h3>
-        <p>Conferencia anual el 25 de octubre.</p>
-      </div>
-      <div class="card">
-        <h3>Base de datos</h3>
-        <p>Última copia de seguridad: hace 2 días.</p>
-      </div>
-      <div class="card">
-        <h3>Actualizaciones</h3>
-        <p>Hay 3 actualizaciones disponibles.</p>
+            <!-- Botones de acción -->
+            <div class="d-flex justify-content-between align-items-center">
+                CAMBIAR CONTRASEÑA
+              </a>
+              
+              <a href="{% url 'actualizarperfil' %}" class="btn btn-success btn-lg px-5">
+                EDITAR PERFIL
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 — Todos los derechos reservados | Desarrollado con ❤️ por tu equipo</p>
-  </footer>
-
-</body>
-</html>
-
-{% include  'partials/footer.html' %} 
 {% endblock content %}
-{# 3. ¡ES FUNDAMENTAL CERRAR EL BLOQUE CONTENT! #}

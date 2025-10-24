@@ -1,5 +1,4 @@
 <!-- Esta es el header(parte de arriba) de la pagina -->
-<!-- Header elegante con diseño moderno -->
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
@@ -22,79 +21,82 @@
 
     <style>
       /* === ESTILOS GENERALES === */
-        body {
+      body {
         margin: 0;
         font-family: "Poppins", sans-serif;
         background: #f5f6fa;
-        }
+      }
 
       /* === NAVBAR === */
-        .site-nav {
+      .site-nav {
         position: sticky;
         top: 0;
         z-index: 1000;
         background: linear-gradient(90deg, #001f3f, #003b8b);
         padding: 12px 0;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
+      }
 
-        .site-nav .container {
+      .site-nav .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
         max-width: 1200px;
         margin: auto;
         padding: 0 20px;
-        }
+      }
 
       /* === LOGO === */
-        .logo {
+      .logo {
         font-size: 1.9rem;
         font-weight: 700;
         color: #fff;
         text-transform: uppercase;
         letter-spacing: 1px;
         transition: 0.3s;
-        }
+      }
 
-        .logo span.text-primary {
+      .logo span.text-primary {
         color: #f6b800;
-        }
+      }
 
-        .logo:hover {
+      .logo:hover {
         color: #f6b800;
-        }
+      }
 
       /* === MENÚ PRINCIPAL === */
-        .site-menu {
+      .site-menu {
         list-style: none;
         display: flex;
         gap: 18px;
         margin: 0;
         padding: 0;
-        }
+      }
 
-        .site-menu > li {
+      .site-menu > li {
         position: relative;
         list-style: none;
-        }
+      }
 
-        .site-menu a {
+      .site-menu a {
         color: #f0f0f0;
         font-weight: 500;
         text-decoration: none;
         padding: 8px 12px;
         border-radius: 6px;
         transition: all 0.3s ease;
-        }
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
 
-        .site-menu a:hover {
+      .site-menu a:hover {
         background: rgba(255, 255, 255, 0.15);
         color: #f6b800;
-        }
+      }
 
       /* === SUBMENÚS === */
-        .has-children .dropdown {
+      .has-children .dropdown {
         position: absolute;
         top: 120%;
         left: 0;
@@ -109,139 +111,124 @@
         transition: all 0.25s ease-in-out;
         display: flex;
         flex-direction: column;
-        }
+      }
 
-        .has-children:hover > .dropdown {
+      .has-children:hover > .dropdown {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
-        }
+      }
 
-        .dropdown li {
+      .dropdown li {
         width: 100%;
         list-style: none;
-        }
+      }
 
-        .dropdown a {
+      .dropdown a {
         padding: 10px 20px;
         color: #fff;
         font-size: 0.9rem;
-        }
+      }
 
-        .dropdown a:hover {
+      .dropdown a:hover {
         background: rgba(255, 255, 255, 0.1);
         color: #f6b800;
-        }
+      }
 
       /* SUBMENÚ ANIDADO */
-        .dropdown .has-children {
+      .dropdown .has-children {
         position: relative;
-        }
+      }
 
-        .dropdown .has-children:hover > .dropdown {
+      .dropdown .has-children:hover > .dropdown {
         left: 100%;
         top: 0;
-        }
+      }
 
       /* Quitar puntos de todas las listas */
-        .site-menu ul,
-        .site-menu li,
-        .dropdown ul,
-        .dropdown li {
+      .site-menu ul,
+      .site-menu li,
+      .dropdown ul,
+      .dropdown li {
         list-style: none;
-        }
+      }
 
       /* === BUSCADOR === */
-        .search-form {
+      .search-form {
         position: relative;
-        }
+      }
 
-        .search-form input {
+      .search-form input {
         border: none;
         border-radius: 30px;
         padding: 8px 35px 8px 15px;
         background: rgba(255, 255, 255, 0.15);
         color: white;
         transition: all 0.3s ease;
-        }
+      }
 
-        .search-form input::placeholder {
+      .search-form input::placeholder {
         color: #e0e0e0;
-        }
+      }
 
-        .search-form input:focus {
+      .search-form input:focus {
         background: rgba(255, 255, 255, 0.25);
         outline: none;
-        }
+      }
 
-        .search-form .bi-search {
+      .search-form .bi-search {
         position: absolute;
         right: 12px;
         top: 8px;
         color: #f6b800;
-        }
+      }
 
       /* === RESPONSIVO === */
-        @media (max-width: 991px) {
+      @media (max-width: 991px) {
         .site-menu {
           display: none; /* Aquí podrías agregar tu menú móvil */
         }
-        }
+      }
     </style>
 </head>
 <body>
-    <nav class="site-nav">
-        <div class="container">
-        <a href="{% url 'index' %}" class="logo"
-            >Canacintra<span class="text-primary">.</span></a
-        >
+  <nav class="site-nav">
+    <div class="container">
+      <a href="{% url 'index' %}" class="logo">Canacintra<span class="text-primary">.</span></a>
+      <ul class="site-menu">
+        <li class="active"><a href="{% url 'index' %}">Inicio</a></li>
 
-        <ul class="site-menu">
-            <li class="active"><a href="{% url 'index' %}">Inicio</a></li>
+        <li class="has-children">
+          <a href="#">Categorías</a>
+          <ul class="dropdown">
+            <li><a href="{% url 'categoria1' %}">Categoria 1</a></li>
+            <li><a href="{% url 'categoria2' %}">Categoria 2</a></li>
+            <li><a href="{% url 'categoria3' %}">Categoria 3</a></li>
+            <li><a href="#">Culturales</a></li>
+          </ul>
+        </li>
 
-            <!-- Categorías -->
-            <li class="has-children">
-            <a href="#">Categorías</a>
-            <ul class="dropdown">
-                <li><a href="#">Políticas</a></li>
-                <li><a href="#">Económicas</a></li>
-                <li><a href="#">Sociales</a></li>
-                <li><a href="#">Culturales</a></li>
-                <li><a href="#">Científicas</a></li>
-                <li><a href="#">Deportivas</a></li>
-                <li class="has-children">
-                <a href="#">Geográficas</a>
-                <ul class="dropdown">
-                    <li><a href="#">Locales</a></li>
-                    <li><a href="#">Regionales</a></li>
-                    <li><a href="#">Nacionales</a></li>
-                </ul>
-                </li>
-            </ul>
-            </li>
+        {% if user.is_authenticated %}
+        <!-- Usuario autenticado -->
+        <li class="has-children">
+          <a href="#"><i class="bi bi-person-circle"></i> Cuenta</a>
+          <ul class="dropdown">
+            <li><a href="{% url 'perfil' %}">Perfil</a></li>
+            <li><a href="{% url 'configuracion' %}">Configuración</a></li>
+            <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+          </ul>
+        </li>
+        {% else %}
+        <!-- Usuario no autenticado -->
+        <li><a href="{% url 'login' %}"><i class="bi bi-box-arrow-in-right"></i> Iniciar sesión</a></li>
+        {% endif %}
+      </ul>
 
-            <!-- Cuenta -->
-            <li class="has-children">
-            <a href="#">Cuenta</a>
-            <ul class="dropdown">
-                <li><a href="{% url 'perfil' %}">Perfil</a></li>
-                <li><a href="#">Configuración</a></li>
-                <li><a href="#">Capacitaciones</a></li>
-                <li><a href="#">Cerrar sesión</a></li>
-            </ul>
-            </li>
-
-            <!-- Otros -->
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Consultas</a></li>
-            <li><a href="#">El tiempo</a></li>
-        </ul>
-
-        <form action="#" class="search-form">
-            <input type="text" placeholder="Buscar..." />
-            <i class="bi bi-search"></i>
-        </form>
-        </div>
-    </nav>
+      <form action="#" class="search-form">
+        <input type="text" placeholder="Buscar..." />
+        <i class="bi bi-search"></i>
+      </form>
+    </div>
+  </nav>
 </body>
 </html>
