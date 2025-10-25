@@ -1,28 +1,27 @@
+{% load static %}
 <section class="carousel" aria-roledescription="carrusel" aria-label="Galería automática de imágenes" id="carousel">
 <div class="track" id="track">
 
-<!-- Reemplaza las URLs por tus propias imágenes -->
 <figure class="slide">
-<img src="https://picsum.photos/id/1015/1600/900" alt="Paisaje 1">
-<figcaption class="caption">Noticia 1 — descripción</figcaption>
+    <img src="{% static 'images/ghost.jpg' %}" alt="Paisaje 1">
+    <figcaption class="caption">Ghost of Tsushima — “Ghost of Tsushima™ es un juego de acción en mundo abierto ambientado en el Japón feudal.</figcaption>
 </figure>
 
 <figure class="slide">
-<img src="https://picsum.photos/id/1015/1600/900" alt="Paisaje 2">
-<figcaption class="caption">Noticia 2 — descripción</figcaption>
+    <img src="{% static 'images/espacio.jpg' %}" alt="Paisaje 2">
+    <figcaption class="caption">Sistema Solar — ¿Qué es el sistema solar? ¿Cuáles son las partes que lo conforman? </figcaption>
 </figure>
 
 <figure class="slide">
-<img src="https://picsum.photos/id/1025/1600/900" alt="Paisaje 3">
-<figcaption class="caption">Noticia 3 — descripción</figcaption>
+    <img src="{% static 'images/literatura.jpg' %}" alt="Paisaje 3">
+    <figcaption class="caption">Literatura — Mundo de Libros es un espacio único para viajar y conocer nuevos lugares a través de la lectura.</figcaption>
 </figure>
 
 <figure class="slide">
-<img src="https://picsum.photos/id/1039/1600/900" alt="Paisaje 4">
-<figcaption class="caption">Noticia 4 — descripción</figcaption>
+    <img src="{% static 'images/pelicula.jpg' %}" alt="Paisaje 4">
+    <figcaption class="caption">Flow —"Flow" es una película de animación independiente de fantasía y aventuras lanzada en 2024</figcaption>
 </figure>
 </div>
 
-<!-- Visually hidden live region for screen readers to announce changes -->
 <div class="sr-only" aria-live="polite" id="carousel-status">Slide 1 de 4</div>
 </section>
