@@ -11,7 +11,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #139776;
+    background: linear-gradient(135deg, #0A2540 0%, #1a3a52 100%);
 }
 .container{
     width: 800px;
@@ -21,7 +21,7 @@ body{
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgb(0, 0, 0, 0.3)
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
 .container-form{
     width: 100%;
@@ -38,6 +38,7 @@ body{
 .container-form h2{
     font-size: 30px;
     margin-bottom: 20px;
+    color: #0A2540;
 }
 .social-networks{
     display: flex;
@@ -49,10 +50,17 @@ body{
     border-radius: 6px;
     padding: 8px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+.social-networks ion-icon:hover{
+    border-color: #00BCD4;
+    color: #00BCD4;
+    transform: translateY(-2px);
 }
 .container-form span{
     font-size: 12px;
-    margin-bottom: 15px;   
+    margin-bottom: 15px;
+    color: #555;
 }
 .container-input{
     width: 300px;
@@ -63,7 +71,13 @@ body{
     align-items: center;
     gap: 8px;
     padding: 0 15px;
-    background-color: #EEEEEE;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.container-input:focus-within{
+    background-color: #E8F5F7;
+    border: 1px solid #00BCD4;
 }
 .container-input input{
     border: none;
@@ -71,12 +85,19 @@ body{
     width: 100%;
     height: 100%;
     background-color: inherit;
+    color: #0A2540;
 }
 .container-form a{
-    color: black;
+    color: #00BCD4;
     font-size: 14px;
     margin-bottom: 20px;
     margin-top: 5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.container-form a:hover{
+    color: #0091A8;
+    text-decoration: underline;
 }
 .button{
     width: 170px;
@@ -86,8 +107,16 @@ body{
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    background-color: #3AB397;
+    background-color: #00BCD4;
     color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+}
+.button:hover{
+    background-color: #00A8B8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
 }
 
 /* Animacion del formulario*/
@@ -112,7 +141,7 @@ body{
     display: flex;
     align-items: center;
     transform: translateX(100%);
-    background-color: #3AB397;
+    background: linear-gradient(135deg, #00BCD4 0%, #0091A8 100%);
     transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
     overflow: hidden;
     border-radius: 50% 0 0 50%;
@@ -120,7 +149,7 @@ body{
 .container.toggle .container-welcome{
     transform: translateX(0);
     border-radius: 0 50% 50% 0;
-    background-color: #3AA8AD;
+    background: linear-gradient(135deg, #1a5f7a 0%, #0A2540 100%);
 }
 
 .container-welcome .welcome{
@@ -140,15 +169,23 @@ body{
 
 .container-welcome h3{
     font-size: 40px;
+    font-weight: 700;
 }
 
 .container-welcome p{
     font-size: 14px;
     text-align: center;
+    line-height: 1.6;
 }
 
 .container-welcome .button{
     background-color: transparent;
+    border: 2px solid white;
+    box-shadow: none;
+}
+.container-welcome .button:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
 }
 
 .container.toggle .welcome-sign-in{

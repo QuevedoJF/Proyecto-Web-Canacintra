@@ -1,16 +1,9 @@
-<!-- cuerpo del Noticiero -->
 {% extends 'partials/base.html' %} 
-
 {% load static %}
-
 {% block title %}Inicio{% endblock %} 
-
 {% block content %}
-
-<!--seccion del slider-->
 {% include "partials/carrusel.html" %}
 
-<!-- Start posts-not -->
 <section class="section posts-entry posts-entry-sm bg-light">
   <div class="container">
     <div class="row">
@@ -18,319 +11,150 @@
         <h2 class="posts-entry-title">Noticias</h2>
       </div>
       <div class="col-sm-6 text-sm-end">
-        <a href="category.html" class="read-more">View All</a>
+        <a href="#" class="read-more">View All</a>
       </div>
       <div class="col-md-6 col-lg-3">
         <div class="blog-entry">
-          <a href="single.html" class="img-link">
+          <a href="#" class="img-link">
             <img
-              src="{% static 'images/img_1_horizontal.jpg' %}"
+              src="{% static 'images/paisaje_ghost.jpg' %}"
               alt="Image"
               class="img-fluid"
             />
           </a>
-          <span class="date">Apr. 14th, 2022</span>
+          <span class="date"> 17 de julio de 2020</span>
           <h2>
-            <a href="single.html">Noticia 1</a>
+            <a href="#">Ghost of Tsushima</a>
           </h2>
-          <p>Cuerpo de la noticia</p>
+          <p>“Ghost of Tsushima™ es un juego de acción en mundo abierto ambientado en el Japón feudal. 
+            El protagonista es Jin Sakai, un samurái que lo arriesga todo para defender la isla de Tsushima de la...</p>
           <p><a href="#" class="read-more">Continue Reading</a></p>
         </div>
       </div>
+
       <div class="col-md-6 col-lg-3">
         <div class="blog-entry">
-          <a href="single.html" class="img-link">
+          <a href="#" class="img-link">
             <img
-              src="{% static 'images/img_2_horizontal.jpg' %}"
+              src="{% static 'images/planetas.jpg' %}"
               alt="Image"
               class="img-fluid"
             />
           </a>
-          <span class="date">Apr. 14th, 2022</span>
+          <span class="date">4 de marzo de 2025</span>
           <h2>
-            <a href="single.html">Noticia 2</a>
+            <a href="#">Sistema Solar</a>
           </h2>
-          <p>Cuerpo de la noticia</p>
+          <p>¿Qué es el sistema solar? ¿Cuáles son las partes que lo conforman? ¿Dónde se encuentra el sistema solar 
+            dentro de la galaxia? ¿Cuáles son sus límites espaciales? ¿Cómo se...</p>
           <p><a href="#" class="read-more">Continue Reading</a></p>
         </div>
       </div>
+
       <div class="col-md-6 col-lg-3">
         <div class="blog-entry">
-          <a href="single.html" class="img-link">
+          <a href="#" class="img-link">
             <img
-              src="{% static 'images/img_3_horizontal.jpg' %}"
+              src="{% static 'images/libro.jpg' %}"
               alt="Image"
               class="img-fluid"
             />
           </a>
-          <span class="date">Apr. 14th, 2022</span>
+          <span class="date">14 de abril 2022</span>
           <h2>
-            <a href="single.html">Noticia 3</a>
+            <a href="#">Libros</a>
           </h2>
-          <p>Cuerpo de la noticia</p>
+          <p>Bienvenido a un mundo de infinitas posibilidades, donde el viaje es tan emocionante como el destino, 
+            y donde cada momento es una oportunidad para dejar volar tu imaginación. Cuando baje la marea Ver más 
+            La sombra último tren Ver más La ...</p>
           <p><a href="#" class="read-more">Continue Reading</a></p>
         </div>
       </div>
+
       <div class="col-md-6 col-lg-3">
         <div class="blog-entry">
-          <a href="single.html" class="img-link">
+          <a href="#" class="img-link">
             <img
-              src="{% static 'images/img_4_horizontal.jpg' %}"
+              src="{% static 'images/pelicula.jpg' %}"
               alt="Image"
               class="img-fluid"
             />
           </a>
-          <span class="date">Apr. 14th, 2022</span>
+          <span class="date">29 de agosto de 2025</span>
           <h2>
-            <a href="single.html">Noticia 4</a>
+            <a href="https://flow.movie/">Flow</a>
           </h2>
-          <p>Cuerpo de la noticia</p>
-          <p><a href="#" class="read-more">Continue Reading</a></p>
+          <p>Flow, un mundo que salvar, ¿Quién dijo que los gatos le tienen miedo al agua? Ganadora del Óscar,
+            esta bella y deslumbrante perla animada se ha consagrado como el gran descubrimiento...</p>
+          <p><a href="https://flow.movie/" class="read-more">Continue Reading</a></p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
-<!-- End posts-entry -->
 
-<!-- Start additional posts section -->
 <section class="section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="post-entry-alt">
-          <a href="single.html" class="img-link">
-            <img src="{% static 'images/img_5_horizontal.jpg' %}" alt="Image" class="img-fluid">
-          </a>
-          <div class="excerpt">
-            <h2>
-              <a href="single.html">Noticia 20</a>
-            </h2>
-            <div class="post-meta align-items-center text-left clearfix">
-              <figure class="author-figure mb-0 me-3 float-start">
-                <img src="{% static 'images/person_1.jpg' %}" alt="Image" class="img-fluid">
-              </figure>
-              <span class="d-inline-block mt-1">By <a href="#">subido por:</a></span>
-              <span>&nbsp;-&nbsp; July 19, 2019</span>
-            </div>
-            <p>Cuerpo de la noticia</p>
-            <p><a href="#" class="read-more">Continue Reading</a></p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 mb-4">
-        <div class="post-entry-alt">
-          <a href="single.html" class="img-link">
-            <img src="{% static 'images/img_6_horizontal.jpg' %}" alt="Image" class="img-fluid">
-          </a>
-          <div class="excerpt">
-            <h2>
-              <a href="single.html">Noticia 21</a>
-            </h2>
-            <div class="post-meta align-items-center text-left clearfix">
-              <figure class="author-figure mb-0 me-3 float-start">
-                <img src="{% static 'images/person_2.jpg' %}" alt="Image" class="img-fluid">
-              </figure>
-              <span class="d-inline-block mt-1">By <a href="#">subido por:</a></span>
-              <span>&nbsp;-&nbsp; July 19, 2019</span>
-            </div>
-            <p>Cuerpo de la noticia</p>
-            <p><a href="#" class="read-more">Continue Reading</a></p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 mb-4">
-        <div class="post-entry-alt">
-          <a href="single.html" class="img-link">
-            <img src="{% static 'images/img_5_horizontal.jpg' %}" alt="Image" class="img-fluid">
-          </a>
-          <div class="excerpt">
-            <h2>
-              <a href="single.html">Noticia 22</a>
-            </h2>
-            <div class="post-meta align-items-center text-left clearfix">
-              <figure class="author-figure mb-0 me-3 float-start">
-                <img src="{% static 'images/person_3.jpg' %}" alt="Image" class="img-fluid">
-              </figure>
-              <span class="d-inline-block mt-1">By <a href="#">subido por:</a></span>
-              <span>&nbsp;-&nbsp; July 19, 2019</span>
-            </div>
-            <p>Cuerpo de la noticia</p>
-            <p><a href="#" class="read-more">Continue Reading</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="post-entry-alt">
-          <a href="single.html" class="img-link">
-            <img src="{% static 'images/img_4_horizontal.jpg' %}" alt="Image" class="img-fluid">
-          </a>
-          <div class="excerpt">
-            <h2>
-              <a href="single.html">Startup vs corporate: What job suits you best?</a>
-            </h2>
-            <div class="post-meta align-items-center text-left clearfix">
-              <figure class="author-figure mb-0 me-3 float-start">
-                <img src="{% static 'images/person_4.jpg' %}" alt="Image" class="img-fluid">
-              </figure>
-              <span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-              <span>&nbsp;-&nbsp; July 19, 2019</span>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt
-              tempora dolor laudantium sed optio, explicabo ad deleniti impedit
-              facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro
-              id est.
-            </p>
-            <p><a href="#" class="read-more">Continue Reading</a></p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 mb-4">
-        <div class="post-entry-alt">
-          <a href="single.html" class="img-link">
-            <img src="{% static 'images/img_3_horizontal.jpg' %}" alt="Image" class="img-fluid">
-          </a>
-          <div class="excerpt">
-            <h2>
-              <a href="single.html">Startup vs corporate: What job suits you best?</a>
-            </h2>
-            <div class="post-meta align-items-center text-left clearfix">
-              <figure class="author-figure mb-0 me-3 float-start">
-                <img src="{% static 'images/person_5.jpg' %}" alt="Image" class="img-fluid">
-              </figure>
-              <span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-              <span>&nbsp;-&nbsp; July 19, 2019</span>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt
-              tempora dolor laudantium sed optio, explicabo ad deleniti impedit
-              facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro
-              id est.
-            </p>
-            <p><a href="#" class="read-more">Continue Reading</a></p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 mb-4">
-        <div class="post-entry-alt">
-          <a href="single.html" class="img-link">
-            <img src="{% static 'images/img_2_horizontal.jpg' %}" alt="Image" class="img-fluid">
-          </a>
-          <div class="excerpt">
-            <h2>
-              <a href="single.html">Startup vs corporate: What job suits you best?</a>
-            </h2>
-            <div class="post-meta align-items-center text-left clearfix">
-              <figure class="author-figure mb-0 me-3 float-start">
-                <img src="{% static 'images/person_4.jpg' %}" alt="Image" class="img-fluid">
-              </figure>
-              <span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-              <span>&nbsp;-&nbsp; July 19, 2019</span>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt
-              tempora dolor laudantium sed optio, explicabo ad deleniti impedit
-              facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro
-              id est.
-            </p>
-            <p><a href="#" class="read-more">Continue Reading</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="post-entry-alt">
-          <a href="single.html" class="img-link">
-            <img src="{% static 'images/img_1_horizontal.jpg' %}" alt="Image" class="img-fluid">
-          </a>
-          <div class="excerpt">
-            <h2>
-              <a href="single.html">Startup vs corporate: What job suits you best?</a>
-            </h2>
-            <div class="post-meta align-items-center text-left clearfix">
-              <figure class="author-figure mb-0 me-3 float-start">
-                <img src="{% static 'images/person_3.jpg' %}" alt="Image" class="img-fluid">
-              </figure>
-              <span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-              <span>&nbsp;-&nbsp; July 19, 2019</span>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt
-              tempora dolor laudantium sed optio, explicabo ad deleniti impedit
-              facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro
-              id est.
-            </p>
-            <p><a href="#" class="read-more">Continue Reading</a></p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 mb-4">
-        <div class="post-entry-alt">
-          <a href="single.html" class="img-link">
-            <img src="{% static 'images/img_4_horizontal.jpg' %}" alt="Image" class="img-fluid">
-          </a>
-          <div class="excerpt">
-            <h2>
-              <a href="single.html">Startup vs corporate: What job suits you best?</a>
-            </h2>
-            <div class="post-meta align-items-center text-left clearfix">
-              <figure class="author-figure mb-0 me-3 float-start">
-                <img src="{% static 'images/person_2.jpg' %}" alt="Image" class="img-fluid">
-              </figure>
-              <span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-              <span>&nbsp;-&nbsp; July 19, 2019</span>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt
-              tempora dolor laudantium sed optio, explicabo ad deleniti impedit
-              facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro
-              id est.
-            </p>
-            <p><a href="#" class="read-more">Continue Reading</a></p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 mb-4">
-        <div class="post-entry-alt">
-          <a href="single.html" class="img-link">
-            <img src="{% static 'images/img_3_horizontal.jpg' %}" alt="Image" class="img-fluid">
-          </a>
-          <div class="excerpt">
-            <h2>
-              <a href="single.html">Startup vs corporate: What job suits you best?</a>
-            </h2>
-            <div class="post-meta align-items-center text-left clearfix">
-              <figure class="author-figure mb-0 me-3 float-start">
-                <img src="{% static 'images/person_5.jpg' %}" alt="Image" class="img-fluid">
-              </figure>
-              <span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-              <span>&nbsp;-&nbsp; July 19, 2019</span>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt
-              tempora dolor laudantium sed optio, explicabo ad deleniti impedit
-              facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro
-              id est.
-            </p>
-            <p><a href="#" class="read-more">Continue Reading</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End additional posts section -->
 
+      <div class="col-lg-4 mb-4">
+        <div class="post-entry-alt">
+          <a href="#" class="img-link">
+            <img src="{% static 'images/pinturas.jpg' %}" alt="Image" class="img-fluid">
+          </a>
+          <div class="excerpt">
+            <span class="date">28 de julio de 1999 </span>
+            <h2>
+              <a href="#">Vincent van Gogh</a>
+            </h2>
+            <div class="post-meta align-items-center text-left clearfix">
+              </div>
+            <p>Vincent Willem van Gogh fue un pintor neerlandés y una de las figuras más influyentes del posimpresionismo. 
+              Aunque solo vendió una obra en vida (La viña roja), se convirtió....</p>
+            <p><a href="#" class="read-more">Continue Reading</a></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 mb-4">
+        <div class="post-entry-alt">
+          <a href="#" class="img-link">
+            <img src="{% static 'images/minecraft.jpg' %}" alt="Image" class="img-fluid">
+          </a>
+          <div class="excerpt">
+            <span class="date"> 9 de diciembre de 2019</span>
+            <h2>
+              <a href="#">Minecraft</a>
+            </h2>
+            <div class="post-meta align-items-center text-left clearfix"> 
+            </div>
+            <p>Sumérgete en un mundo abierto de construcción, creación y supervivencia en Minecraft: 
+              el mejor juego sandbox simulador de construcción. Recolecta recursos, sobrevive a la noche y construye...</p>
+            <p><a href="#" class="read-more">Continue Reading</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mb-4">
+        <div class="post-entry-alt">
+          <a href="#" class="img-link">
+            <img src="{% static 'images/paisajes.jpg' %}" alt="Image" class="img-fluid">
+          </a>
+          <div class="excerpt">
+            <span class="date">29 de mayo de 2023</span>
+            <h2>
+              <a href="#">LOS HERMOSOS PAISAJES DE LA NATURALEZA</a>
+            </h2>
+            <div class="post-meta align-items-center text-left clearfix">
+            </div>
+            <p>Contempla los lugares más hermosos sobre la faz de la tierra gracias a estas imágenes de paisajes. 
+              Descubre rincones llenos de luz y color, mares de aguas cristalinas y vistas de ensueño.</p>
+            <p><a href="#" class="read-more">Continue Reading</a></p>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div> 
+</section>
 {% endblock content %}
