@@ -30,7 +30,8 @@
     <link rel="stylesheet" href="{% static 'css/flatpickr.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/carrusel.css' %}" />
     <link rel="stylesheet" href="{% static 'css/estilos_company.css' %}">
-    <title>Canacintra &mdash; Noticiero</title>
+    
+    <title>{% block title %}Canacintra &mdash; Noticiero{% endblock %}</title>
   </head>
   <body>
     <div class="site-mobile-menu site-navbar-target">
@@ -41,16 +42,21 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-    {% include 'partials/header.html' %} {% block content %} 
+    
+    {% include 'partials/header.html' %} 
+    
+    {% block content %} 
     {% endblock content%} 
+    
     {% include 'partials/footer.html' %}
-    <!-- Preloader -->
+    
     <div id="overlayer"></div>
     <div class="loader">
       <div class="spinner-border text-primary" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
+    
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'js/tiny-slider.js' %}"></script>
     <script src="{% static 'js/flatpickr.min.js' %}"></script>
@@ -60,5 +66,46 @@
     <script src="{% static 'js/counter.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
     <script src="{% static 'js/carrusel.js' %}"></script>
+    
+    <script>
+    // 1. Encontrar los elementos
+    const toggleSwitch = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // 2. Función para aplicar el tema
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        body.classList.add('dark-mode');
+        if (toggleSwitch) {
+          toggleSwitch.checked = true;
+        }
+      } else {
+        body.classList.remove('dark-mode');
+        if (toggleSwitch) {
+          toggleSwitch.checked = false;
+        }
+      }
+    }
+
+    // 3. Cargar el tema guardado al cargar la página
+    //    (Si no hay nada guardado, prefiere el modo claro)
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
+
+    // 4. Añadir el "click listener" al botón
+    if (toggleSwitch) {
+      toggleSwitch.addEventListener('change', function() {
+        let newTheme = 'light';
+        if (this.checked) {
+          newTheme = 'dark';
+        }
+        // Aplicar el nuevo tema
+        applyTheme(newTheme);
+        // Guardar la preferencia
+        localStorage.setItem('theme', newTheme);
+      });
+    }
+    </script>
+
   </body>
 </html>

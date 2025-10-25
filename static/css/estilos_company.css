@@ -1,6 +1,179 @@
+/* ================================================
+  ESTILOS DEL HEADER (MOVIDOS DESDE header.html)
+================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* === NAVBAR === */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, #001f3f, #003b8b);
+  padding: 12px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-family: "Poppins", sans-serif; /* Se aplica la fuente al nav */
+}
+
+.site-nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* === LOGO === */
+.logo {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  font-family: "Poppins", sans-serif; /* Asegura la fuente */
+}
+
+.logo span.text-primary {
+  color: #f6b800;
+}
+
+.logo:hover {
+  color: #f6b800;
+}
+
+/* === MENÚ PRINCIPAL === */
+.site-menu {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.site-menu > li {
+  position: relative;
+  list-style: none;
+}
+
+.site-menu a {
+  color: #f0f0f0;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Poppins", sans-serif; /* Asegura la fuente */
+}
+
+.site-menu a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #f6b800;
+}
+
+/* === SUBMENÚS === */
+.has-children .dropdown {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: rgba(0, 35, 82, 0.97); /* Fondo azul oscuro del header */
+  border-radius: 8px;
+  min-width: 200px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5px);
+  transition: all 0.25s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.has-children:hover > .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown li {
+  width: 100%;
+  list-style: none;
+}
+
+.dropdown a {
+  padding: 10px 20px;
+  color: #fff; /* Texto blanco en modo claro */
+  font-size: 0.9rem;
+}
+
+.dropdown a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f6b800; /* Acento amarillo del header */
+}
+
+/* SUBMENÚ ANIDADO */
+.dropdown .has-children {
+  position: relative;
+}
+
+.dropdown .has-children:hover > .dropdown {
+  left: 100%;
+  top: 0;
+}
+
+/* Quitar puntos de todas las listas */
+.site-menu ul,
+.site-menu li,
+.dropdown ul,
+.dropdown li {
+  list-style: none;
+}
+
+/* === BUSCADOR === */
+.search-form {
+  position: relative;
+}
+
+.search-form input {
+  border: none;
+  border-radius: 30px;
+  padding: 8px 35px 8px 15px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif; /* Asegura la fuente */
+}
+
+.search-form input::placeholder {
+  color: #e0e0e0;
+}
+
+.search-form input:focus {
+  background: rgba(255, 255, 255, 0.25);
+  outline: none;
+}
+
+.search-form .bi-search {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  color: #f6b800;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 991px) {
+  .site-menu {
+    display: none; /* Aquí podrías agregar tu menú móvil */
+  }
+}
+
 /*
-  NUEVO DISEÑO v3: Limpio, minimalista, con acento "Teal"
-  Importamos una fuente más profesional desde Google Fonts
+ ================================================
+  AQUÍ EMPIEZA EL CSS "TEAL v3" (MODO CLARO BASE)
+ ================================================
 */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
@@ -18,6 +191,7 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+/* Enlaces generales del contenido (no del header) */
 a {
     color: #00796B; /* Acento "Teal" para enlaces */
     text-decoration: none;
@@ -28,56 +202,27 @@ a:hover {
     text-decoration: none;
 }
 
-/* --- Encabezado / Navegación (sin cambios) --- */
-.site-header {
-    background-color: #1f2326;
-    padding: 10px 0;
-    border-bottom: 2px solid #00C4FF; /* Mantenemos el azul del header */
-}
-.site-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.site-header .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #FFFFFF;
-}
-.site-header nav a {
-    color: #FFFFFF;
-    padding: 10px 15px;
-    font-weight: bold;
-}
-.site-header nav a:hover {
-    background-color: #00C4FF;
-    color: #282E33;
-    text-decoration: none;
-}
-
-/* --- Contenido de las Páginas (Diseño Nuevo) --- */
+/* --- Contenido de las Páginas (Diseño Nuevo - para About, Vision, Mission) --- */
 .content-page {
     background-color: #FFFFFF;
     padding: 40px 50px;
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 8px;
-    /* Sombra muy sutil para dar profundidad */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
 }
 
-/* Párrafo principal (lead) */
 .content-page p.lead {
     font-size: 1.25em;
     color: #333;
-    font-weight: 300; /* Más ligero */
+    font-weight: 300;
     border-bottom: 1px solid #EEE;
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
 
 .content-page h1 {
-    color: #2C3E50; /* Color pizarra oscuro */
+    color: #2C3E50;
     font-weight: 700;
     font-size: 2.8em;
     margin-top: 0;
@@ -89,19 +234,16 @@ a:hover {
     margin-bottom: 20px;
 }
 
-/* --- Subtítulos (Objetivos, Historia, etc.) --- */
 .content-page h2 {
-    color: #00796B; /* Acento Teal para subtítulos */
+    color: #00796B;
     font-weight: 700;
     font-size: 1.8em;
     margin-top: 40px;
     margin-bottom: 20px;
-    /* Pequeña línea decorativa a la izquierda */
     border-left: 4px solid #00796B;
     padding-left: 15px;
 }
 
-/* --- Listas (Valores y Beneficios) --- */
 .content-page ul {
     list-style: none;
     padding-left: 0;
@@ -116,26 +258,25 @@ a:hover {
     font-size: 1.1em;
 }
 
-/* Viñeta personalizada (Checkmark en color teal) */
 .content-page li::before {
-    content: '›'; /* Símbolo "mayor que" o flecha */
+    content: '›';
     position: absolute;
     left: 0;
     top: -2px;
-    color: #00796B; /* Acento Teal */
+    color: #00796B;
     font-weight: 700;
-    font-size: 1.8em; /* Más grande */
+    font-size: 1.8em;
 }
 
 .content-page li strong {
-    color: #333; /* Texto strong más oscuro */
+    color: #333;
     font-weight: 700;
 }
 
-/* --- Call To Action (CTA) --- */
+/* --- Call To Action (CTA - para About, Vision, Mission) --- */
 .cta-box {
-    background-color: #F8F9FA; /* Fondo gris claro */
-    border: 1px solid #E0E0E0; /* Borde suave */
+    background-color: #F8F9FA;
+    border: 1px solid #E0E0E0;
     border-radius: 8px;
     padding: 30px;
     text-align: center;
@@ -144,11 +285,11 @@ a:hover {
 }
 
 .cta-box:hover {
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Sombra al pasar el ratón */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .cta-box h3 {
-    color: #2C3E50; /* Pizarra oscuro */
+    color: #2C3E50;
     font-size: 1.6em;
     margin: 0 0 15px 0;
     font-weight: 700;
@@ -161,28 +302,343 @@ a:hover {
 }
 
 .cta-button {
-    background-color: #00796B; /* Botón en Teal */
+    background-color: #00796B;
     color: #FFFFFF;
     padding: 14px 35px;
-    border-radius: 50px; /* Botón "píldora" redondeado */
+    border-radius: 50px;
     font-weight: 700;
     font-size: 1.1em;
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 121, 107, 0.3); /* Sombra del color del botón */
+    box-shadow: 0 4px 15px rgba(0, 121, 107, 0.3);
 }
 
 .cta-button:hover {
-    background-color: #004D40; /* Teal más oscuro */
+    background-color: #004D40;
     color: #FFFFFF;
     text-decoration: none;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 121, 107, 0.5); /* Sombra más fuerte */
+    box-shadow: 0 6px 20px rgba(0, 121, 107, 0.5);
 }
 
-/* --- ESTILOS DEL FOOTER ELIMINADOS ---
-   Ya no se necesitan estilos para .site-footer 
-   ni .footer-widget
-*/
+/* ================================================
+  ESTILOS PARA EL INTERRUPTOR (SWITCH)
+================================================ */
+
+.theme-switch {
+  display: inline-block;
+  height: 26px;
+  width: 50px;
+  position: relative;
+  margin-left: 15px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #777;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #00C4FF; /* Color azul cian del header */
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* ================================================
+  TEMA OSCURO (MODO NEGRO) - BASE Y PÁGINAS CONTENT
+================================================ */
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #c5c5c5;
+}
+
+body.dark-mode .content-page {
+  background-color: #252525;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid #333;
+}
+
+body.dark-mode p.lead {
+  color: #f1f1f1;
+  border-bottom: 1px solid #444;
+}
+
+body.dark-mode .content-page h1 {
+  color: #FFFFFF;
+}
+
+body.dark-mode .content-page h2 {
+  color: #00C4FF; /* Acento azul cian (en lugar de teal) */
+  border-left: 4px solid #00C4FF;
+}
+
+body.dark-mode .content-page li::before {
+  color: #00C4FF; /* Viñetas en azul cian */
+}
+
+body.dark-mode .content-page li strong {
+  color: #f1f1f1;
+}
+
+/* Enlaces generales en modo oscuro (NO afecta al header) */
+body.dark-mode a {
+  color: #00C4FF;
+}
+
+body.dark-mode a:hover {
+  color: #6effff;
+}
+
+/* --- CTA Oscuro --- */
+body.dark-mode .cta-box {
+  background-color: #2C3E50;
+  border: 1px solid #444;
+}
+
+body.dark-mode .cta-box h3 {
+  color: #FFFFFF;
+}
+
+body.dark-mode .cta-box p {
+  color: #c5c5c5;
+}
+
+body.dark-mode .cta-button {
+  background-color: #00C4FF;
+  color: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(0, 196, 255, 0.3);
+}
+
+body.dark-mode .cta-button:hover {
+  background-color: #FFFFFF;
+  color: #1a1a1a;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* ================================================
+  ESTILOS MODO OSCURO PARA index.html (NOTICIAS)
+================================================ */
+
+body.dark-mode section.bg-light,
+body.dark-mode section.section {
+  background-color: #1a1a1a !important; /* Fondo oscuro */
+}
+
+body.dark-mode h2.posts-entry-title { /* Título "NOTICIAS" */
+  color: #FFFFFF;
+}
+
+/* Enlace "View All" y "Continue Reading" en index */
+body.dark-mode a.read-more {
+  color: #00C4FF;
+}
+body.dark-mode a.read-more:hover {
+  color: #6effff;
+}
+
+/* Tarjetas de noticias en index */
+body.dark-mode .blog-entry,
+body.dark-mode .post-entry-alt {
+  background-color: #252525;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  padding: 15px; /* Asegura padding */
+  border: 1px solid #333;
+}
+
+/* Títulos dentro de tarjetas en index */
+body.dark-mode .blog-entry h2 a,
+body.dark-mode .post-entry-alt h2 a {
+  color: #f1f1f1;
+}
+body.dark-mode .blog-entry h2 a:hover,
+body.dark-mode .post-entry-alt h2 a:hover {
+  color: #00C4FF;
+}
+
+/* Fechas en index */
+body.dark-mode .blog-entry span.date,
+body.dark-mode .post-entry-alt span.date {
+  color: #888;
+}
+
+/* Texto de párrafo en index */
+body.dark-mode .blog-entry p,
+body.dark-mode .post-entry-alt p {
+  color: #c5c5c5;
+}
+
+/* Info del autor en index */
+body.dark-mode .post-meta span,
+body.dark-mode .post-meta a {
+    color: #888;
+}
+body.dark-mode .post-meta a:hover {
+    color: #00C4FF;
+}
+
+/* ================================================
+  ESTILOS MODO OSCURO PARA PÁGINAS DE CATEGORÍA v3
+================================================ */
+
+/* Título principal (ej. "Category: Business") */
+body.dark-mode .col-lg-8 h2.mb-4 {
+    color: #FFFFFF;
+}
+
+/* Metadatos del post (Fecha, Categoría) */
+body.dark-mode .col-md-8 span.text-muted {
+    color: #888 !important;
+}
+body.dark-mode .col-md-8 span strong {
+    color: #aaa !important;
+}
+
+/* Título del post (h3) */
+body.dark-mode .col-md-8 h3 a.text-dark {
+    color: #f1f1f1 !important;
+}
+body.dark-mode .col-md-8 h3 a.text-dark:hover {
+    color: #00C4FF !important;
+}
+
+/* Extracto/Resumen del post (p) */
+body.dark-mode .col-md-8 p.text-muted {
+    color: #c5c5c5 !important;
+}
+
+/* Botón "READ MORE" */
+body.dark-mode .col-md-8 a.btn-outline-primary {
+    color: #00C4FF !important;
+    border-color: #00C4FF !important;
+}
+body.dark-mode .col-md-8 a.btn-outline-primary:hover {
+    color: #1a1a1a !important;
+    background-color: #00C4FF !important;
+    border-color: #00C4FF !important;
+}
+
+/* Paginación */
+body.dark-mode .pagination .page-link {
+    background-color: #252525;
+    border-color: #444;
+    color: #00C4FF;
+}
+body.dark-mode .pagination .page-item.active .page-link {
+    background-color: #00C4FF;
+    border-color: #00C4FF;
+    color: #1a1a1a;
+}
+body.dark-mode .pagination .page-item.disabled .page-link {
+    color: #555;
+    background-color: #2a2a2a;
+    border-color: #444;
+}
+body.dark-mode .pagination .page-link:hover {
+    background-color: #333;
+    border-color: #555;
+}
+
+/* --- Sidebar (Columna lateral derecha .col-lg-4) --- */
+body.dark-mode .col-lg-4 {
+    color: #c5c5c5;
+}
+
+/* Títulos dentro de la Sidebar (Popular Posts, Categories, Tags) */
+body.dark-mode .col-lg-4 h3.mb-4 {
+    color: #FFFFFF;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+/* Buscador en Sidebar */
+body.dark-mode .col-lg-4 .form-control {
+    background-color: #333;
+    border-color: #444;
+    color: #f1f1f1;
+}
+body.dark-mode .col-lg-4 .form-control::placeholder {
+    color: #888;
+}
+
+/* Popular Posts en Sidebar */
+body.dark-mode .col-lg-4 .d-flex h6 a.text-dark {
+    color: #f1f1f1 !important;
+}
+body.dark-mode .col-lg-4 .d-flex h6 a.text-dark:hover {
+    color: #00C4FF !important;
+}
+body.dark-mode .col-lg-4 .d-flex p.text-muted {
+    color: #888 !important;
+}
+
+/* Categorías en Sidebar */
+body.dark-mode .col-lg-4 .list-unstyled li a.text-dark {
+    color: #f1f1f1 !important;
+}
+body.dark-mode .col-lg-4 .list-unstyled li a.text-dark:hover {
+    color: #00C4FF !important;
+}
+body.dark-mode .col-lg-4 .list-unstyled li span.text-muted {
+    color: #888 !important;
+}
+
+/* Tags en Sidebar */
+body.dark-mode .col-lg-4 .d-flex a.badge.bg-light { /* Más específico */
+    background-color: #333 !important; /* Fondo oscuro para tags */
+    color: #c5c5c5 !important; /* Texto claro */
+    border: 1px solid #444; /* Borde sutil */
+}
+body.dark-mode .col-lg-4 .d-flex a.badge.bg-light:hover {
+    background-color: #444 !important;
+    color: #FFFFFF !important;
+}
+
+/* ================================================
+  ESTILOS MODO OSCURO PARA EL DROPDOWN DEL HEADER
+================================================ */
+
+body.dark-mode .has-children .dropdown {
+  background: #252525;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+  border: 1px solid #333;
+}
+
+body.dark-mode .dropdown a {
+  color: #f1f1f1;
+}
+
+body.dark-mode .dropdown a:hover {
+  background: rgba(0, 196, 255, 0.1);
+  color: #00C4FF;
+}
