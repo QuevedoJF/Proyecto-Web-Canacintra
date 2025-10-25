@@ -9,18 +9,18 @@
 <section class="section">
   <div class="container-fluid">
     <div class="row">
-      <!-- Sidebar izquierdo -->
       <div class="col-lg-2 bg-light p-4">
         <h5 class="mb-4">Panel de Perfil</h5>
         
         <ul class="list-unstyled">
           <li class="mb-3">
-            <a href="{% url 'perfil' %}" class="d-flex align-items-center text-muted">
+            <a href="{% url 'perfil_admi' %}" class="d-flex align-items-center text-muted">
               <i class="bi bi-person-circle me-2"></i>
               <span>Mi perfil</span>
             </a>
           </li>
           <li class="mb-3">
+            <a href="#" class="d-flex align-items-center text-muted">
               <i class="bi bi-newspaper me-2"></i>
               <span>Noticias</span>
             </a>
@@ -38,6 +38,7 @@
             </a>
           </li>
           <li class="mb-3">
+            <a href="{% url 'user' %}" class="d-flex align-items-center text-muted">
               <i class="bi bi-key me-2"></i>
               <span>Usuarios</span>
             </a>
@@ -45,13 +46,13 @@
         </ul>
 
         <hr class="my-4">
+        
+        <a href="{% url 'logout' %}" class="btn btn-danger w-100"> 
           <i class="bi bi-box-arrow-right me-2"></i>
           CERRAR SESIÓN
         </a>
-      </div>
-
-      <!-- Contenido principal -->
-      <div class="col-lg-10 p-5">
+        
+      </div> <div class="col-lg-10 p-5">
         <div class="card border-0 shadow-sm">
           <div class="card-body p-5">
             <h2 class="mb-4">Cambiar Contraseña</h2>
@@ -59,7 +60,6 @@
             <form method="POST">
               {% csrf_token %}
               
-              <!-- Contraseña actual -->
               <div class="mb-4">
                 <label for="old_password" class="form-label">Contraseña Actual</label>
                 <input 
@@ -73,7 +73,6 @@
                 {% endif %}
               </div>
 
-              <!-- Nueva contraseña -->
               <div class="mb-4">
                 <label for="new_password1" class="form-label">Nueva Contraseña</label>
                 <input 
@@ -87,7 +86,6 @@
                 {% endif %}
               </div>
 
-              <!-- Confirmar nueva contraseña -->
               <div class="mb-4">
                 <label for="new_password2" class="form-label">Confirmar Nueva Contraseña</label>
                 <input 
@@ -101,18 +99,16 @@
                 {% endif %}
               </div>
 
-              <!-- Botones -->
               <div class="d-flex gap-3">
                 <button type="submit" class="btn btn-success btn-lg px-5">
                   GUARDAR CAMBIOS
                 </button>
-                <a href="{% url 'perfil' %}" class="btn btn-outline-secondary btn-lg px-4">
+                <a href="{% url 'perfil_admi' %}" class="btn btn-outline-secondary btn-lg px-4">
                   CANCELAR
                 </a>
               </div>
             </form>
 
-            <!-- Mensajes -->
             {% if messages %}
               <div class="mt-4">
                 {% for message in messages %}
@@ -125,8 +121,7 @@
             {% endif %}
           </div>
         </div>
-      </div>
-    </div>
+      </div> </div>
   </div>
 </section>
 {% endblock content %}

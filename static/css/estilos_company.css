@@ -382,6 +382,7 @@ body.dark-mode {
   color: #c5c5c5;
 }
 
+/* --- Estilos Oscuros para Contenido General (About, Vision, Mission) --- */
 body.dark-mode .content-page {
   background-color: #252525;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
@@ -410,12 +411,12 @@ body.dark-mode .content-page li strong {
   color: #f1f1f1;
 }
 
-/* Enlaces generales en modo oscuro (NO afecta al header) */
-body.dark-mode a {
+/* Enlaces generales en modo oscuro (NO afecta al header ni sidebar de perfil) */
+body.dark-mode a:not(.site-menu a):not(.logo):not(.col-lg-2 a):not(.dropdown a) {
   color: #00C4FF;
 }
 
-body.dark-mode a:hover {
+body.dark-mode a:not(.site-menu a):not(.logo):not(.col-lg-2 a):not(.dropdown a):hover {
   color: #6effff;
 }
 
@@ -507,6 +508,7 @@ body.dark-mode .post-meta a:hover {
     color: #00C4FF;
 }
 
+
 /* ================================================
   ESTILOS MODO OSCURO PARA PÁGINAS DE CATEGORÍA v3
 ================================================ */
@@ -569,7 +571,7 @@ body.dark-mode .pagination .page-link:hover {
     border-color: #555;
 }
 
-/* --- Sidebar (Columna lateral derecha .col-lg-4) --- */
+/* --- Sidebar de Categoría (Columna lateral derecha .col-lg-4) --- */
 body.dark-mode .col-lg-4 {
     color: #c5c5c5;
 }
@@ -583,12 +585,12 @@ body.dark-mode .col-lg-4 h3.mb-4 {
 
 /* Buscador en Sidebar */
 body.dark-mode .col-lg-4 .form-control {
-    background-color: #333;
-    border-color: #444;
-    color: #f1f1f1;
+    background-color: #333 !important; /* Refuerzo con !important */
+    border-color: #444 !important;
+    color: #f1f1f1 !important;
 }
 body.dark-mode .col-lg-4 .form-control::placeholder {
-    color: #888;
+    color: #888 !important;
 }
 
 /* Popular Posts en Sidebar */
@@ -614,10 +616,10 @@ body.dark-mode .col-lg-4 .list-unstyled li span.text-muted {
 }
 
 /* Tags en Sidebar */
-body.dark-mode .col-lg-4 .d-flex a.badge.bg-light { /* Más específico */
-    background-color: #333 !important; /* Fondo oscuro para tags */
-    color: #c5c5c5 !important; /* Texto claro */
-    border: 1px solid #444; /* Borde sutil */
+body.dark-mode .col-lg-4 .d-flex a.badge.bg-light {
+    background-color: #333 !important;
+    color: #c5c5c5 !important;
+    border: 1px solid #444;
 }
 body.dark-mode .col-lg-4 .d-flex a.badge.bg-light:hover {
     background-color: #444 !important;
@@ -641,4 +643,297 @@ body.dark-mode .dropdown a {
 body.dark-mode .dropdown a:hover {
   background: rgba(0, 196, 255, 0.1);
   color: #00C4FF;
+}
+
+/* ================================================
+  ESTILOS MODO OSCURO PARA PANEL DE PERFIL v2
+  (Reforzado con !important y selectores precisos)
+================================================ */
+
+/* --- Sidebar del Panel (Panel de Perfil .col-lg-2.bg-light) --- */
+body.dark-mode .col-lg-2.bg-light {
+  background-color: #252525 !important; /* Fondo oscuro, !important GANA a bg-light */
+  color: #c5c5c5 !important; /* Texto claro */
+  border-right: 1px solid #333;
+}
+
+body.dark-mode .col-lg-2 h5 { /* Título "Panel de Perfil" */
+  color: #FFFFFF !important;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+/* Enlaces dentro de la sidebar */
+body.dark-mode .col-lg-2 ul li a {
+  color: #c5c5c5 !important; /* !important GANA a text-dark/text-muted */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 8px 10px; /* Añade padding para hover */
+  border-radius: 4px; /* Redondea el hover */
+  display: flex; /* Asegura alineación con icono */
+  align-items: center;
+}
+/* Hover y enlace activo (el que tiene text-dark en el HTML) */
+body.dark-mode .col-lg-2 ul li a:hover,
+body.dark-mode .col-lg-2 ul li a.text-dark {
+  background-color: rgba(0, 196, 255, 0.1) !important;
+  color: #00C4FF !important; /* Azul cian */
+}
+/* Íconos dentro de los enlaces */
+body.dark-mode .col-lg-2 ul li a i {
+  color: inherit !important; /* Hereda el color del enlace */
+}
+
+/* Línea divisoria */
+body.dark-mode .col-lg-2 hr {
+    border-top: 1px solid #444 !important;
+}
+
+/* Enlace/Botón "CERRAR SESIÓN" en sidebar */
+/* Aplica a ambos casos: <button> o <a> */
+body.dark-mode .col-lg-2 .btn-danger,
+body.dark-mode .col-lg-2 a[href*="logout"] {
+  background-color: #dc3545 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  /* Estilos adicionales si es un enlace simple para que parezca botón */
+  display: block; /* O inline-block si prefieres */
+  text-align: center;
+  padding: 0.375rem 0.75rem; /* Padding similar a btn */
+  border-radius: 0.25rem; /* Bordes redondeados */
+  text-decoration: none !important;
+}
+body.dark-mode .col-lg-2 .btn-danger:hover,
+body.dark-mode .col-lg-2 a[href*="logout"]:hover {
+  background-color: #c82333 !important;
+  color: #FFFFFF !important;
+}
+
+
+/* --- Área Principal del Contenido (.col-lg-10) --- */
+/* (No necesita fondo si el body ya es oscuro) */
+
+/* Tarjeta/Contenedor blanco principal (.card.border-0.shadow-sm) */
+body.dark-mode .col-lg-10 .card {
+  background-color: #252525 !important;
+  color: #c5c5c5 !important;
+  border: 1px solid #333 !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Títulos dentro de la tarjeta */
+body.dark-mode .col-lg-10 .card h1,
+body.dark-mode .col-lg-10 .card h2,
+body.dark-mode .col-lg-10 .card h3,
+body.dark-mode .col-lg-10 .card h5 {
+    color: #FFFFFF !important;
+    border-bottom-color: #444 !important; /* Asegura el color de la línea */
+}
+
+/* --- Formularios --- */
+body.dark-mode .form-label {
+  color: #c5c5c5 !important;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #333 !important;
+  border-color: #555 !important;
+  color: #f1f1f1 !important;
+}
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+  background-color: #444 !important;
+  border-color: #00C4FF !important;
+  color: #f1f1f1 !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 196, 255, 0.25) !important;
+}
+body.dark-mode .form-control::placeholder {
+  color: #888 !important;
+}
+body.dark-mode .form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23c5c5c5' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+body.dark-mode .form-text {
+    color: #888 !important;
+}
+body.dark-mode .text-danger {
+    color: #ff6b6b !important;
+}
+
+/* --- Botones --- */
+body.dark-mode .btn-primary { /* Buscar */
+    background-color: #0056b3 !important;
+    border-color: #0056b3 !important;
+    color: #FFFFFF !important;
+}
+body.dark-mode .btn-primary:hover {
+    background-color: #003b8b !important;
+    border-color: #003b8b !important;
+}
+
+body.dark-mode .btn-success { /* Guardar, Aprobar, Editar */
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+    color: #FFFFFF !important;
+}
+body.dark-mode .btn-success:hover {
+    background-color: #157347 !important;
+    border-color: #146c43 !important;
+}
+
+body.dark-mode .btn-outline-secondary { /* Cancelar, Seleccionar Todos */
+    border-color: #888 !important;
+    color: #c5c5c5 !important;
+}
+body.dark-mode .btn-outline-secondary:hover {
+    background-color: #444 !important;
+    border-color: #aaa !important;
+    color: #f1f1f1 !important;
+}
+
+body.dark-mode .btn-danger { /* Eliminar */
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: #FFFFFF !important;
+}
+body.dark-mode .btn-danger:hover {
+    background-color: #c82333 !important;
+    border-color: #bd2130 !important;
+}
+body.dark-mode .btn-info { /* Ver Detalle */
+    background-color: #0dcaf0 !important;
+    border-color: #0dcaf0 !important;
+    color: #000 !important;
+}
+body.dark-mode .btn-info:hover {
+    background-color: #31d2f2 !important;
+    border-color: #25cff2 !important;
+}
+/* Botón Guardar Cambios oscuro (btn-dark) */
+body.dark-mode .btn-dark {
+    background-color: #555 !important;
+    border-color: #555 !important;
+    color: #f1f1f1 !important;
+}
+body.dark-mode .btn-dark:hover {
+    background-color: #444 !important;
+    border-color: #444 !important;
+}
+
+
+/* --- Elementos Específicos Panel --- */
+body.dark-mode .rounded-circle.bg-secondary { /* Placeholder foto perfil */
+    background-color: #444 !important;
+}
+body.dark-mode .rounded-circle .bi-person-fill {
+    color: #888 !important;
+}
+
+body.dark-mode .card-body h3 { /* Nombre:, Correo: */
+    color: #aaa !important;
+}
+body.dark-mode .card-body p.text-muted { /* Info perfil, texto stats */
+    color: #f1f1f1 !important;
+}
+
+/* Tarjetas Stats Comentarios */
+body.dark-mode .row.mb-4 .card {
+    background-color: #333 !important;
+    border-color: #444 !important;
+}
+body.dark-mode .row.mb-4 .card h3 { /* Números Stats */
+    color: #00C4FF !important; /* Color base azul */
+}
+body.dark-mode .row.mb-4 .card p.text-muted {
+    color: #aaa !important;
+}
+/* Colores específicos números stats */
+body.dark-mode .row.mb-4 .card h3.text-primary { color: #00C4FF !important; }
+body.dark-mode .row.mb-4 .card h3.text-warning { color: #ffc107 !important; }
+body.dark-mode .row.mb-4 .card h3.text-success { color: #198754 !important; }
+
+/* Placeholder "No hay comentarios" */
+body.dark-mode .text-center.py-5 i.bi-chat-left-text {
+    color: #555 !important;
+}
+body.dark-mode .text-center.py-5 p.text-muted {
+    color: #888 !important;
+}
+
+/* Tabla Comentarios */
+body.dark-mode .table {
+    color: #c5c5c5 !important;
+    border-color: #444 !important;
+}
+body.dark-mode .table th,
+body.dark-mode .table td {
+    border-color: #444 !important;
+}
+body.dark-mode .table thead.bg-light {
+    background-color: #333 !important;
+    color: #f1f1f1 !important;
+    border-color: #555 !important;
+}
+body.dark-mode .table-hover tbody tr:hover {
+    background-color: #2c2c2c !important;
+    color: #f1f1f1 !important;
+}
+
+/* Badges Estado Comentarios */
+body.dark-mode .badge.bg-success {
+    background-color: #198754 !important;
+    color: #FFFFFF !important;
+}
+body.dark-mode .badge.bg-warning {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+/* Modal Comentario */
+body.dark-mode .modal-content {
+    background-color: #252525 !important;
+    color: #c5c5c5 !important;
+    border: 1px solid #333 !important;
+}
+body.dark-mode .modal-header {
+    border-bottom-color: #444 !important;
+}
+body.dark-mode .modal-header .modal-title {
+    color: #FFFFFF !important;
+}
+body.dark-mode .modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%) !important;
+}
+body.dark-mode .modal-body hr {
+    border-top: 1px solid #444 !important;
+}
+body.dark-mode .modal-footer {
+    border-top-color: #444 !important;
+}
+
+/* Mensajes Alerta */
+body.dark-mode .alert {
+    border: none !important;
+    color: #FFFFFF !important;
+}
+body.dark-mode .alert-success { background-color: #198754 !important; }
+body.dark-mode .alert-danger { background-color: #dc3545 !important; }
+body.dark-mode .alert-warning { background-color: #ffc107 !important; color: #000 !important; }
+body.dark-mode .alert-info { background-color: #0dcaf0 !important; color: #000 !important; }
+
+body.dark-mode .alert .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%) !important;
+}
+
+/* Checkbox Comentarios */
+body.dark-mode .form-check-input {
+    background-color: #333 !important;
+    border-color: #555 !important;
+}
+body.dark-mode .form-check-input:checked {
+    background-color: #00C4FF !important;
+    border-color: #00C4FF !important;
+}
+body.dark-mode .form-check-label {
+    color: #c5c5c5 !important;
 }

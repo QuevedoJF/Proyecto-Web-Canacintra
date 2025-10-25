@@ -15,13 +15,13 @@
         
         <ul class="list-unstyled">
           <li class="mb-3">
-            <a href="{% url 'perfil' %}" class="d-flex align-items-center text-muted">
+            <a href="{% url 'perfil_admi' %}" class="d-flex align-items-center text-muted">
               <i class="bi bi-person-circle me-2"></i>
               <span>Mi perfil</span>
             </a>
           </li>
           <li class="mb-3">
-            <a href="{% url 'mis_noticias' %}" class="d-flex align-items-center text-muted">
+            <a href="#" class="d-flex align-items-center text-muted">
               <i class="bi bi-newspaper me-2"></i>
               <span>Noticias</span>
             </a>
@@ -36,13 +36,13 @@
             </a>
           </li>
           <li class="mb-3">
-            <a href="{% url 'cambiar_contrasena' %}" class="d-flex align-items-center text-muted">
+            <a href="{% url 'cambiarcontrasena' %}" class="d-flex align-items-center text-muted">
               <i class="bi bi-folder me-2"></i>
               <span>Cambiar Contraseña</span>
             </a>
           </li>
           <li class="mb-3">
-            <a href="{% url 'usuarios' %}" class="d-flex align-items-center text-muted">
+            <a href="#" class="d-flex align-items-center text-muted">
               <i class="bi bi-key me-2"></i>
               <span>Usuarios</span>
             </a>
@@ -299,7 +299,7 @@
     }
     
     if (confirm(`¿Aprobar ${checked} comentario(s)?`)) {
-      form.action = "{% url 'aprobar_multiples' %}";
+      form.action = "#";
       form.submit();
     }
   }
@@ -315,7 +315,7 @@
     }
     
     if (confirm(`¿Eliminar ${checked} comentario(s)? Esta acción no se puede deshacer.`)) {
-      form.action = "{% url 'eliminar_multiples' %}";
+      form.action = "#";
       form.submit();
     }
   }
