@@ -21,5 +21,4 @@ path("identidad/", views.identidad, name="identidad"),
     path('about/', views.about_view, name='about'),
     path('vision/', views.vision_view, name='vision'),
     path('mission/', views.mission_view, name='mission'),
-
 ]

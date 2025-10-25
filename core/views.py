@@ -3,6 +3,9 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.shortcuts import render, redirect
+from django.contrib.auth import logout
+# ... (tus otras importaciones)
 
 # Create your views here.
 def index(request):
@@ -83,10 +86,14 @@ def register_view(request):
     return render(request, 'login.html')
 
 def about_view(request):
-    return render(request, 'core/about.html') 
+    return render(request, 'core/about.html')
 
 def vision_view(request):
     return render(request, 'core/vision.html')
 
 def mission_view(request):
     return render(request, 'core/mission.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
