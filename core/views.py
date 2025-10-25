@@ -25,8 +25,8 @@ def carrusel_view(request):
 
 
 
-def perfil(request):
-    return render(request, 'core/perfil.html')
+def perfil_admi(request):
+    return render(request, 'core/perfil_admi.html')
 
 def login(request):
     return render(request, 'core/login.html')
@@ -40,9 +40,6 @@ def categoria2(request):
 def categoria3(request):
     return render(request, 'core/categoria3.html')
 
-def perfil(request):
-    return render(request, 'core/perfil.html')
-
 def actualizarperfil(request):
     return render(request, 'core/actualizarperfil.html')
 
@@ -54,7 +51,6 @@ def cambiarcontrasena(request):
 
 def configuracion(request):
     return render(request, 'core/configuracion.html')
-
 
 def login_view(request):
     if request.method == 'POST':
@@ -86,7 +82,11 @@ def register_view(request):
 
     return render(request, 'login.html')
 
-def logout_view(request):
-    logout(request)
-    return redirect('login')
+def about_view(request):
+    return render(request, 'core/about.html') 
 
+def vision_view(request):
+    return render(request, 'core/vision.html')
+
+def mission_view(request):
+    return render(request, 'core/mission.html')

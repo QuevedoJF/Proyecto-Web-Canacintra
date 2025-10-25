@@ -1,0 +1,125 @@
+/* --- Estilos Globales --- */
+body {
+    /* El fondo oscuro de tu imagen */
+    background-color: #282E33;
+    /* El color de texto principal */
+    color: #ADB5BD;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    color: #00C4FF; /* Color cian para enlaces */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Encabezado / Navegación (Para poder ir entre páginas) --- */
+.site-header {
+    background-color: #1f2326;
+    padding: 10px 0;
+    border-bottom: 2px solid #00C4FF;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.site-header nav a {
+    color: #FFFFFF;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+.site-header nav a:hover {
+    background-color: #00C4FF;
+    color: #282E33;
+    text-decoration: none;
+}
+
+/* --- Contenido de las Páginas (About, Mision, Vision) --- */
+.content-page {
+    background-color: #2f363b;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+.content-page h1 {
+    color: #FFFFFF;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+}
+
+.content-page p {
+    font-size: 1.1em;
+}
+
+/* --- Pie de Página (Footer) --- */
+.site-footer {
+    background-color: #1f2326;
+    padding: 40px 0;
+    margin-top: 40px;
+    border-top: 1px solid #444;
+}
+
+/* --- Widget "COMPANY" (Lo que pediste en la imagen) --- */
+.footer-widget {
+    /* Mantenemos el fondo oscuro original por si acaso */
+    /* background-color: #282E33; */
+    padding: 15px;
+}
+
+/* Estilo del título "COMPANY" */
+.footer-widget h3 {
+    color: #00C4FF; /* Color cian */
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    /* La línea azul debajo del título */
+    border-bottom: 2px solid #00C4FF;
+    display: inline-block; /* Para que la línea no ocupe todo el ancho */
+}
+
+/* Estilo de la lista de enlaces */
+.footer-widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-widget li {
+    margin-bottom: 10px;
+}
+
+/* Estilo de los enlaces (About us, Vision, Mission) */
+.footer-widget a {
+    color: #ADB5BD; /* Color gris claro */
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.footer-widget a:hover {
+    color: #FFFFFF; /* Se pone blanco al pasar el ratón */
+    text-decoration: none;
+}
