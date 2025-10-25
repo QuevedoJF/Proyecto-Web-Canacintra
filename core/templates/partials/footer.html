@@ -1,4 +1,3 @@
-<!-- Este es el footer(base de abajo) de la pagina --> 
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
@@ -9,10 +8,10 @@
     <style>
         /* ESTILOS CSS PARA EL FOOTER */
         .main-footer {
-            background-color: #263238; /* Color de fondo ligeramente más oscuro y moderno */
-            color: #eceff1; /* Blanco hueso para el texto principal */
-            padding: 70px 0 30px; /* Más espacio vertical */
-            font-family: 'Poppins', sans-serif; /* Nueva tipografía */
+            background-color: #263238; 
+            color: #eceff1; 
+            padding: 70px 0 30px; 
+            font-family: 'Poppins', sans-serif; 
         }
 
         .footer-content {
@@ -21,23 +20,23 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-            flex-wrap: wrap; /* Para hacerlo responsive en pantallas pequeñas */
+            flex-wrap: wrap; 
         }
 
         .footer-col {
             margin-bottom: 40px;
-            min-width: 250px; /* Ancho mínimo para las columnas */
+            min-width: 250px; 
             padding-right: 20px;
         }
 
         /* Títulos de las secciones */
         .footer-col h4 {
-            color: #00bcd4; /* Color de acento moderno (cyan) */
+            color: #00bcd4; 
             font-size: 1.1em;
-            font-weight: 700; /* Resalta el título */
+            font-weight: 700;
             margin-bottom: 25px;
-            border-bottom: 2px solid #00bcd4; /* Subrayado sutil */
-            display: inline-block; /* Para que el subrayado se ajuste al texto */
+            border-bottom: 2px solid #00bcd4;
+            display: inline-block; 
             padding-bottom: 5px;
         }
 
@@ -45,7 +44,7 @@
         .footer-col p {
             font-size: 0.9em;
             line-height: 1.6;
-            color: #b0bec5; /* Color sutil para el texto descriptivo */
+            color: #b0bec5; 
             font-weight: 300;
         }
 
@@ -63,41 +62,54 @@
             color: #b0bec5;
             text-decoration: none;
             font-size: 0.9em;
-            transition: color 0.3s ease, padding-left 0.3s ease; /* Transición para el hover */
+            transition: color 0.3s ease, padding-left 0.3s ease; 
             display: block;
         }
 
         .footer-col ul li a:hover {
-            color: #00bcd4; /* Color de acento en hover */
-            padding-left: 5px; /* Pequeño desplazamiento a la derecha en hover */
+            color: #00bcd4; 
+            padding-left: 5px; 
         }
 
-        /* Iconos Sociales */
+        /* --- CSS DE ICONOS CORREGIDO --- */
+        .social-icons {
+            margin-top: 25px;
+            display: flex; /* Los pone en fila */
+            align-items: center; /* Los alinea verticalmente */
+            gap: 10px; /* Espacio entre los círculos */
+        }
+        
         .social-icons a {
-            display: inline-flex; /* Usamos flex para centrar mejor el icono */
+            display: inline-flex; 
             align-items: center;
             justify-content: center;
             width: 40px;
             height: 40px;
-            background-color: #37474f; /* Un fondo para los iconos */
+            background-color: #37474f; 
             color: #eceff1;
-            border-radius: 50%; /* Iconos circulares */
-            margin-right: 10px;
+            border-radius: 50%; 
+            /* margin-right: 10px; (usamos 'gap' arriba) */
             transition: background-color 0.3s ease, color 0.3s ease;
             text-decoration: none;
-            font-size: 1.2em;
+        }
+        
+        /* Regla para las IMÁGENES dentro de los círculos */
+        .social-icons a img {
+            width: 24px;  /* Ajusta el tamaño de tu imagen (ej. 24px) */
+            height: 24px; /* para que quepa bien en el círculo de 40px */
+            object-fit: contain;
         }
 
         .social-icons a:hover {
-            background-color: #00bcd4; /* Color de acento en hover */
-            color: #263238; /* Texto oscuro en hover */
+            background-color: #00bcd4; 
+            color: #263238; 
         }
         
         /* Contenido de Entradas Recientes */
         .post-entry {
             display: flex;
             margin-bottom: 20px;
-            text-decoration: none; /* Quitamos el subrayado del enlace del post */
+            text-decoration: none;
         }
 
         .post-entry img {
@@ -105,13 +117,13 @@
             height: 60px;
             object-fit: cover;
             margin-right: 15px;
-            border-radius: 4px; /* Bordes suaves */
+            border-radius: 4px;
             opacity: 0.8;
             transition: opacity 0.3s ease;
         }
 
         .post-entry:hover img {
-             opacity: 1; /* Imagen se vuelve más opaca en hover */
+            opacity: 1;
         }
 
         .post-info span {
@@ -130,7 +142,7 @@
         }
 
         .post-entry:hover strong {
-            color: #00bcd4; /* Título del post en color de acento en hover */
+            color: #00bcd4; 
         }
 
         /* Seccion de Copyright */
@@ -138,10 +150,10 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px 20px 0;
-            border-top: 1px solid #37474f; /* Separador sutil */
+            border-top: 1px solid #37474f; 
             text-align: center;
             font-size: 0.8em;
-            color: #78909c; /* Color más discreto */
+            color: #78909c; 
         }
         
         /* Media query básico para mejor responsividad */
@@ -159,71 +171,78 @@
                 display: block; /* Para centrar */
                 border: none;
             }
+            /* Centra los iconos en móvil */
+            .social-icons {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
 
 <footer class="main-footer">
+    
     <div class="footer-content">
 
         <div class="footer-col footer-about">
-            <h4>ABOUT</h4>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-            <div class="social-icons" style="margin-top: 25px;">
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-facebook-f"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-pinterest"></i></a>
-            </div>
-        </div>
-
-        <div class="footer-col footer-company">
-            <h4>COMPANY</h4>
-            <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Vision</a></li>
-                <li><a href="#">Mission</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col footer-posts">
-            <h4>RECENT POST ENTRY</h4>
-
-            <a href="#" class="post-entry">
-                <img src="{% static 'images/post-image-1.jpg' %}" alt="Cool Way to Wear Socks and Sandals">
-                <div class="post-info">
-                    <strong>There's a Cool New Way for Men to Wear Socks and Sandals</strong>
-                    <span>March 15, 2018</span>
-                </div>
-            </a>
-
-            <a href="#" class="post-entry">
-                <img src="{% static 'images/post-image-2.jpg' %}" alt="Cool Way to Wear Socks and Sandals">
-                <div class="post-info">
-                    <strong>There's a Cool New Way for Men to Wear Socks and Sandals</strong>
-                    <span>March 15, 2018</span>
-                </div>
-            </a>
+            <h4>CANACINSTRA</h4>
+            <p>SEDE NACIONAL CANACINTRA
+AV. SAN ANTONIO 256, AMPLIACIÓN NÁPOLES, 03849, CDMX.</p>
             
-            <a href="#" class="post-entry">
-                <img src="{% static 'images/post-image-3.jpg' %}" alt="Cool Way to Wear Socks and Sandals">
+<div class="social-icons">
+    
+    <a href="https://x.com/canacintramex" target="_blank">
+        <img src="{% static 'images/X.png' %}" alt="Twitter">
+    </a>
+
+    <a href="https://www.facebook.com/CANACINTRAMexico" target="_blank">
+        <img src="{% static 'images/facebook.png' %}" alt="Facebook">
+    </a>
+
+    <a href="https://www.youtube.com/@canacintraoficial" target="_blank">
+        <img src="{% static 'images/youtube.png' %}" alt="Youtube">
+    </a>
+
+</div>
+    </div> 
+        <div class="footer-col footer-company">
+            <h4>Conoce más sobre nosotros..</h4>
+            <ul>
+                <li><a href="{% url 'about' %}">About us</a></li>
+                <li><a href="{% url 'vision' %}">Vision</a></li>
+                <li><a href="{% url 'mission' %}">Mission</a></li>
+            </ul>
+        </div> <div class="footer-col footer-posts">
+
+            <h4>Noticias mas vistas</h4>
+            <a href="https://latam.ign.com/ghost-of-tsushima" class="post-entry">
+                <img src="{% static 'images/ghost.jpg' %}" alt="Cool Way to Wear Socks and Sandals">
                 <div class="post-info">
-                    <strong>There's a Cool New Way for Men to Wear Socks and Sandals</strong>
-                    <span>March 15, 2018</span>
+                    <strong>el juego gira en torno al samurái Jin Sakai (Daisuke Tsuji), uno de los pocos supervivientes de la primera invasión mongola a Japón.</strong>
+                    <span>17 de julio de 2020</span>
                 </div>
             </a>
 
-        </div>
-    </div>
+            <a href="https://mimundodelibros.blogspot.com/" class="post-entry">
+                <img src="{% static 'images/literatura.jpg' %}" alt="Cool Way to Wear Socks and Sandals">
+                <div class="post-info">
+                    <strong>Mundo de Libros es un espacio único para viajar y conocer nuevos lugares a través de la lectura.</strong>
+                    <span>31 de octubre de 2020</span>
+                </div>
+            </a>
 
-    <div class="footer-bottom">
-        <p>Copyright © 2025. All Rights Reserved — Designed with love by <a href="#" style="color: #00bcd4; text-decoration: none;">Untree.co</a>. Distributed by <a href="#" style="color: #00bcd4; text-decoration: none;">ThemeWagon</a></p>
-    </div>
+            <a href="https://www.todocuadros.com.mx/pages/vincent-van-gogh" class="post-entry">
+                <img src="{% static 'images/pinturas.jpg' %}" alt="Cool Way to Wear Socks and Sandals">
+                <div class="post-info">
+                    <strong>Vincent van Gogh (1853–1890) fue un pintor neerlandés cuya obra marcó un punto de inflexión en la historia del arte moderno.</strong>
+                    <span>29 de julio de 1890</span>
+                </div>
+            </a>
+        </div> 
+    </div> 
+<div class="footer-bottom">
+<p>© 2025 CANACINTRA |  <a href="#" style="color: #00bcd4; text-decoration: none;">Copyright</a></p>
+</div>
 </footer>
 </body>
 </html>

@@ -1,125 +1,188 @@
+/*
+  NUEVO DISEÑO v3: Limpio, minimalista, con acento "Teal"
+  Importamos una fuente más profesional desde Google Fonts
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
 /* --- Estilos Globales --- */
 body {
-    /* El fondo oscuro de tu imagen */
-    background-color: #282E33;
-    /* El color de texto principal */
-    color: #ADB5BD;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F8F9FA; /* Fondo gris muy claro */
+    color: #5A5A5A; /* Color de texto principal (gris suave) */
+    font-family: 'Lato', sans-serif; /* Nueva fuente */
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.7;
 }
-
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
 }
-
 a {
-    color: #00C4FF; /* Color cian para enlaces */
+    color: #00796B; /* Acento "Teal" para enlaces */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #004D40; /* Teal más oscuro */
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* --- Encabezado / Navegación (Para poder ir entre páginas) --- */
+/* --- Encabezado / Navegación (sin cambios) --- */
 .site-header {
     background-color: #1f2326;
     padding: 10px 0;
-    border-bottom: 2px solid #00C4FF;
+    border-bottom: 2px solid #00C4FF; /* Mantenemos el azul del header */
 }
-
 .site-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .site-header .logo {
     font-size: 1.5em;
     font-weight: bold;
     color: #FFFFFF;
 }
-
 .site-header nav a {
     color: #FFFFFF;
     padding: 10px 15px;
     font-weight: bold;
 }
-
 .site-header nav a:hover {
     background-color: #00C4FF;
     color: #282E33;
     text-decoration: none;
 }
 
-/* --- Contenido de las Páginas (About, Mision, Vision) --- */
+/* --- Contenido de las Páginas (Diseño Nuevo) --- */
 .content-page {
-    background-color: #2f363b;
-    padding: 30px;
+    background-color: #FFFFFF;
+    padding: 40px 50px;
     margin-top: 30px;
+    margin-bottom: 30px;
     border-radius: 8px;
+    /* Sombra muy sutil para dar profundidad */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+/* Párrafo principal (lead) */
+.content-page p.lead {
+    font-size: 1.25em;
+    color: #333;
+    font-weight: 300; /* Más ligero */
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .content-page h1 {
-    color: #FFFFFF;
-    border-bottom: 2px solid #555;
-    padding-bottom: 10px;
+    color: #2C3E50; /* Color pizarra oscuro */
+    font-weight: 700;
+    font-size: 2.8em;
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 
 .content-page p {
     font-size: 1.1em;
+    margin-bottom: 20px;
 }
 
-/* --- Pie de Página (Footer) --- */
-.site-footer {
-    background-color: #1f2326;
-    padding: 40px 0;
+/* --- Subtítulos (Objetivos, Historia, etc.) --- */
+.content-page h2 {
+    color: #00796B; /* Acento Teal para subtítulos */
+    font-weight: 700;
+    font-size: 1.8em;
     margin-top: 40px;
-    border-top: 1px solid #444;
+    margin-bottom: 20px;
+    /* Pequeña línea decorativa a la izquierda */
+    border-left: 4px solid #00796B;
+    padding-left: 15px;
 }
 
-/* --- Widget "COMPANY" (Lo que pediste en la imagen) --- */
-.footer-widget {
-    /* Mantenemos el fondo oscuro original por si acaso */
-    /* background-color: #282E33; */
-    padding: 15px;
-}
-
-/* Estilo del título "COMPANY" */
-.footer-widget h3 {
-    color: #00C4FF; /* Color cian */
-    font-size: 1.2em;
-    text-transform: uppercase;
-    margin: 0 0 15px 0;
-    padding-bottom: 10px;
-    /* La línea azul debajo del título */
-    border-bottom: 2px solid #00C4FF;
-    display: inline-block; /* Para que la línea no ocupe todo el ancho */
-}
-
-/* Estilo de la lista de enlaces */
-.footer-widget ul {
+/* --- Listas (Valores y Beneficios) --- */
+.content-page ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-.footer-widget li {
-    margin-bottom: 10px;
-}
-
-/* Estilo de los enlaces (About us, Vision, Mission) */
-.footer-widget a {
-    color: #ADB5BD; /* Color gris claro */
-    text-decoration: none;
+.content-page li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
     font-size: 1.1em;
 }
 
-.footer-widget a:hover {
-    color: #FFFFFF; /* Se pone blanco al pasar el ratón */
-    text-decoration: none;
+/* Viñeta personalizada (Checkmark en color teal) */
+.content-page li::before {
+    content: '›'; /* Símbolo "mayor que" o flecha */
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: #00796B; /* Acento Teal */
+    font-weight: 700;
+    font-size: 1.8em; /* Más grande */
 }
+
+.content-page li strong {
+    color: #333; /* Texto strong más oscuro */
+    font-weight: 700;
+}
+
+/* --- Call To Action (CTA) --- */
+.cta-box {
+    background-color: #F8F9FA; /* Fondo gris claro */
+    border: 1px solid #E0E0E0; /* Borde suave */
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 50px;
+    transition: box-shadow 0.3s ease;
+}
+
+.cta-box:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Sombra al pasar el ratón */
+}
+
+.cta-box h3 {
+    color: #2C3E50; /* Pizarra oscuro */
+    font-size: 1.6em;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+}
+
+.cta-box p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: #5A5A5A;
+}
+
+.cta-button {
+    background-color: #00796B; /* Botón en Teal */
+    color: #FFFFFF;
+    padding: 14px 35px;
+    border-radius: 50px; /* Botón "píldora" redondeado */
+    font-weight: 700;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 121, 107, 0.3); /* Sombra del color del botón */
+}
+
+.cta-button:hover {
+    background-color: #004D40; /* Teal más oscuro */
+    color: #FFFFFF;
+    text-decoration: none;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 121, 107, 0.5); /* Sombra más fuerte */
+}
+
+/* --- ESTILOS DEL FOOTER ELIMINADOS ---
+   Ya no se necesitan estilos para .site-footer 
+   ni .footer-widget
+*/
