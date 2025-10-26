@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}Categoría 3{% endblock %}
+{% block title %}Categoría - Naturaleza{% endblock %}
 
 {% block content %}
 
@@ -13,22 +13,22 @@
       <div class="col-lg-8">
         <div class="row mb-4">
           <div class="col-12">
-            <h2 class="mb-4">Category: Business</h2>
+            <h2 class="mb-4">Category: Naturaleza</h2>
           </div>
         </div>
 
         <!-- Post Item -->
         <div class="row mb-5">
           <div class="col-md-4">
-            <img src="{% static 'images/img_1_horizontal.jpg' %}" alt="Image" class="img-fluid rounded">
+            <img src="{% static 'images/paisajes.jpg' %}" alt="Image" class="img-fluid rounded">
           </div>
           <div class="col-md-8">
-            <span class="text-muted">Apr. 14th, 2022 • <strong>Business</strong></span>
+            <span class="text-muted">28 de mayo de 2025 • <strong>Naturaleza</strong></span>
             <h3 class="mt-2">
-              <a href="single.html" class="text-dark">Thought you loved Python? Wait until you meet Rust</a>
+              <a href="single.html" class="text-dark">Naturaleza - Características, elementos e importancia.</a>
             </h3>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.
+              La naturaleza es un concepto abstracto que se refiere al conjunto de fenómenos del universo independientes de la actividad humana.
             </p>
             <p>
               <a href="single.html" class="btn btn-outline-primary">READ MORE</a>
@@ -39,15 +39,15 @@
         <!-- Post Item -->
         <div class="row mb-5">
           <div class="col-md-4">
-            <img src="{% static 'images/img_2_horizontal.jpg' %}" alt="Image" class="img-fluid rounded">
+            <img src="{% static 'images/bosque.jpg' %}" alt="Image" class="img-fluid rounded">
           </div>
           <div class="col-md-8">
-            <span class="text-muted">Apr. 14th, 2022 • <strong>Business</strong></span>
+            <span class="text-muted">29 de noviembre de 2024  • <strong>Naturaleza</strong></span>
             <h3 class="mt-2">
-              <a href="single.html" class="text-dark">Thought you loved Python? Wait until you meet Rust</a>
+              <a href="single.html" class="text-dark">La biodiversidad: naturaleza con otro nombre</a>
             </h3>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.
+              La biodiversidad sostiene la salud planetaria y da forma a todo -desde el sabor de un grano, la hebra de una tela o el trago de agua que sustentan nuestras necesidades más básicas. Sin embargo, la...
             </p>
             <p>
               <a href="single.html" class="btn btn-outline-primary">READ MORE</a>
@@ -58,16 +58,15 @@
         <!-- Post Item -->
         <div class="row mb-5">
           <div class="col-md-4">
-            <img src="{% static 'images/img_3_horizontal.jpg' %}" alt="Image" class="img-fluid rounded">
+            <img src="{% static 'images/naturaleza.jpg' %}" alt="Image" class="img-fluid rounded">
           </div>
           <div class="col-md-8">
-            <span class="text-muted">Apr. 14th, 2022 • <strong>Business</strong></span>
+            <span class="text-muted">29 de diciembre de 2020 • <strong>Naturaleza</strong></span>
             <h3 class="mt-2">
-              <a href="single.html" class="text-dark">Thought you loved Python? Wait until you meet Rust</a>
+              <a href="single.html" class="text-dark">Día Mundial de la Naturaleza | Dirección General del Servicio de Información....</a>
             </h3>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.
-            </p>
+              La palabra naturaleza deriva del vocablo latín: natura, que a su vez hace referencia al verbo nasci, el cual significa “nacer”. Lo cual de una forma muy atinada describe lo que la naturaleza representa para la humanidad.
             <p>
               <a href="single.html" class="btn btn-outline-primary">READ MORE</a>
             </p>
@@ -77,15 +76,15 @@
         <!-- Post Item -->
         <div class="row mb-5">
           <div class="col-md-4">
-            <img src="{% static 'images/img_4_horizontal.jpg' %}" alt="Image" class="img-fluid rounded">
+            <img src="{% static 'images/puesta_de_sol.jpg' %}" alt="Image" class="img-fluid rounded">
           </div>
           <div class="col-md-8">
-            <span class="text-muted">Apr. 14th, 2022 • <strong>Business</strong></span>
+            <span class="text-muted">24 de febrero de 2023 • <strong>Naturaleza</strong></span>
             <h3 class="mt-2">
-              <a href="single.html" class="text-dark">Thought you loved Python? Wait until you meet Rust</a>
+              <a href="single.html" class="text-dark">10 lugares naturales del mundo que debes visitar | Nat...</a>
             </h3>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.
+              En los Balcanes búlgaros, el Parque Nacional Pirin ocupa 38 mil hectáreas, de acuerdo con información de Unesco. Este sitio montañoso de piedra caliza posee picos que...
             </p>
             <p>
               <a href="single.html" class="btn btn-outline-primary">READ MORE</a>
@@ -101,11 +100,11 @@
                 <li class="page-item disabled">
                   <a class="page-link" href="#" tabindex="-1">Previous</a>
                 </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#">Next</a>
+                <li class="page-item active"><a class="page-link" href="{% url 'categoria1' %}">1</a></li>
+                <li class="page-item active"><a class="page-link" href="{% url 'categoria2' %}">2</a></li>
+                <li class="page-item active"><a class="page-link" href="{% url 'categoria3' %}">3</a></li>
+                <li class="page-item active">
+                  <a class="page-link" href="#" tabindex="1">Next</a>
                 </li>
               </ul>
             </nav>
@@ -131,75 +130,63 @@
           <!-- Popular Post Item -->
           <div class="d-flex mb-4">
             <div class="me-3">
-              <img src="{% static 'images/img_1_horizontal.jpg' %}" alt="Image" class="img-fluid" style="width: 80px; height: 80px; object-fit: cover;">
+              <img src="{% static 'images/paisaje_poppular1.jpg' %}" alt="Image" class="img-fluid" style="width: 80px; height: 80px; object-fit: cover;">
             </div>
             <div>
               <h6>
-                <a href="single.html" class="text-dark">There's a Cool New Way for Men to Wear Socks and Sandals</a>
+                <a href="single.html" class="text-dark">10 lugares naturales del mundo que debes visitar | Nat...</a>
               </h6>
-              <p class="text-muted small mb-0">March 15, 2018</p>
+              <p class="text-muted small mb-0">24 de febrero de 2023 </p>
             </div>
           </div>
 
           <!-- Popular Post Item -->
           <div class="d-flex mb-4">
             <div class="me-3">
-              <img src="{% static 'images/img_2_horizontal.jpg' %}" alt="Image" class="img-fluid" style="width: 80px; height: 80px; object-fit: cover;">
+              <img src="{% static 'images/paisaje_poppular2.jpg' %}" alt="Image" class="img-fluid" style="width: 125px; height: 80px; object-fit: cover;">
             </div>
             <div>
               <h6>
-                <a href="single.html" class="text-dark">There's a Cool New Way for Men to Wear Socks and Sandals</a>
+                <a href="single.html" class="text-dark">Día Mundial de la Naturaleza | Dirección General del Servicio de Información....</a>
               </h6>
-              <p class="text-muted small mb-0">March 15, 2018</p>
+              <p class="text-muted small mb-0">29 de diciembre de 2020</p>
             </div>
           </div>
 
           <!-- Popular Post Item -->
           <div class="d-flex mb-4">
             <div class="me-3">
-              <img src="{% static 'images/img_3_horizontal.jpg' %}" alt="Image" class="img-fluid" style="width: 80px; height: 80px; object-fit: cover;">
+              <img src="{% static 'images/paisaje_poppular3.jpg' %}" alt="Image" class="img-fluid" style="width: 80px; height: 80px; object-fit: cover;">
             </div>
             <div>
               <h6>
-                <a href="single.html" class="text-dark">There's a Cool New Way for Men to Wear Socks and Sandals</a>
+                <a href="single.html" class="text-dark">Naturaleza - Características, elementos e importancia.</a>
               </h6>
-              <p class="text-muted small mb-0">March 15, 2018</p>
+              <p class="text-muted small mb-0">28 de mayo de 2025</p>
             </div>
           </div>
         </div>
 
-        <!-- Categorías -->
+<!-- Categorías -->
         <div class="mb-5">
           <h3 class="mb-4">Categories</h3>
           <ul class="list-unstyled">
             <li class="mb-2">
-              <a href="#" class="d-flex justify-content-between text-dark">
-                <span>Business</span>
+              <a href="{% url 'categoria1' %}" class="d-flex justify-content-between text-dark">
+                <span>Gaming</span>
                 <span class="text-muted">(12)</span>
               </a>
             </li>
             <li class="mb-2">
-              <a href="#" class="d-flex justify-content-between text-dark">
-                <span>Travel</span>
+              <a href="{% url 'categoria2' %}" class="d-flex justify-content-between text-dark">
+                <span>Naturaleza</span>
                 <span class="text-muted">(22)</span>
               </a>
             </li>
             <li class="mb-2">
-              <a href="#" class="d-flex justify-content-between text-dark">
-                <span>Design</span>
+              <a href="{% url 'categoria3' %}" class="d-flex justify-content-between text-dark">
+                <span>Literatura</span>
                 <span class="text-muted">(37)</span>
-              </a>
-            </li>
-            <li class="mb-2">
-              <a href="#" class="d-flex justify-content-between text-dark">
-                <span>Food</span>
-                <span class="text-muted">(42)</span>
-              </a>
-            </li>
-            <li class="mb-2">
-              <a href="#" class="d-flex justify-content-between text-dark">
-                <span>Technology</span>
-                <span class="text-muted">(14)</span>
               </a>
             </li>
           </ul>
@@ -209,14 +196,9 @@
         <div class="mb-5">
           <h3 class="mb-4">Tags</h3>
           <div class="d-flex flex-wrap gap-2">
-            <a href="#" class="badge bg-light text-dark p-2">Travel</a>
-            <a href="#" class="badge bg-light text-dark p-2">Adventure</a>
-            <a href="#" class="badge bg-light text-dark p-2">Food</a>
-            <a href="#" class="badge bg-light text-dark p-2">Lifestyle</a>
-            <a href="#" class="badge bg-light text-dark p-2">Business</a>
-            <a href="#" class="badge bg-light text-dark p-2">Freelancing</a>
-            <a href="#" class="badge bg-light text-dark p-2">Travel</a>
-            <a href="#" class="badge bg-light text-dark p-2">Adventure</a>
+            <a href="{% url 'categoria1' %}" class="badge bg-light text-dark p-2">Juegos</a>
+            <a href="{% url 'categoria2' %}" class="badge bg-light text-dark p-2">Libros</a>
+            <a href="{% url 'categoria3' %}" class="badge bg-light text-dark p-2">Naturaleza</a>
           </div>
         </div>
       </div>

@@ -43,6 +43,7 @@ def categoria2(request):
 def categoria3(request):
     return render(request, 'core/categoria3.html')
 
+
 def about_view(request):
     return render(request, 'core/about.html')
 

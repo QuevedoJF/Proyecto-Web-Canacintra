@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}Categoría 2{% endblock %}
+{% block title %}Categoría - Literatura{% endblock %}
 
 {% block content %}
 
@@ -13,22 +13,22 @@
       <div class="col-lg-8">
         <div class="row mb-4">
           <div class="col-12">
-            <h2 class="mb-4">Category: Business</h2>
+            <h2 class="mb-4">Category: Literatura</h2>
           </div>
         </div>
 
         <!-- Post Item -->
         <div class="row mb-5">
           <div class="col-md-4">
-            <img src="{% static 'images/img_1_horizontal.jpg' %}" alt="Image" class="img-fluid rounded">
+            <img src="{% static 'images/libro.jpg' %}" alt="Image" class="img-fluid rounded">
           </div>
           <div class="col-md-8">
-            <span class="text-muted">Apr. 14th, 2022 • <strong>Business</strong></span>
+            <span class="text-muted">5 de mayo de 2020 • <strong>Literatura</strong></span>
             <h3 class="mt-2">
-              <a href="single.html" class="text-dark">Thought you loved Python? Wait until you meet Rust</a>
+              <a href="single.html" class="text-dark">Literatura - Qué es, características, tipos e historia</a>
             </h3>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.
+              Nunca resulta fácil justificar qué es y qué no es literatura, ya que se trata de un concepto construido históricamente y se han escrito textos que hoy se consideran literarios antes de que su
             </p>
             <p>
               <a href="single.html" class="btn btn-outline-primary">READ MORE</a>
@@ -39,15 +39,15 @@
         <!-- Post Item -->
         <div class="row mb-5">
           <div class="col-md-4">
-            <img src="{% static 'images/img_2_horizontal.jpg' %}" alt="Image" class="img-fluid rounded">
+            <img src="{% static 'images/literatura.jpg' %}" alt="Image" class="img-fluid rounded">
           </div>
           <div class="col-md-8">
-            <span class="text-muted">Apr. 14th, 2022 • <strong>Business</strong></span>
+            <span class="text-muted">25 de noviembre de 2019 • <strong>Literatura</strong></span>
             <h3 class="mt-2">
-              <a href="single.html" class="text-dark">Thought you loved Python? Wait until you meet Rust</a>
+              <a href="single.html" class="text-dark">La literatura como sistema</a>
             </h3>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.
+              No estaremos en presencia de una 'literatura' si sólo contamos con desperdigadas, aisladas obras literarias, por excelentes que éstas sean; en cambio, ellas se integrarán a un sistema que es eso, una 'literatura' en el momento en que sean absorbidas por la crítica dentro d...
             </p>
             <p>
               <a href="single.html" class="btn btn-outline-primary">READ MORE</a>
@@ -58,15 +58,15 @@
         <!-- Post Item -->
         <div class="row mb-5">
           <div class="col-md-4">
-            <img src="{% static 'images/img_3_horizontal.jpg' %}" alt="Image" class="img-fluid rounded">
+            <img src="{% static 'images/libro_literatura.jpg' %}" alt="Image" class="img-fluid rounded">
           </div>
           <div class="col-md-8">
-            <span class="text-muted">Apr. 14th, 2022 • <strong>Business</strong></span>
+            <span class="text-muted">12 de noviembre de 2019 • <strong>Literatura</strong></span>
             <h3 class="mt-2">
-              <a href="single.html" class="text-dark">Thought you loved Python? Wait until you meet Rust</a>
+              <a href="single.html" class="text-dark">Literatura en EL PAÍS</a>
             </h3>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.
+              Todas las noticias sobre Literatura publicadas en EL PAÍS. Información, novedades y última hora sobre Literatura.
             </p>
             <p>
               <a href="single.html" class="btn btn-outline-primary">READ MORE</a>
@@ -77,15 +77,15 @@
         <!-- Post Item -->
         <div class="row mb-5">
           <div class="col-md-4">
-            <img src="{% static 'images/img_4_horizontal.jpg' %}" alt="Image" class="img-fluid rounded">
+            <img src="{% static 'images/libros.jpg' %}" alt="Image" class="img-fluid rounded">
           </div>
           <div class="col-md-8">
-            <span class="text-muted">Apr. 14th, 2022 • <strong>Business</strong></span>
+            <span class="text-muted">17 de abril de 2023 • <strong>Literatura</strong></span>
             <h3 class="mt-2">
-              <a href="single.html" class="text-dark">Thought you loved Python? Wait until you meet Rust</a>
+              <a href="single.html" class="text-dark">20 clásicos de la literatura que todo gran lector deb...</a>
             </h3>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.
+              La literatura inglesa está poblada de grandes clásicos. Orgullo y prejuicio es uno de ellos, una comedia romántica que se centra en la relación entre los personajes. Tanto Orgullo y...
             </p>
             <p>
               <a href="single.html" class="btn btn-outline-primary">READ MORE</a>
@@ -101,11 +101,11 @@
                 <li class="page-item disabled">
                   <a class="page-link" href="#" tabindex="-1">Previous</a>
                 </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#">Next</a>
+                <li class="page-item active"><a class="page-link" href="{% url 'categoria1' %}">1</a></li>
+                <li class="page-item active"><a class="page-link" href="{% url 'categoria2' %}">2</a></li>
+                <li class="page-item active"><a class="page-link" href="{% url 'categoria3' %}">3</a></li>
+                <li class="page-item active">
+                  <a class="page-link" href="#" tabindex="1">Next</a>
                 </li>
               </ul>
             </nav>
@@ -131,75 +131,63 @@
           <!-- Popular Post Item -->
           <div class="d-flex mb-4">
             <div class="me-3">
-              <img src="{% static 'images/img_1_horizontal.jpg' %}" alt="Image" class="img-fluid" style="width: 80px; height: 80px; object-fit: cover;">
+              <img src="{% static 'images/libro_popular1.jpg' %}" alt="Image" class="img-fluid" style="width: 80px; height: 80px; object-fit: cover;">
             </div>
             <div>
               <h6>
-                <a href="single.html" class="text-dark">There's a Cool New Way for Men to Wear Socks and Sandals</a>
+                <a href="single.html" class="text-dark">20 clásicos de la literatura que todo gran lector deb...</a>
               </h6>
-              <p class="text-muted small mb-0">March 15, 2018</p>
+              <p class="text-muted small mb-0">17 de abril de 2023 </p>
             </div>
           </div>
 
           <!-- Popular Post Item -->
           <div class="d-flex mb-4">
             <div class="me-3">
-              <img src="{% static 'images/img_2_horizontal.jpg' %}" alt="Image" class="img-fluid" style="width: 80px; height: 80px; object-fit: cover;">
+              <img src="{% static 'images/libro_popular3.jpg' %}" alt="Image" class="img-fluid" style="width: 60px; height: 80px; object-fit: cover;">
             </div>
             <div>
               <h6>
-                <a href="single.html" class="text-dark">There's a Cool New Way for Men to Wear Socks and Sandals</a>
+                <a href="single.html" class="text-dark">Literatura en EL PAÍS</a>
               </h6>
-              <p class="text-muted small mb-0">March 15, 2018</p>
+              <p class="text-muted small mb-0">12 de noviembre de 2019</p>
             </div>
           </div>
 
           <!-- Popular Post Item -->
           <div class="d-flex mb-4">
             <div class="me-3">
-              <img src="{% static 'images/img_3_horizontal.jpg' %}" alt="Image" class="img-fluid" style="width: 80px; height: 80px; object-fit: cover;">
+              <img src="{% static 'images/libro_popular2.jpg' %}" alt="Image" class="img-fluid" style="width: 80px; height: 80px; object-fit: cover;">
             </div>
             <div>
               <h6>
-                <a href="single.html" class="text-dark">There's a Cool New Way for Men to Wear Socks and Sandals</a>
+                <a href="single.html" class="text-dark">Literatura - Qué es, características, tipos e historia</a>
               </h6>
-              <p class="text-muted small mb-0">March 15, 2018</p>
+              <p class="text-muted small mb-0">5 de mayo de 2020</p>
             </div>
           </div>
         </div>
 
-        <!-- Categorías -->
+<!-- Categorías -->
         <div class="mb-5">
           <h3 class="mb-4">Categories</h3>
           <ul class="list-unstyled">
             <li class="mb-2">
-              <a href="#" class="d-flex justify-content-between text-dark">
-                <span>Business</span>
+              <a href="{% url 'categoria1' %}" class="d-flex justify-content-between text-dark">
+                <span>Gaming</span>
                 <span class="text-muted">(12)</span>
               </a>
             </li>
             <li class="mb-2">
-              <a href="#" class="d-flex justify-content-between text-dark">
-                <span>Travel</span>
+              <a href="{% url 'categoria3' %}" class="d-flex justify-content-between text-dark">
+                <span>Naturaleza</span>
                 <span class="text-muted">(22)</span>
               </a>
             </li>
             <li class="mb-2">
-              <a href="#" class="d-flex justify-content-between text-dark">
-                <span>Design</span>
+              <a href="{% url 'categoria2' %}" class="d-flex justify-content-between text-dark">
+                <span>Literatura</span>
                 <span class="text-muted">(37)</span>
-              </a>
-            </li>
-            <li class="mb-2">
-              <a href="#" class="d-flex justify-content-between text-dark">
-                <span>Food</span>
-                <span class="text-muted">(42)</span>
-              </a>
-            </li>
-            <li class="mb-2">
-              <a href="#" class="d-flex justify-content-between text-dark">
-                <span>Technology</span>
-                <span class="text-muted">(14)</span>
               </a>
             </li>
           </ul>
@@ -209,14 +197,9 @@
         <div class="mb-5">
           <h3 class="mb-4">Tags</h3>
           <div class="d-flex flex-wrap gap-2">
-            <a href="#" class="badge bg-light text-dark p-2">Travel</a>
-            <a href="#" class="badge bg-light text-dark p-2">Adventure</a>
-            <a href="#" class="badge bg-light text-dark p-2">Food</a>
-            <a href="#" class="badge bg-light text-dark p-2">Lifestyle</a>
-            <a href="#" class="badge bg-light text-dark p-2">Business</a>
-            <a href="#" class="badge bg-light text-dark p-2">Freelancing</a>
-            <a href="#" class="badge bg-light text-dark p-2">Travel</a>
-            <a href="#" class="badge bg-light text-dark p-2">Adventure</a>
+            <a href="{% url 'categoria1' %}" class="badge bg-light text-dark p-2">Juegos</a>
+            <a href="{% url 'categoria2' %}" class="badge bg-light text-dark p-2">Libros</a>
+            <a href="{% url 'categoria3' %}" class="badge bg-light text-dark p-2">Naturaleza</a>
           </div>
         </div>
       </div>
