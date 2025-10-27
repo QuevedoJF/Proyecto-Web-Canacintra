@@ -20,8 +20,14 @@ urlpatterns = [
     path("libros/", views.libros, name="libros"),
     path("flow/", views.flow, name="flow"),
     path("pintura/", views.pintura, name="pintura"),
-    path("paisajes/", views.paisajes, name="paisajes"),
-
+    path("paisajes/", views.paisajes, name="paisajes"),    
+    path("sekiro/", views.sekiro, name="sekiro"),
+    path("hollow_knight/", views.hollow_knight, name="hollow_knight"),
+    path("literatura1/", views.literatura1, name="literatura1"),
+    path("literatura2/", views.literatura2, name="literatura2"),
+    path("literatura3/", views.literatura3, name="literatura3"),
+    path("literatura4/", views.literatura4, name="literatura4"),
+    
     # VISTAS DE AUTENTICACIÓN
     # 1. Página del formulario de login (la plantilla)
     path("login/", views.login_page, name="login_page"), 

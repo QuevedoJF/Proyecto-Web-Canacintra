@@ -56,8 +56,26 @@ def flow(request):
 def pintura(request):
     return render(request, 'category/pintura.html', {})
 
-def paisajes(request):
+def paisajes(request):        
     return render(request, 'category/paisajes.html', {})
+
+def sekiro(request):
+    return render(request, 'category/sekiro.html', {})    
+
+def hollow_knight(request):        
+    return render(request, 'category/hollow_knight.html', {})
+
+def literatura1(request):        
+    return render(request, 'category/literatura1.html', {})
+
+def literatura2(request):        
+    return render(request, 'category/literatura2.html', {})
+
+def literatura3(request):        
+    return render(request, 'category/literatura3.html', {})
+
+def literatura4(request):        
+    return render(request, 'category/literatura4.html', {})
 
 #FOOTER: estas son las categoorias del footer
 def about_view(request):

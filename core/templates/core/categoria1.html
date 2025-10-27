@@ -63,18 +63,18 @@
           <div class="col-md-8">
             <span class="text-muted">22 de marzo de 2019 • <strong>Gaming</strong></span>
             <h3 class="mt-2">
-              <a href="single.html" class="text-dark">SEKIRO</a>
+              <a href="{% url 'sekiro' %}" class="text-dark">SEKIRO</a>
             </h3>
             <p class="text-muted">
               Sekiro: Shadows Die Twice es un videojuego de acción y aventura desarrollado por From Software y distribuido por Activision.​ 
             </p>
             <p>
-              <a href="single.html" class="btn btn-outline-primary">READ MORE</a>
+              <a href="{% url 'sekiro' %}" class="btn btn-outline-primary">READ MORE</a>
             </p>
           </div>
         </div>
 
-        <!-- Post Item -->
+        <!-- Post Item -->           
         <div class="row mb-5">
           <div class="col-md-4">
             <img src="{% static 'images/hollow_knight.jpg' %}" alt="Image" class="img-fluid rounded">
@@ -82,13 +82,13 @@
           <div class="col-md-8">
             <span class="text-muted">14 abril de 2017 • <strong>Gaming</strong></span>
             <h3 class="mt-2">
-              <a href="single.html" class="text-dark">Hollow Knight</a>
+              <a href="{% url 'hollow_knight' %}" class="text-dark">Hollow Knight</a>
             </h3>
             <p class="text-muted">
               Hollow Knight es una aventura de acción clásica en 2D ambientada en un vasto mundo interconectado. Explora cavernas tortuosas, ciudades antiguas y páramos mortales.
             </p>
             <p>
-              <a href="single.html" class="btn btn-outline-primary">READ MORE</a>
+              <a href="{% url 'hollow_knight' %}" class="btn btn-outline-primary">READ MORE</a>
             </p>
           </div>
         </div>
@@ -135,7 +135,7 @@
             </div>
             <div>
               <h6>
-                <a href="single.html" class="text-dark">Sekiro es una aventura de acción intensa en tercera persona ambientada en el sangriento Japón del siglo XIV.</a>
+                <a href="{% url 'sekiro' %}" class="text-dark">Sekiro es una aventura de acción intensa en tercera persona ambientada en el sangriento Japón del siglo XIV.</a>
               </h6>
               <p class="text-muted small mb-0">22 de marzo de 2019</p>
             </div>
@@ -148,7 +148,7 @@
             </div>
             <div>
               <h6>
-                <a href="single.html" class="text-dark">Hollow Knight es un videojuego perteneciente al género metroidvania.</a>
+                <a href="{% url 'hollow_knight' %}" class="text-dark">Hollow Knight es un videojuego perteneciente al género metroidvania.</a>
               </h6>
               <p class="text-muted small mb-0">14 abril de 2017</p>
             </div>

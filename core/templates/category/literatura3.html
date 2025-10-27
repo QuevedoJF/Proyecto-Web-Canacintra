@@ -1,0 +1,70 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}Literatura en EL PAÍS | Crítica, Noticias y Cultura Editorial{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">La Sección de Literatura en EL PAÍS</h1>
+        <p class="lead text-center">Un referente periodístico y cultural para la crítica literaria, las novedades editoriales y el análisis del sector del libro en español.</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/literatura2.jpg' %}" 
+                alt="Imagen de la portada de EL PAÍS con un enfoque en libros" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 400px; object-fit: cover; width: 100%;"
+            >
+        </div>
+
+        <section id="que_es">
+            <h2>¿Qué es la Sección de Literatura de EL PAÍS?</h2>
+            <p>La sección de Literatura, parte integral del periódico español EL PAÍS y de su suplemento cultural (anteriormente *Babelia*), es un **espacio de crítica y noticias especializado** que aborda la actualidad del mundo del libro, la publicación de novedades editoriales y el análisis de la obra de autores tanto consagrados como emergentes.</p>
+            <p>Donde se lleva a cabo: Si bien la redacción central y la toma de decisiones se ubican en **Madrid, España**, la sección se desarrolla y existe principalmente en el **entorno digital** a través de su sitio web. Es un espacio periodístico y cultural más que una ubicación física única.</p>
+        </section>
+
+        <section id="alcance_anios">
+            <h2>Alcance Global y Trayectoria Histórica</h2>
+            <p>EL PAÍS comenzó a publicarse el **4 de mayo de 1976**. Desde sus inicios, ha dado una cobertura sostenida a la cultura y, por ende, a la literatura. Por lo tanto, la sección lleva activamente más de **49 años** cubriendo el sector.</p>
+            
+            <h3>Ciudades y Regiones Implicadas</h3>
+            <p>Aunque su origen es español, su influencia es panhispánica. La sección implica a:</p>
+            <ul>
+                <li>Madrid, España: Sede principal de la redacción y la editorial.</li>
+                <li>América Latina: EL PAÍS tiene una fuerte presencia en la región. La sección cubre activamente novedades, autores y ferias del libro en ciudades clave como **Ciudad de México, Buenos Aires** y **Bogotá**, reflejando la diversidad de la literatura en español.</li>
+                <li>Barcelona, España: Ciudad fundamental en el mundo editorial en español, donde se concentran muchas casas editoriales de peso internacional.</li>
+            </ul>
+        </section>
+
+        <section id="funciones">
+            <h2>Funciones Principales y Tipo de Contenido</h2>
+            <p>La sección sirve como un importante mediador entre las obras y los lectores, influenciando la percepción pública y las ventas de las novedades literarias.</p>
+            <ul>
+                <li>Crítica Literaria: Publicación semanal de reseñas detalladas por parte de críticos y académicos de renombre sobre ficción, ensayo y poesía.</li>
+                <li>Entrevistas y Perfiles: Reportajes a fondo con autores internacionales, ganadores de premios y figuras clave del sector editorial.</li>
+                <li>Cobertura de Ferias: Cobertura de los principales eventos literarios mundiales, como la Feria del Libro de Fráncfort (Alemania), la Feria Internacional del Libro de Guadalajara (México) y la Feria del Libro de Madrid.</li>
+                <li>Temas de Actualidad: Análisis de las tendencias del mercado editorial, el impacto del libro electrónico y los debates sobre el futuro de la lectura.</li>
+            </ul>
+            <img src="{% static 'images/literatura1.jpg' %}" alt="Imagen de un autor firmando un libro" class="img-fluid my-3" style="border-radius: 4px;">
+        </section>
+        
+        <section id="acceso">
+            <h2>Accede a la Actualidad Literaria</h2>
+            
+            <div class="cta-box">
+                <h3>El Pulso del Mundo del Libro</h3>
+                <p>La sección de Literatura de EL PAÍS es un punto de encuentro esencial para cualquier lector o profesional interesado en el pulso crítico y comercial de las letras en lengua española.</p>
+                
+                <a href="https://elpais.com/cultura/literatura/" target="_blank" class="cta-button">
+                    Visitar la Sección de Literatura de EL PAÍS
+                </a>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,92 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}20 Clásicos de la Literatura que Todo Gran Lector Debe Leer{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">20 Clásicos de la Literatura Imprescindibles</h1>
+        <p class="lead text-center">Una selección de obras fundamentales que han moldeado la cultura, el pensamiento y la narrativa universal, esenciales en la biblioteca de todo gran lector.</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/literatura4.jpg' %}" 
+                alt="Imagen de una pila de libros antiguos y clásicos" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 400px; object-fit: cover; width: 100%;"
+            >
+        </div>
+
+        <section id="introduccion">
+            <h2>¿Por qué son Clásicos?</h2>
+            <p>Una obra se convierte en "clásico" no solo por su antigüedad, sino por su capacidad de trascender su tiempo y lugar de origen. Los siguientes 20 títulos son textos que han influido en autores posteriores, han definido géneros y continúan ofreciendo nuevas lecturas a cada generación.</p>
+        </section>
+
+        <section id="lista_clasicos">
+            <h2>La Lista Esencial</h2>
+            <p>Esta selección abarca desde la antigüedad griega hasta el siglo XX, cubriendo los géneros más influyentes (épica, novela, teatro y ensayo).</p>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <ol>
+                        <li>La Ilíada y La Odisea (Homero, S. VIII a.C.). Género: Épica. Fundamentos de la narrativa occidental.</li>
+                        <li>Edipo Rey (Sófocles, S. V a.C.). Género: Tragedia. Obra cumbre de la tragedia griega.</li>
+                        <li>Don Quijote de la Mancha (Miguel de Cervantes, 1605/1615). Género: Novela. Considerada la primera novela moderna.</li>
+                        <li>Hamlet (William Shakespeare, c. 1603). Género: Teatro/Tragedia. La exploración definitiva de la duda y la venganza.</li>
+                        <li>Orgullo y Prejuicio (Jane Austen, 1813). Género: Novela Romántica/Social. Crítica sutil a la sociedad georgiana.</li>
+                        <li>Moby Dick (Herman Melville, 1851). Género: Novela de Aventura/Alegoría. Una obsesiva búsqueda que trasciende la aventura marina.</li>
+                        <li>Madame Bovary (Gustave Flaubert, 1856). Género: Novela Realista. Pionera en la exploración de la psicología femenina y la crítica social.</li>
+                        <li>Guerra y Paz (León Tolstói, 1869). Género: Novela Histórica/Épica. Un vasto retrato de la sociedad rusa y las Guerras Napoleónicas.</li>
+                        <li>Crimen y Castigo (Fiódor Dostoievski, 1866). Género: Novela Psicológica. Un profundo estudio de la culpa, la moral y la redención.</li>
+                        <li>Las Aventuras de Huckleberry Finn (Mark Twain, 1884). Género: Novela de Aventura. Crítica satírica a los prejuicios del Sur de EE. UU.</li>
+                    </ol>
+                </div>
+
+                <div class="col-md-6">
+                    <ol start="11">
+                        <li>En Busca del Tiempo Perdido (Marcel Proust, 1913-1927). Género: Novela Moderna. Obra cumbre del modernismo que explora la memoria y el tiempo.</li>
+                        <li>Ulises (James Joyce, 1922). Género: Novela Experimental. Un hito en el uso de la técnica del flujo de conciencia.</li>
+                        <li>El Gran Gatsby (F. Scott Fitzgerald, 1925). Género: Novela Social. La crítica a la superficialidad del "Sueño Americano".</li>
+                        <li>Cien Años de Soledad (Gabriel García Márquez, 1967). Género: Realismo Mágico. Obra definitoria del Boom Latinoamericano.</li>
+                        <li>1984 (George Orwell, 1949). Género: Distopía. Advertencia sobre el totalitarismo, la vigilancia y la manipulación de la verdad.</li>
+                        <li>Paraíso Perdido (John Milton, 1667). Género: Poesía Épica. El relato teológico de la caída del hombre.</li>
+                        <li>Don Juan Tenorio (José Zorrilla, 1844). Género: Teatro Romántico. La adaptación más famosa del mito de Don Juan en español.</li>
+                        <li>La Metamorfosis (Franz Kafka, 1915). Género: Novela Corta. Exploración de la alienación y el absurdo de la existencia.</li>
+                        <li>El Principito (Antoine de Saint-Exupéry, 1943). Género: Fábula/Filosofía. Una obra aparentemente simple sobre el sentido de la vida y la amistad.</li>
+                        <li>Ensayo sobre la ceguera (José Saramago, 1995). Género: Novela Filosófica. Crítica sobre la decadencia moral y la sociedad moderna.</li>
+                    </ol>
+                </div>
+            </div>
+            <img src="{% static 'images/libro_popular3.jpg' %}" alt="Collage de autores clásicos como Shakespeare y Cervantes" class="img-fluid my-3" style="border-radius: 4px;">
+        </section>
+
+        <section id="importancia">
+            <h2>Beneficios de Abordar estos Títulos</h2>
+            <p>Leer los clásicos es una inversión cultural que va más allá del placer de la trama. Estos libros son fundamentales porque:</p>
+            <ul>
+                <li>Formación del Lenguaje: Exponen al lector a una prosa rica y compleja, mejorando la capacidad de expresión y el vocabulario.</li>
+                <li>Conciencia Histórica: Ofrecen una ventana directa a los valores, conflictos y modos de pensamiento de épocas pasadas.</li>
+                <li>Desarrollo de Empatía: A través de personajes universalmente humanos, los clásicos permiten comprender la complejidad de las motivaciones humanas.</li>
+            </ul>
+        </section>
+
+        <section id="cta">
+            <h2>Comienza tu Viaje Literario</h2>
+            
+            <div class="cta-box">
+                <h3>El momento de leer es Ahora</h3>
+                <p>Si bien la lista es desafiante, cada obra ofrece una recompensa invaluable. No te apresures; disfruta el proceso de descubrir por qué estas historias han permanecido vigentes durante siglos.</p>
+                
+                <a href="https://www.cervantes.es/default.htm" target="_blank" class="cta-button">
+                    Busca tu Próximo Clásico
+                </a>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock content %}

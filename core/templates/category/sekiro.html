@@ -1,0 +1,88 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}Sekiro: Shadows Die Twice | La Venganza del Lobo Manco{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">Sekiro: Shadows Die Twice</h1>
+        <p class="lead text-center">TAKE REVENGE. RESTORE YOUR HONOR. KILL INGENIOSAMENTE.</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/sekiro_portada.jpg' %}" 
+                alt="Imagen promocional de Sekiro, el Lobo Manco" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 400px; object-fit: cover; width: 100%;"
+            >
+        </div>
+
+        <section id="trama">
+            <h2>Trama, Personajes y Sinopsis</h2>
+            <p>En Sekiro: Shadows Die Twice eres "el lobo manco" (Sekiro, o Lobo), un guerrero sin honor y desfigurado que fue rescatado del borde de la muerte. Destinado a proteger al joven descendiente de una antigua estirpe, te convertirás en el objetivo de muchos enemigos violentos, incluido el peligroso clan Ashina.</p>
+            <p>Cuando el joven sea capturado, ni la muerte te detendrá en la riesgosa misión por rescatarlo y recuperar tu honor. El juego se desarrolla como una sangrienta confrontación donde la venganza es el único camino.</p>
+            <ul>
+                <li>Personaje Principal: Sekiro (El Lobo Manco)</li>
+                <li>Antagonista Principal: Genichiro Ashina y la facción del Clan Ashina.</li>
+                <li>Objetivo: Proteger al Heredero Divino.</li>
+            </ul>
+        </section>
+
+        <section id="caracteristicas">
+            <h2>Jugabilidad, Combate y Verticalidad</h2>
+            <p>Explora el Japón de la era Sengoku de finales del siglo XVI, un brutal periodo de constante conflicto, mientras te enfrentas a inconmensurables enemigos en un mundo oscuro y tortuoso.</p>
+            <ul>
+                <li>Herramienta Clave: Despliega un arsenal de mortíferas herramientas ortopédicas (el Brazo Prostético Shinobi) y poderosas habilidades ninja.</li>
+                <li>Movilidad: El combate y la exploración combinan el sigilo, la verticalidad y la transversalidad gracias al uso del gancho (grappling hook).</li>
+                <li>Combate Visceral: El sistema se centra en el combate cara a cara, donde la deflexión (parry) es esencial para romper la postura del enemigo y realizar un golpe mortal.</li>
+            </ul>
+            <img src="{% static 'images/sekiro_juego1.jpg' %}" alt="Imagen de combate o jugabilidad con el brazo prostético" class="img-fluid my-3" style="border-radius: 4px;">
+        </section>
+
+        <section id="desarrollo">
+            <h2>Desarrollo, Empresa y Ambientación</h2>
+            <p>Sekiro: Shadows Die Twice es un título aclamado por su nivel de dificultad y su diseño artístico.</p>
+            <ul>
+                <li>Empresa Desarrolladora: FromSoftware (Japón)</li>
+                <li>Quien la creó (Director): Hidetaka Miyazaki, conocido por su estilo único de diseño de videojuegos.</li>
+                <li>Empresa Distribuidora: Activision</li>
+                <li>Fecha de Lanzamiento: 22 de marzo de 2019</li>
+                <li>Donde se lleva a cabo: Japón de la era Sengoku (finales del siglo XVI), en la región ficticia de Ashina.
+                    <img src="{% static 'images/sekiro_intro.jpg' %}" alt="Logo de FromSoftware o imagen del director" class="img-fluid my-3" style="border-radius: 4px;">
+                </li>
+            </ul>
+        </section>
+
+        <section id="requisitos">
+            <h2>Requisitos y Plataformas</h2>
+            
+            <div class="cta-box">
+                <h3>Dónde se Puede Jugar</h3>
+                <p>Sekiro está disponible en las principales plataformas de juego y es un título desafiante en cualquier sistema.</p>
+                
+                <p>Plataformas:</p>
+                <ul>
+                    <li>PlayStation 4 (PS4)</li>
+                    <li>Xbox One</li>
+                    <li>PC (Steam)</li>
+                </ul>
+
+                <p>Requisitos del juego:</p>
+                <p>El juego requiere un procesador y un sistema operativo de 64 bits para funcionar. Típicamente solicita 8 GB de RAM y una tarjeta gráfica de nivel intermedio o superior. Se recomienda a los usuarios de PC consultar la página de Steam para verificar los requisitos mínimos y recomendados exactos antes de la compra.</p>
+                
+                <a href="https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice/" target="_blank" class="cta-button">
+                    Ver en Steam
+                </a>
+                <a href="https://www.sekirothegame.com/mx/es" target="_blank" class="cta-button">
+                    mas informacion
+                </a>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock content %}

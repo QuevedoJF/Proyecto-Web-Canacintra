@@ -1,0 +1,93 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}Hollow Knight | Un Metroidvania con Corazón de Soulslike{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">Hollow Knight</h1>
+        <p class="lead text-center">Un juego de acción y plataformas 2D inspirado en Dark Souls. Un soberbio metroidvania con corazón de soulborne.</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/hollow_knight.jpg' %}" 
+                alt="Imagen promocional de Hollow Knight con el Caballero" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 400px; object-fit: cover; width: 100%;"
+            >
+        </div>
+
+        <section id="trama">
+            <h2>Explorando un Reino Caído (Hallownest)</h2>
+            <p>Hollow Knight te sumerge en el laberíntico mundo subterráneo del Hallownest, un misterioso reino caído y olvidado habitado por insectos de apariencia melancólica y hostil. En este tétrico lugar, trampas y misterios dan la bienvenida al Caballero, un silencioso personaje armado únicamente con un simple aguijón.</p>
+            <p>Siguiendo la estela de los soulsborne, la historia de Hollow Knight está presentada de forma indirecta, sin jamás darnos mucha información. Para descubrir lo sucedido en el Hallownest, el jugador deberá prestar atención a su entorno y escuchar atentamente los crípticos mensajes de sus moradores. Solo uniendo poco a poco los cabos sueltos podremos ver la imagen completa de su misterioso puzle y su trepidante historia.</p>
+        </section>
+            <img src="{% static 'images/hollow_knight1.jpg' %}" alt="Imagen de combate del Caballero contra un jefe" class="img-fluid my-3" style="border-radius: 4px;">
+        <section id="jugabilidad">
+            <h2>Jugabilidad: Una Aventura Desafiante pero Altamente Gratificante</h2>
+            <p>Hollow Knight es, en esencia, un soberbio metroidvania donde acción, plataformas y exploración se unen para brindar una experiencia de juego inmejorable. Es una carta de amor a FromSoftware, ofreciendo una jugabilidad tan divertida como desafiante. Aquellos que no estén acostumbrados a los arcade puede que les lleve un rato conseguir sobrevivir algunos minutos en el Hallownest.</p>
+            <ul>
+                <li>Combate y Reflejos: La jugabilidad se basa esencialmente en el combate, poniendo a prueba nuestros reflejos a la hora de esquivar y derrotar a sus más de 130 enemigos y jefes de nivel. Cada uno de ellos cuenta con un comportamiento y puntos débiles distintos.</li>
+                <li>Mecánica de Almas: Al eliminar a estos enemigos de apariencia insectoide, iremos cargando una pequeña reserva de almas. Ésta nos servirá para recuperar algo de vida o, más adelante, para hacer uso del resto de técnicas y magia que iremos encontrando.</li>
+                <li>Mecánica Punitiva (Soulslike): Siguiendo la estela de los Souls, cada vez que muramos perderemos todo nuestro dinero y para recuperarlo, tendremos que volver al lugar donde perdimos la vida y enfrentarnos a nuestro propio espíritu.</li>
+            </ul>
+            <img src="{% static 'images/hollow_knight2.jpg' %}" alt="Imagen de combate del Caballero contra un jefe" class="img-fluid my-3" style="border-radius: 4px;">
+        </section>
+
+        <section id="graficos_sonido">
+            <h2>Gráficos y Sonido: Una Espeluznante Aventura Dibujada a Mano</h2>
+            <p>Sin duda, uno de los puntos más llamativos de Hollow Knight es su impresionante apartado gráfico y sus preciosos gráficos 2D. Todos los fondos y animaciones del juego han sido meticulosamente dibujados a mano, mostrando el amor y la dedicación puestos por el estudio indie Team Cherry. Esto hace del juego una experiencia visual francamente espectacular.</p>
+            <ul>
+                <li>Estilo Visual: Los gráficos pueden recordar al estilo de Cuphead, con una ambientación tan enigmática como cautivadora que recorre las oscuras cavernas y las ruinas laberínticas del Hallownest.</li>
+                <li>Banda Sonora: La banda sonora premia al jugador con una selección de temas tan tétricos como cautivadores, poniéndonos en todo momento en el papel del Caballero. Son pistas llenas de misterio, sutiles pero a la vez pegadizas.</li>
+            </ul>
+            <img src="{% static 'images/hollow_knight4.jpg' %}" alt="Muestra de los fondos 2D dibujados a mano" class="img-fluid my-3" style="border-radius: 4px;">
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusión y Disponibilidad</h2>
+            
+            <div class="cta-box">
+                <h3>Una Obra Maestra dentro del Género Metroidvania</h3>
+                <p>Hollow Knight es un regalo para todos los amantes del género de acción y plataformas, demostrando una vez más cómo un juego indie es capaz de despuntar frente al más conocido AAA del momento. Este soberbio metroidvania con corazón de soulborne ofrece una experiencia desafiante y altamente gratificante. Con un apartado gráfico y sonoro sobresaliente y una jugabilidad adictiva, te aseguramos que una vez lo pruebes no vas a poder dejar de jugar.</p>
+                
+                <p>Desarrollador: Team Cherry</p>
+                
+                <h4>Pros Destacados:</h4>
+                <ul>
+                    <li>Apartado gráfico y sonoro sobresaliente.</li>
+                    <li>Soberbio diseño de niveles.</li>
+                    <li>Sólido metroidvania inspirado en los títulos de FromSoftware.</li>
+                    <li>Original diseño de personajes y enemigos.</li>
+                </ul>
+
+                <h4>Contras:</h4>
+                <ul>
+                    <li>A pesar de ser genial, no aporta muchas ideas nuevas al género.</li>
+                </ul>
+
+                <a href="https://store.steampowered.com/app/367520/Hollow_Knight/" target="_blank" class="cta-button">
+                    Descárgalo ya mismo
+                </a>
+            </div>
+        </section>
+          <img src="{% static 'images/hollow_knight3.jpg' %}" alt="Imagen de combate del Caballero contra un jefe" class="img-fluid my-3" style="border-radius: 4px;">
+        <section id="idiomas_disponibilidad">
+            <h2>Programa Disponible en Otros Idiomas</h2>
+            <p>Hollow Knight goza de una amplia disponibilidad internacional. El programa está disponible en los siguientes idiomas (entre otros):</p>
+            <ul>
+                <li>Download Hollow Knight / Télécharger Hollow Knight</li>
+                <li>Hollow Knight herunterladen / Hollow Knight download</li>
+                <li>Скачать Hollow Knight / 下载 Hollow Knight</li>
+                <li>Hollow Knight をダウンロードする / Hollow Knight 다운로드</li>
+                <li>Unduh Hollow Knight / Hollow Knight indir</li>
+                <li>Scaricare Hollow Knight / Ladda ner Hollow Knight / Pobierz Hollow Knight</li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+{% endblock content %}

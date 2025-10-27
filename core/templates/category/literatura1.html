@@ -1,0 +1,105 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}Literatura: Qué es, Características, Tipos e Historia Profunda{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">Literatura: Qué es, Características, Tipos e Historia</h1>
+        <p class="lead text-center">La manifestación artística que utiliza el lenguaje para la creación de mundos estéticos, simbólicos y narrativos que trascienden el tiempo.</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/literatura.jpg' %}" 
+                alt="Imagen de una estantería de libros o una biblioteca" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 400px; object-fit: cover; width: 100%;"
+            >
+        </div>
+
+        <section id="definicion">
+            <h2>El Problema de la Definición: Arte y Lenguaje</h2>
+            <p>La literatura es una categoría cultural e histórica en constante debate. Se define como el arte de la expresión verbal, pero su alcance es mucho mayor. Como se ha mencionado, resulta difícil justificar qué es y qué no es literatura, ya que el concepto se ha ido construyendo históricamente, incluyendo textos escritos antes de la consolidación del término.</p>
+            <p>El núcleo de la literatura reside en su función poética: el lenguaje se desvía de su propósito práctico (informar) para centrarse en sí mismo, en la belleza de la forma, la sonoridad y la evocación simbólica. La literatura transforma el lenguaje cotidiano en un artefacto estético.</p>
+        </section>
+
+        <section id="caracteristicas">
+            <h2>Características, Propósitos y Funciones Estéticas</h2>
+            <p>La literatura se distingue por un conjunto de rasgos que definen su naturaleza artística y su impacto cultural:</p>
+            <ul>
+                <li>Función Poética (Estética): El lenguaje se utiliza para embellecer y crear una experiencia sensorial o emocional, más allá de la mera transmisión de información.</li>
+                <li>Ficcionalidad: Aunque puede basarse en hechos reales (como la novela histórica), la obra crea un universo autónomo que se rige por sus propias reglas internas.</li>
+                <li>Subjetividad: La obra literaria es, en gran medida, el resultado de la visión individual del autor sobre el mundo, transmitiendo sentimientos y emociones.</li>
+                <li>Permanencia y Tradición: Las obras literarias se inscriben dentro de un diálogo intertextual con las obras del pasado, y su significado perdura a través del tiempo, siendo reinterpretadas por cada generación.</li>
+                <li>Lenguaje Elaborado (Retórica): Uso recurrente de figuras literarias (metáforas, hipérboles, símiles) y recursos estilísticos para generar ambigüedad, profundidad y originalidad.</li>
+            </ul>
+            <img src="{% static 'images/libros.jpg' %}" alt="Imagen simbólica de la creación literaria" class="img-fluid my-3" style="border-radius: 4px;">
+        </section>
+
+        <section id="generos">
+            <h2>Tipos y Clasificación Profunda de Géneros</h2>
+            <p>La clasificación clásica, establecida por Aristóteles, sigue siendo la base para comprender las diferentes formas de discurso literario:</p>
+            
+            <h3>1. Género Narrativo (Épica o Prosa)</h3>
+            <p>Su función es relatar o contar sucesos. Se estructura en prosa y ha evolucionado enormemente desde la antigüedad.</p>
+            <ul>
+                <li>La Novela: La forma más extensa y popular de la narrativa moderna. Permite un desarrollo profundo de personajes, subtramas y ambientes complejos (ej. Cien años de soledad).</li>
+                <li>El Cuento: Narración breve con pocos personajes y un argumento simple pero de gran impacto (ej. cuentos de Edgar Allan Poe).</li>
+                <li>La Epopeya: Antigua narración en verso de hazañas heroicas o míticas, fundamental para la identidad cultural (ej. La Ilíada).</li>
+            </ul>
+            
+            <h3>2. Género Lírico (Poesía)</h3>
+            <p>Se centra en la expresión de sentimientos, emociones o estados de ánimo a través de la voz del "yo poético".</p>
+            <ul>
+                <li>La Oda: Poema extenso que exalta a una persona o concepto (ej. las odas de Pablo Neruda).</li>
+                <li>El Soneto: Composición fija de catorce versos endecasílabos, popular en el Renacimiento.</li>
+                <li>La Canción: Poema lírico simple, a menudo destinado a ser cantado o con una marcada musicalidad.</li>
+            </ul>
+
+            <h3>3. Género Dramático (Teatro)</h3>
+            <p>Obras diseñadas exclusivamente para ser representadas en un escenario.</p>
+            <ul>
+                <li>La Tragedia: Obra con un desenlace fatal o doloroso, donde los personajes enfrentan fuerzas superiores (ej. obras de Sófocles o Shakespeare).</li>
+                <li>La Comedia: Obra con tono ligero, cuyo fin es entretener y, a menudo, criticar vicios sociales.</li>
+                <li>El Drama: Género mixto que refleja la complejidad de la vida real, donde se mezclan lo cómico y lo trágico.</li>
+            </ul>
+        </section>
+        
+        <section id="historia">
+            <h2>Historia y Grandes Periodos Literarios</h2>
+            <p>La historia de la literatura es casi tan antigua como la escritura misma, reflejando las preocupaciones filosóficas, sociales y espirituales de cada era:</p>
+            <ul>
+                <li>Literatura Antigua (Hasta S. V): Nacimiento de la épica (Grecia y Roma). Predominio de mitos y la fundación de los géneros.</li>
+                <li>Medioevo (S. V - XV): Literatura religiosa y caballeresca, donde el teatro y las formas populares ganan terreno.</li>
+                <li>Renacimiento: Foco en el ser humano (Humanismo), recuperación de las formas clásicas y nacimiento de la novela moderna (ej. Cervantes).</li>
+                <li>Barroco (S. XVII): Estilo complejo y ornamentado que refleja el desengaño. Época dorada del teatro español.</li>
+                <li>Ilustración (S. XVIII): Predominio de la razón y la didáctica. Nacimiento del ensayo como género moderno.</li>
+                <li>Romanticismo (S. XIX): Exaltación del individuo, los sentimientos, la pasión y la naturaleza (Goethe, Lord Byron).</li>
+                <li>Realismo y Naturalismo (Finales S. XIX): Búsqueda de la representación fiel y objetiva de la realidad social y sus problemas (Tolstói, Zola).</li>
+                <li>Vanguardias y Siglo XX: Ruptura con las tradiciones. Experimentación formal, exploración del subconsciente y la psicología humana (Joyce, Kafka, el Boom Latinoamericano).</li>
+            </ul>
+            <img src="{% static 'images/libro.jpg' %}" alt="Imagen de diferentes estilos literarios a través del tiempo" class="img-fluid my-3" style="border-radius: 4px;">
+        </section>
+
+        <section id="acceso">
+            <h2>El Legado Inmortal de la Palabra</h2>
+            
+            <div class="cta-box">
+                <h3>Sumergirse en la Tradición Literaria</h3>
+                <p>La lectura de literatura no solo es un pasatiempo, sino una herramienta para la reflexión crítica, la expansión de la empatía, el vocabulario y el conocimiento histórico. Cada obra es un testimonio vivo de la experiencia humana esperando ser descubierto y revivido por el lector.</p>
+                
+                <p>Te invitamos a explorar las grandes obras que han definido la humanidad, desde los épicos griegos hasta los narradores contemporáneos.</p>
+                
+                <a href="https://www.cervantes.es/default.htm" target="_blank" class="cta-button">
+                    Explorar el Instituto Cervantes
+                </a>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock content %}
