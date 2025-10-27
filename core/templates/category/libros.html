@@ -1,0 +1,75 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}Literatura | Mundo de Libros y Conocimiento{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">El Mundo de la Literatura</h1>
+        <p class="lead text-center">Un espacio único para viajar y conocer nuevos lugares a través de las palabras escritas.</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/literatura.jpg' %}" 
+                alt="Imagen de una estantería de libros o una biblioteca" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 400px; object-fit: cover; width: 100%;"
+            >
+        </div>
+
+        <section id="generos">
+            <h2>Definición y Principales Géneros</h2>
+            <p>La literatura es el arte que utiliza como instrumento la palabra. Es una manifestación artística que refleja la cultura, la historia y la imaginación humana a lo largo de los siglos. Un libro es el vehículo tradicional de la obra literaria.</p>
+            <p>Los géneros literarios clásicos ayudan a clasificar las obras. Aunque las clasificaciones modernas son flexibles, las categorías fundamentales incluyen:</p>
+            <ul>
+                <li>Narrativa (Prosa): Incluye la novela (el género más popular), el cuento y la fábula. Su objetivo es relatar una historia.</li>
+                <li>Poesía (Verso): Se enfoca en la expresión de sentimientos y emociones a través de la belleza y el ritmo del lenguaje.</li>
+                <li>Teatro (Dramático): Obras destinadas a ser representadas ante un público (tragedia, comedia, drama).</li>
+                <li>Ensayo (Didáctico): Obras que buscan exponer y debatir ideas o conocimientos de manera argumentativa.</li>
+            </ul>
+        </section>
+
+        <section id="beneficios">
+            <h2>El Valor y los Beneficios de la Lectura</h2>
+            <p>Leer va más allá del simple entretenimiento. Es una herramienta poderosa para el desarrollo personal y profesional. El acceso al conocimiento y la experiencia se encuentra encapsulado en cada obra.</p>
+            <ul>
+                <li>Desarrollo Cognitivo: La lectura mejora la concentración, la memoria y la habilidad analítica para comprender textos complejos.</li>
+                <li>Expansión del Vocabulario: Estar expuesto a diferentes estilos y palabras enriquece el vocabulario y mejora la expresión verbal.</li>
+                <li>Empatía e Inteligencia Emocional: Al sumergirse en las vidas de los personajes, el lector desarrolla una mejor comprensión de las emociones y perspectivas humanas.
+                    <img src="{% static 'images/libro.jpg' %}" alt="Imagen de una persona leyendo o un cerebro estimulado" class="img-fluid my-3" style="border-radius: 4px;">
+                </li>
+            </ul>
+        </section>
+
+        <section id="industria">
+            <h2>La Evolución del Formato y la Edición</h2>
+            <p>La industria del libro ha experimentado una transformación radical, desde la invención de la imprenta de Gutenberg hasta la era digital. Hoy coexisten múltiples formatos.</p>
+            <ul>
+                <li>El Ebook y el Audiolibro: Los formatos digitales han hecho que la lectura sea más accesible y portátil. Los audiolibros han ganado popularidad al permitir el consumo de literatura mientras se realizan otras actividades.</li>
+                <li>Autoedición: Las plataformas en línea han permitido a los autores publicar sus obras directamente, democratizando el acceso al mercado y al público.</li>
+            </ul>
+            <img src="{% static 'images/libro_literatura.jpg' %}" alt="Imagen de un lector de ebooks y libros físicos" class="img-fluid my-3" style="border-radius: 4px;">
+        </section>
+
+        <section id="acceso">
+            <h2>Fomento a la Lectura</h2>
+            
+            <div class="cta-box">
+                <h3>Involúcrate en la Cultura Escrita</h3>
+                <p>El apoyo a la lectura es fundamental para el desarrollo de la sociedad. Instituciones como la Secretaría de Cultura y el INBAL promueven programas y ferias del libro (como la FIL Guadalajara y la FIL Palacio de Minería) para acercar las obras a todos los ciudadanos.</p>
+                
+                <p>¡Nunca es tarde para comenzar una nueva aventura! La próxima gran obra te está esperando.</p>
+                
+                <a href="https://www.cultura.gob.mx/" target="_blank" class="cta-button">
+                    Visita el Sitio de la Secretaría de Cultura
+                </a>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock content %}

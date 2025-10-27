@@ -14,6 +14,13 @@ urlpatterns = [
     path("about/", views.about_view, name="about"),
     path("vision/", views.vision_view, name="vision"),
     path("mission/", views.mission_view, name="mission"),
+    path("ghost/", views.ghost, name="ghost"),
+    path("minecraft/", views.minecraft, name="minecraft"),
+    path("planetas/", views.planetas, name="planetas"),
+    path("libros/", views.libros, name="libros"),
+    path("flow/", views.flow, name="flow"),
+    path("pintura/", views.pintura, name="pintura"),
+    path("paisajes/", views.paisajes, name="paisajes"),
 
     # VISTAS DE AUTENTICACIÓN
     # 1. Página del formulario de login (la plantilla)

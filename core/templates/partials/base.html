@@ -1,4 +1,5 @@
 {% load static %}
+<body class="{% block body_class %}{% endblock %}">
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,6 +31,8 @@
     <link rel="stylesheet" href="{% static 'css/flatpickr.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/carrusel.css' %}" />
     <link rel="stylesheet" href="{% static 'css/estilos_company.css' %}">
+    
+    
     
     <title>{% block title %}Canacintra &mdash; Noticiero{% endblock %}</title>
   </head>

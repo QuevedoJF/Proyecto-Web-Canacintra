@@ -1,0 +1,84 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}Vincent van Gogh | La Tragedia y el Genio del Postimpresionismo{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">Vincent van Gogh (1853 – 1890)</h1>
+        <p class="lead text-center">Pintor neerlandés, figura central del Postimpresionismo, cuyo estilo único de colores vibrantes y pinceladas turbulentas redefinió el arte moderno.</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/Vincent van Gogh1.jpg' %}" 
+                alt="Autorretrato icónico de Vincent van Gogh" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 500px; object-fit: cover; width: 50%;"
+            >
+        </div>
+
+        <section id="biografia">
+            <h2>Vida y el Camino hacia la Pintura</h2>
+            <p>Vincent Willem van Gogh nació en 1853 en los Países Bajos. Su vida fue una constante búsqueda, marcada por la inestabilidad emocional y las penurias económicas. Antes de dedicarse de lleno al arte, trabajó como marchante de arte en la firma Goupil & Cie y, brevemente, como predicador en una zona minera pobre en Bélgica.</p>
+            <p>Su carrera artística fue sorprendentemente corta, abarcando apenas diez años (1880-1890). Sus primeras obras, creadas en los Países Bajos, como "Los comedores de patatas" (1885), se caracterizan por una paleta oscura y terrosa, centrada en retratar la dura vida de los campesinos y obreros.</p>
+            <p>El punto de inflexión en su vida y obra ocurrió en 1886, cuando se trasladó a París, donde su hermano menor, Theo, trabajaba como marchante de arte. Allí, Vincent descubrió el Impresionismo y, más importante, el arte japonés (ukiyo-e), lo que liberó su paleta hacia colores vivos y saturados.</p>
+            <img src="{% static 'images/Vincent van Gogh4.jpg' %}" alt="Obra de la etapa temprana de Van Gogh" class="img-fluid my-3" style="border-radius: 4px;">
+        </section>
+
+        <section id="estilo">
+            <h2>Estilo: La Explosión del Postimpresionismo</h2>
+            <p>Van Gogh es una figura fundamental del Postimpresionismo, un movimiento que, aunque se inspiró en el uso del color de los impresionistas, buscó añadir una dimensión de emoción, estructura y significado simbólico a la obra.</p>
+            <ul>
+                <li>Uso Emocional del Color: Para Van Gogh, el color no solo representaba la luz, sino que era un vehículo para transmitir su estado de ánimo y emociones internas. Sus amarillos intensos, azules vibrantes y verdes saturados son un sello distintivo.</li>
+                <li>Pincelada Expresiva (Impasto): Aplicaba la pintura al óleo de manera espesa y con pinceladas cortas, audaces y a menudo arremolinadas (impasto). Esto añade una textura palpable y una sensación dinámica de movimiento y energía a la superficie del lienzo.</li>
+                <li>Geometrización y Distorsión: Utilizaba contornos gruesos y, a menudo, distorsionaba las formas (como los cipreses o las estrellas) para lograr un efecto expresivo, alejándose de la representación estrictamente realista.</li>
+            </ul>
+        </section>
+
+        <section id="obras">
+            <h2>Obras Maestras y su Significado</h2>
+            <p>Aunque solo vendió una obra en vida, Van Gogh fue increíblemente prolífico, creando más de 2,000 obras, incluyendo cerca de 900 óleos, en una década. Sus obras más famosas reflejan sus intensos estados emocionales.</p>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <ul>
+                        <li>La Noche Estrellada (1889): Pintada desde el asilo de Saint-Rémy-de-Provence. Es un paisaje nocturno que se ha convertido en un ícono del arte moderno, con sus famosos remolinos turbulentos en el cielo que simbolizan su agitación interior.</li>
+                        <li>Girasoles (Serie): Creada en Arlés (1888-1889), esta serie buscaba decorar la habitación de su amigo Paul Gauguin. Los amarillos vibrantes simbolizaban la calidez, la amistad y el ciclo de la vida y la muerte.
+                            <img src="{% static 'images/Vincent van Gogh2.jpg' %}" alt="La Noche Estrellada" class="img-fluid my-3" style="border-radius: 4px;">
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <ul>
+                        <li>El Dormitorio en Arlés (1888): Muestra su sencilla habitación en la "Casa Amarilla". El uso de colores planos y brillantes tenía como objetivo dar una sensación de calma y descanso, aunque la perspectiva ligeramente distorsionada insinúa su inestabilidad.</li>
+                        <li>Autorretratos: Van Gogh pintó más de 43 autorretratos, a menudo por necesidad (no podía pagar modelos), reflejando su evolución artística y sus luchas personales, como el famoso "Autorretrato con la oreja vendada".
+                            <img src="{% static 'images/Vincent van Gogh3.jpg' %}" alt="Jarrón con Girasoles" class="img-fluid my-3" style="border-radius: 4px;">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="legado">
+            <h2>Ventas, Tragedia y Legado</h2>
+            
+            <div class="cta-box">
+                <h3>El Genio Ignorado y la Influencia Póstuma</h3>
+                <p>Durante su vida, Vincent van Gogh solo tuvo éxito en vender una única obra documentada. Vivió de las modestas pensiones de su hermano Theo, con quien mantuvo una extensa y conmovedora correspondencia que hoy es una fuente invaluable de información sobre su proceso creativo y sus luchas psicológicas.</p>
+                
+                <p>El artista sufrió de graves crisis de salud mental, culminando en su trágica muerte en 1890, a la edad de 37 años. La causa de su muerte (un disparo, posiblemente autoinfligido) sigue siendo debatida.</p>
+                
+                <p>Su verdadero reconocimiento llegó solo después de su muerte, gracias a los esfuerzos de Theo y, posteriormente, de la viuda de Theo, Johanna Bonger. Hoy, Van Gogh es considerado uno de los artistas más influyentes y sus obras alcanzan precios multimillonarios en subastas, marcando el camino para movimientos del siglo XX como el Expresionismo.</p>
+
+                <a href="https://www.vangoghmuseum.nl/" target="_blank" class="cta-button">
+                    Explorar el Museo Van Gogh (Ámsterdam)
+                </a>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock content %}

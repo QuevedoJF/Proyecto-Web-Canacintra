@@ -1,0 +1,80 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}Minecraft | El Juego de Construcción Infinito{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">Minecraft</h1>
+        <p class="lead text-center">Un mundo de bloques, creatividad ilimitada y aventura sin fin.</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/minecraft.jpg' %}" 
+                alt="Imagen de Minecraft: mundo de bloques y Steve" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 400px; object-fit: cover; width: 100%;"
+            >
+        </div>
+
+        <section id="trama">
+            <h2>Concepto y Objetivo del Juego</h2>
+            <p>Minecraft es un videojuego de construcción de tipo "mundo abierto" (sandbox) creado por Markus "Notch" Persson. El juego no tiene un objetivo final definido, lo que permite al jugador una gran libertad para elegir cómo jugar.</p>
+            <p>El mundo está compuesto por objetos tridimensionales ásperos (principalmente cubos y fluidos) llamados "bloques". Estos bloques pueden ser colocados, destruidos y extraídos para formar casi cualquier cosa que el jugador pueda imaginar. El objetivo principal en el modo supervivencia es, simplemente, sobrevivir a las criaturas hostiles que aparecen de noche, explorar y, opcionalmente, derrotar al dragón del Fin.</p>
+        </section>
+
+        <section id="caracteristicas">
+            <h2>Modos de Juego y Características Esenciales</h2>
+            <p>Minecraft ofrece diversos modos para adaptarse a diferentes estilos de juego. La clave de su popularidad reside en la simplicidad de su mecánica base combinada con una complejidad profunda.</p>
+            <ul>
+                <li>Modo Supervivencia: El jugador debe recolectar recursos, construir refugio, mantener la salud y el hambre, y defenderse de monstruos (mobs).</li>
+                <li>Modo Creativo: Ofrece a los jugadores recursos ilimitados, la habilidad de volar y la invulnerabilidad, centrándose puramente en la construcción y el diseño.</li>
+                <li>Redstone: Un sistema de cableado y lógica dentro del juego que permite a los jugadores crear complejos mecanismos, puertas automáticas, granjas e incluso computadoras funcionales.
+                    <img src="{% static 'images/minecraft1.jpg' %}" alt="Imagen de un circuito Redstone" class="img-fluid my-3" style="border-radius: 4px;">
+                </li>
+                <li>Mundo Infinito: Los mundos se generan proceduralmente y son técnicamente infinitos, ofreciendo biomas variados como desiertos, bosques, tundras nevadas y océanos.</li>
+            </ul>
+        </section>
+
+        <section id="desarrollo_idiomas">
+            <h2>Desarrollo y Plataformas</h2>
+            <p>Originalmente desarrollado por Mojang Studios (adquirido por Microsoft en 2014), Minecraft ha evolucionado constantemente desde su lanzamiento en 2011.</p>
+            <ul>
+                <li>Plataformas: Minecraft está disponible en prácticamente todas las plataformas modernas. Las dos versiones principales son:
+                    <ul>
+                        <li>Java Edition: Versión original (PC/Mac/Linux), conocida por su extenso soporte a mods.</li>
+                        <li>Bedrock Edition: Versión para consolas, móviles y Windows 10, que permite el juego cruzado (cross-play) entre plataformas.</li>
+                    </ul>
+                </li>
+                <li>Idiomas: El juego está traducido a más de 100 idiomas. El soporte activo de la comunidad ayuda a mantener las traducciones actualizadas, haciendo que el juego sea accesible a nivel global.
+                    <img src="{% static 'images/minecraft2.jpg' %}" alt="Logos de plataformas de Minecraft" class="img-fluid my-3" style="border-radius: 4px;">
+                </li>
+            </ul>
+        </section>
+
+        <section id="ventas_premios">
+            <h2>Ventas, Premios y Legado</h2>
+            
+            <div class="cta-box">
+                <h3>El Juego Más Vendido de la Historia</h3>
+                <p>Ventas: Minecraft ostenta el título del videojuego más vendido de la historia, con más de 300 millones de copias vendidas en todas las plataformas a nivel mundial.</p>
+                
+                <p>Premios: Ha ganado numerosos premios, incluyendo el "Juego Más Innovador" y el "Mejor Juego Descargable". Su impacto cultural va más allá del entretenimiento, siendo utilizado en programas educativos (Minecraft: Education Edition).</p>
+                
+                <img src="{% static 'images/minecraft4.jpg' %}" alt="Gráfico de ventas o logo de Mojang" class="img-fluid mb-4" style="border-radius: 4px; max-height: 200px;">
+                
+                <p>Legado: Su simplicidad visual y la libertad creativa que ofrece han inspirado a una generación de jugadores y desarrolladores, asegurando su relevancia en la cultura popular global.</p>
+
+                <a href="https://www.minecraft.net/" target="_blank" class="cta-button">
+                    ¡Comienza a Construir tu Mundo Ahora!
+                </a>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock content %}

@@ -18,7 +18,7 @@ def is_admin(user):
     return user.is_staff or user.is_superuser
 # ------------------------------------------
 
-# --- VISTAS PÚBLICAS Y BÁSICAS ---
+# --- CATEGORIAS ---
 def index(request):
     return render(request, 'core/index.html')
 
@@ -27,12 +27,6 @@ def identidad(request):
 
 def contactanos(request):
     return render(request, 'core/contactanos.html')
-
-def carrusel_view(request):
-    imagenes = [
-        {"url": "{% static 'images/paisaje_ghost.jpg' %}", "descripcion": "Paisaje 1"},
-    ]
-    return render(request, "core/partials/carrusel.html", {"imagenes": imagenes})
 
 def categoria1(request):
     return render(request, 'core/categoria1.html')
@@ -43,7 +37,29 @@ def categoria2(request):
 def categoria3(request):
     return render(request, 'core/categoria3.html')
 
+# CATEGORIAS DE LA CARPETA CATEGORY
+def ghost(request):
+    return render(request, 'category/ghost.html', {})
 
+def minecraft(request):
+    return render(request, 'category/minecraft.html', {})
+
+def planetas(request):
+    return render(request, 'category/planetas.html', {})
+
+def libros(request):
+    return render(request, 'category/libros.html', {})
+
+def flow(request):
+    return render(request, 'category/flow.html', {})
+
+def pintura(request):
+    return render(request, 'category/pintura.html', {})
+
+def paisajes(request):
+    return render(request, 'category/paisajes.html', {})
+
+#FOOTER: estas son las categoorias del footer
 def about_view(request):
     return render(request, 'core/about.html')
 
@@ -56,6 +72,13 @@ def mission_view(request):
 # CORRECCIÓN: Vista simple para mostrar la plantilla de login 
 def login_page(request): 
     return render(request, 'core/login.html')
+
+# CARRUSEL: esta es la vista del carrusel
+def carrusel_view(request):
+    imagenes = [
+        {"url": "{% static 'images/paisaje_ghost.jpg' %}", "descripcion": "Paisaje 1"},
+    ]
+    return render(request, "core/partials/carrusel.html", {"imagenes": imagenes})
 
 # --- VISTAS DE AUTENTICACIÓN Y REGISTRO ---
 

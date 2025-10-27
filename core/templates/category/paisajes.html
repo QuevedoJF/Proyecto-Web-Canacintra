@@ -1,0 +1,173 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}Los 10 Paisajes Naturales Más Impresionantes del Mundo{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">Los Hermosos Paisajes de la Naturaleza</h1>
+        <p class="lead text-center">Una exploración detallada de diez de las reservas y parques naturales más impresionantes del planeta, destacando su biodiversidad y protección.</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/bosque.jpg' %}" 
+                alt="Imagen de un paisaje natural majestuoso" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 400px; object-fit: cover; width: 100%;"
+            >
+        </div>
+
+        <section id="introduccion">
+            <h2>El Valor de los Ecosistemas Protegidos</h2>
+            <p>Los paisajes que presentamos a continuación son Patrimonio de la Humanidad o Parques Nacionales, esenciales para la estabilidad climática y la conservación de la biodiversidad. Su designación como reservas garantiza su protección a largo plazo frente a la actividad humana descontrolada. Cada uno representa una ventana invaluable a la historia geológica y biológica del planeta.</p>
+        </section>
+
+        <section id="diez_ejemplos">
+            <h2>Diez Santuarios de la Naturaleza Global</h2>
+
+            <div class="cta-box mb-4">
+                <h3>1. El Gran Cañón</h3>
+                <ul>
+                    <li>Lugar: Parque Nacional del Gran Cañón.</li>
+                    <li>Donde se ubica: Arizona, Estados Unidos.</li>
+                    <li>Años de Reserva: Designado Parque Nacional en 1919 (más de 105 años).</li>
+                    <li>Popularidad: Extremadamente alta (más de 4.5 millones de visitantes anuales).</li>
+                    <li>Que tiene: Un cañón de 446 km de longitud y hasta 1.6 km de profundidad, esculpido por el río Colorado. Ofrece una inigualable sección transversal de la historia geológica de la Tierra.</li>
+                    <li>Que sale: La formación geológica de capas rocosas, el río Colorado, cóndores de California, y ecosistemas desérticos únicos.</li>
+                    <img src="{% static 'images/paisajes1.jpg' %}" alt="Vista del Gran Cañón" class="img-fluid my-3" style="border-radius: 4px;">
+                </ul>
+            </div>
+
+            <div class="cta-box mb-4">
+                <h3>2. Islas Galápagos</h3>
+                <ul>
+                    <li>Lugar: Parque Nacional Galápagos.</li>
+                    <li>Donde se ubica: Ecuador (Océano Pacífico).</li>
+                    <li>Años de Reserva: Fundado como Parque Nacional en 1959 (más de 65 años).</li>
+                    <li>Popularidad: Alta, conocida mundialmente por su biodiversidad única y su papel en las teorías de Charles Darwin.</li>
+                    <li>Que tiene: Un archipiélago volcánico con ecosistemas marinos y terrestres altamente endémicos.</li>
+                    <li>Que sale: Tortugas gigantes (Galápagos), iguanas marinas (únicas en el mundo), piqueros de patas azules y leones marinos.</li>
+                </ul>
+            </div>
+
+            <div class="cta-box mb-4">
+                <h3>3. Parque Nacional Serengueti</h3>
+                <ul>
+                    <li>Lugar: Llanuras del Serengueti.</li>
+                    <li>Donde se ubica: Tanzania, África Oriental.</li>
+                    <li>Años de Reserva: Establecido como Parque Nacional en 1951 (más de 70 años).</li>
+                    <li>Popularidad: Muy alta, es el centro del ecoturismo de safari en África.</li>
+                    <li>Que tiene: Vastas llanuras de sabana y bosques. Famoso por ser el escenario de la Gran Migración anual de ñus y cebras.</li>
+                    <li>Que sale: Los "Cinco Grandes" de África (león, leopardo, elefante, búfalo, rinoceronte), y la masiva Gran Migración.</li>
+                </ul>
+            </div>
+            
+            <div class="cta-box mb-4">
+                <h3>4. Gran Barrera de Coral</h3>
+                <ul>
+                    <li>Lugar: Parque Marino de la Gran Barrera de Coral.</li>
+                    <li>Donde se ubica: Costa de Queensland, Australia.</li>
+                    <li>Años de Reserva: Designado Parque Marino en 1975 (casi 50 años).</li>
+                    <li>Popularidad: Alta, es el principal destino de buceo y una de las Siete Maravillas Naturales del Mundo.</li>
+                    <li>Que tiene: El sistema de arrecifes de coral más grande del mundo, extendiéndose por más de 2,300 km.</li>
+                    <li>Que sale: Miles de especies de peces tropicales, tortugas marinas, el dugongo y más de 400 tipos de coral duro y blando.</li>
+                </ul>
+            </div>
+
+            <div class="cta-box mb-4">
+                <h3>5. Reserva del Amazonas (Manaus)</h3>
+                <ul>
+                    <li>Lugar: Reserva de Desarrollo Sostenible del Amazonas Central.</li>
+                    <li>Donde se ubica: Brasil, Colombia, Perú (Región pan-amazónica).</li>
+                    <li>Años de Reserva: Varios parques protegidos desde la década de 1970 (la protección es compleja y zonal).</li>
+                    <li>Popularidad: Media-Alta, vital para la ciencia y el ecoturismo.</li>
+                    <li>Que tiene: El río Amazonas (el más caudaloso) y la selva tropical más grande del mundo. Es el principal pulmón del planeta.</li>
+                    <li>Que sale: La anaconda, jaguares, delfines rosados de río, monos, perezosos y una biodiversidad vegetal y de insectos inigualable.</li>
+                    <img src="{% static 'images/rio_amazonas.jpg' %}" alt="Vista del Río Amazonas o la selva tropical" class="img-fluid my-3" style="border-radius: 4px;">
+                </ul>
+            </div>
+            
+            <div class="cta-box mb-4">
+                <h3>6. Parque Nacional Torres del Paine</h3>
+                <ul>
+                    <li>Lugar: Torres del Paine.</li>
+                    <li>Donde se ubica: Patagonia, Chile.</li>
+                    <li>Años de Reserva: Fundado en 1959 (más de 65 años).</li>
+                    <li>Popularidad: Alta, destino de trekking y senderismo de clase mundial.</li>
+                    <li>Que tiene: Imponentes macizos de granito (las "Torres"), glaciares activos, lagos de color turquesa y vastas estepas patagónicas.</li>
+                    <li>Que sale: Las famosas Torres de Granito, el Glaciar Grey, pumas, guanacos, zorros y cóndores andinos.</li>
+                </ul>
+            </div>
+
+            <div class="cta-box mb-4">
+                <h3>7. Parque Nacional Banff</h3>
+                <ul>
+                    <li>Lugar: Parque Nacional Banff.</li>
+                    <li>Donde se ubica: Alberta, Canadá (Montañas Rocosas).</li>
+                    <li>Años de Reserva: Establecido en 1885 (más de 140 años), es el primer parque nacional de Canadá.</li>
+                    <li>Popularidad: Muy alta, famoso por su belleza paisajística alpina y lagos.</li>
+                    <li>Que tiene: Lagos de color esmeralda (como el Lago Louise y Moraine), picos nevados, extensos bosques de coníferas y glaciares.</li>
+                    <li>Que sale: Alces, caribúes, osos grizzly, cabras montesas, y los reflejos perfectos en el Lago Moraine.</li>
+                    <img src="{% static 'images/banff_glaciares.jpg' %}" alt="Lago Louise o el Glaciar Victoria en Banff" class="img-fluid my-3" style="border-radius: 4px;">
+                </ul>
+            </div>
+            
+            <div class="cta-box mb-4">
+                <h3>8. Parque Nacional Komodo</h3>
+                <ul>
+                    <li>Lugar: Islas Komodo, Rinca y Padar.</li>
+                    <li>Donde se ubica: Indonesia (Islas menores de la Sonda).</li>
+                    <li>Años de Reserva: Designado Parque Nacional en 1980 (más de 40 años).</li>
+                    <li>Popularidad: Media-Alta, por su fauna única.</li>
+                    <li>Que tiene: Islas volcánicas con sabana seca, playas de arena rosa y ecosistemas marinos.</li>
+                    <li>Que sale: El Dragón de Komodo (el lagarto más grande del mundo, endémico), y paisajes marinos de buceo excepcionales con mantarrayas.</li>
+                </ul>
+            </div>
+            
+            <div class="cta-box mb-4">
+                <h3>9. Fiordos del Oeste (Geirangerfjord)</h3>
+                <ul>
+                    <li>Lugar: Región de Fiordos del Oeste.</li>
+                    <li>Donde se ubica: Noruega.</li>
+                    <li>Años de Reserva: Geirangerfjord y Nærøyfjord son Patrimonio Mundial, protegidos desde 2005.</li>
+                    <li>Popularidad: Extremadamente alta, principal destino de cruceros y turismo paisajístico.</li>
+                    <li>Que tiene: Profundos valles inundados formados por glaciares (fiordos), rodeados de acantilados verticales, cascadas masivas y pequeños pueblos costeros.</li>
+                    <li>Que sale: El fiordo Geirangerfjord, la cascada de las Siete Hermanas, y paisajes de montaña que descienden directamente al mar.</li>
+                </ul>
+            </div>
+            
+            <div class="cta-box mb-4">
+                <h3>10. Parque Nacional de Yellowstone</h3>
+                <ul>
+                    <li>Lugar: Parque Nacional de Yellowstone.</li>
+                    <li>Donde se ubica: Wyoming, Montana e Idaho, Estados Unidos.</li>
+                    <li>Años de Reserva: Fundado en 1872 (más de 150 años), es el primer parque nacional del mundo.</li>
+                    <li>Popularidad: Muy alta, ícono del sistema de parques de EE. UU.</li>
+                    <li>Que tiene: El complejo geotérmico más grande del planeta (un supervolcán latente), que incluye geiseres (como Old Faithful), y aguas termales de colores vibrantes.</li>
+                    <li>Que sale: Geiseres, bisontes americanos, alces, lobos, el Gran Prisma de Aguas Termales, y un ecosistema de alta montaña.</li>
+                    <img src="{% static 'images/yellowstone_geiser.jpg' %}" alt="Imagen del Gran Prisma o un geiser de Yellowstone" class="img-fluid my-3" style="border-radius: 4px;">
+                </ul>
+            </div>
+
+        </section>
+        
+        <section id="conservacion">
+            <h2>Compromiso con la Conservación</h2>
+            
+            <div class="cta-box">
+                <h3>Protegiendo la Belleza para el Futuro</h3>
+                <p>La preservación de estos paisajes no solo garantiza el hogar de millones de especies, sino que también protege los servicios ecosistémicos vitales para la humanidad. El turismo responsable y la investigación científica son herramientas clave para mantener estas reservas intactas para las futuras generaciones.</p>
+                
+                <a href="https://whc.unesco.org/es/list/" target="_blank" class="cta-button">
+                    Explorar Más Patrimonios de la UNESCO
+                </a>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,27 +1,35 @@
 {% load static %}
-<section class="carousel" aria-roledescription="carrusel" aria-label="Galería automática de imágenes" id="carousel">
-<div class="track" id="track">
+<section class="carousel" aria-roledescription="carrusel" aria-label="Galería automática de imágenes" id="carousel" >
+    <div class="track" id="track">
 
-<figure class="slide">
-    <img src="{% static 'images/ghost.jpg' %}" alt="Paisaje 1">
-    <figcaption class="caption">Ghost of Tsushima — “Ghost of Tsushima™ es un juego de acción en mundo abierto ambientado en el Japón feudal.</figcaption>
-</figure>
+        <figure class="slide">
+            <a href="{% url 'ghost' %}">
+                <img src="{% static 'images/ghost.jpg' %}" alt="Imagen: Ghost of Tsushima">
+            </a>
+            <figcaption class="caption">Ghost of Tsushima — “Ghost of Tsushima™ es un juego de acción en mundo abierto ambientado en el Japón feudal.</figcaption>
+        </figure>
 
-<figure class="slide">
-    <img src="{% static 'images/espacio.jpg' %}" alt="Paisaje 2">
-    <figcaption class="caption">Sistema Solar — ¿Qué es el sistema solar? ¿Cuáles son las partes que lo conforman? </figcaption>
-</figure>
+        <figure class="slide">
+            <a href="{% url 'planetas' %}">
+                <img src="{% static 'images/espacio.jpg' %}" alt="Imagen: Sistema Solar">
+            </a>
+            <figcaption class="caption">Sistema Solar — ¿Qué es el sistema solar? ¿Cuáles son las partes que lo conforman?</figcaption>
+        </figure>
 
-<figure class="slide">
-    <img src="{% static 'images/literatura.jpg' %}" alt="Paisaje 3">
-    <figcaption class="caption">Literatura — Mundo de Libros es un espacio único para viajar y conocer nuevos lugares a través de la lectura.</figcaption>
-</figure>
+        <figure class="slide">
+            <a href="{% url 'libros' %}">
+                <img src="{% static 'images/literatura.jpg' %}" alt="Imagen: Literatura">
+            </a>
+            <figcaption class="caption">Literatura — Mundo de Libros es un espacio único para viajar y conocer nuevos lugares a través de la lectura.</figcaption>
+        </figure>
 
-<figure class="slide">
-    <img src="{% static 'images/pelicula.jpg' %}" alt="Paisaje 4">
-    <figcaption class="caption">Flow —"Flow" es una película de animación independiente de fantasía y aventuras lanzada en 2024</figcaption>
-</figure>
-</div>
+        <figure class="slide">
+            <a href="{% url 'flow' %}">
+                <img src="{% static 'images/pelicula.jpg' %}" alt="Imagen: Flow, la película">
+            </a>
+            <figcaption class="caption">Flow —"Flow" es una película de animación independiente de fantasía y aventuras lanzada en 2024</figcaption>
+        </figure>
+    </div>
 
-<div class="sr-only" aria-live="polite" id="carousel-status">Slide 1 de 4</div>
+    <div class="sr-only" aria-live="polite" id="carousel-status">Slide 1 de 4</div>
 </section>

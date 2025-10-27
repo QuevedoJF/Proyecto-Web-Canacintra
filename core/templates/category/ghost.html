@@ -1,0 +1,76 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}Ghost of Tsushima | Historia, Detalles y Logros{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">Ghost of Tsushima</h1>
+        <p class="lead text-center">La épica de Jin Sakai, un samurái forzado a la deshonra para salvar a su pueblo de la invasión mongola de 1274.</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/ghost.jpg' %}" 
+                alt="Imagen principal de la trama o Jin Sakai" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 400px; object-fit: cover; width: 100%;"
+            >
+        </div>
+
+        <section id="trama">
+            <h2>Trama (Jin Sakai: De Samurái a Fantasma)</h2>
+            <p>La historia principal del juego comienza en 1274, durante la primera invasión mongola a Japón. La élite samurái de la isla de Tsushima, liderada por Lord Shimura (tío de Jin), es brutalmente aniquilada en la playa de Komoda por el ejército del general Khotun Khan, un líder mongol astuto y versado en las costumbres japonesas.</p>
+            <p>El protagonista, Jin Sakai, despierta malherido y se da cuenta de que las tácticas honorables del Bushidō han fallado catastróficamente. Para combatir la superioridad numérica y la crueldad de los mongoles, Jin se ve obligado a abandonar su código de honor y utilizar métodos deshonrosos: sigilo, engaño, veneno y terror. Al adoptar la identidad del Fantasma, logra liberar gradualmente la isla, pero esta elección lo pone en conflicto directo con Lord Shimura y con el código moral que juró defender.</p>
+        </section>
+
+        <section id="caracteristicas_rendimiento">
+            <h2>Características Principales y Rendimiento Técnico</h2>
+            <p>Ghost of Tsushima es un juego de acción y aventura en mundo abierto, jugado desde una perspectiva en tercera persona, que enfatiza tanto el combate directo como el sigilo.</p>
+            <ul>
+                <li>Características: El mundo abierto de Tsushima se divide en tres regiones (Izuhara, Toyotama y Kamiagata). La navegación es orgánica, utilizando el Viento Guía como principal herramienta en lugar de los waypoints tradicionales. El jugador debe dominar múltiples Posturas de Combate con la katana.</li>
+                <li>Rendimiento Técnico: En PlayStation 5, el juego ofrece 4K dinámico a 60 FPS, proporcionando una experiencia fluida. La versión Director's Cut añadió el uso de la respuesta háptica y los gatillos adaptativos del control DualSense, mejorando la inmersión en el combate.
+                    <img src="{% static 'images/paisaje_ghost.jpg' %}" alt="Imagen de jugabilidad en 60 FPS o DualSense" class="img-fluid my-3" style="border-radius: 4px;">
+                </li>
+                <li>Modo Multijugador: El modo cooperativo Ghost of Tsushima: Legends permite a hasta cuatro jugadores completar misiones y asaltos basados en la mitología japonesa.</li>
+            </ul>
+        </section>
+
+        <section id="idiomas_desarrollo">
+            <h2>Idiomas y Proceso de Desarrollo</h2>
+            <p>Fue desarrollado por Sucker Punch Productions, conocidos por la serie Infamous. El juego fue uno de los últimos grandes exclusivos de PlayStation 4 y su desarrollo se extendió por casi seis años.</p>
+            <ul>
+                <li>Idiomas: El juego ofrece un soporte lingüístico robusto. El doblaje japonés es destacado, y la versión Director's Cut mejoró la sincronización labial para el audio en japonés. También cuenta con doblaje completo en español (Latino y España) e inglés.
+                    <img src="{% static 'images/ghost_juego.jpg' %}" alt="Imagen sobre idiomas o el doblaje en japonés" class="img-fluid my-3" style="border-radius: 4px;">
+                </li>
+                <li>Desarrollo: La versión para PC fue lanzada por Nixxes Software en 2024, ofreciendo compatibilidad con monitores Ultrawide y tecnologías de escalado como NVIDIA DLSS 3 y AMD FSR 3.</li>
+            </ul>
+        </section>
+        
+        <section id="inspiracion_premios">
+            <h2>Inspiración, Ventas y Premios</h2>
+            
+            <div class="cta-box">
+                <h3>Legado y Reconocimiento</h3>
+                <p>Inspiración y Autenticidad: El juego rinde un claro homenaje al cine clásico de samuráis (Chanbara), especialmente las películas de Akira Kurosawa. El "Modo Kurosawa" es un filtro en blanco y negro que simula la estética de esas películas. Aunque la historia es ficticia, el diseño se basa en la geografía y cultura reales del período Kamakura, priorizando la estética épica sobre la precisión histórica total.</p>
+                
+                <p>Ventas: Ghost of Tsushima fue un éxito rotundo, superando las 5 millones de copias vendidas en sus primeros cinco meses y consolidándose como una de las nuevas franquicias más importantes de PlayStation. Su éxito se extiende con la versión Director's Cut y el exitoso lanzamiento en PC.</p>
+                
+                <p>Premios: Fue nominado a Juego del Año (GOTY) en los The Game Awards de 2020, donde ganó el prestigioso premio Voz de Jugador (Player's Voice). También recibió galardones importantes por su Dirección de Arte, Diseño de Audio y Narrativa.</p>
+                
+                <img src="{% static 'images/ghost_portada.jpg' %}" alt="Imagen de premios o logo GOTY" class="img-fluid mb-4" style="border-radius: 4px; max-height: 200px;">
+                
+                <p>Una adaptación cinematográfica está actualmente en desarrollo, dirigida por Chad Stahelski (John Wick), lo que subraya el impacto cultural y el legado de la obra.</p>
+
+                <a href="https://www.playstation.com/es-mx/games/ghost-of-tsushima/" target="_blank" class="cta-button">
+                    ¡Descubre el Camino del Fantasma Ahora!
+                </a>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,70 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}Flow | La Película de Animación (2024){% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">Flow (El Gato)</h1>
+        <p class="lead text-center">Una aventura de supervivencia sin diálogos sobre la amistad forzada por un mundo inundado. Título original: Straume (2024).</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/pelicula.jpg' %}" 
+                alt="El gato de la película Flow en un mundo inundado" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 400px; object-fit: cover; width: 100%;"
+            >
+        </div>
+
+        <section id="trama">
+            <h2>Trama y Concepto Central</h2>
+            <p>La película de animación letona, dirigida por Gints Zilbalodis, se desarrolla en un futuro distópico donde una gran inundación ha cubierto la Tierra, obligando a las criaturas terrestres a vivir sobre cualquier objeto flotante. La historia se centra en un gato (cuya sinopsis en IMDb lo describe como "un animal solitario") cuya supervivencia se ve amenazada por el agua.</p>
+            <p>Forzado por la catástrofe, el gato encuentra refugio en un bote que ya es ocupado por varias especies, incluyendo un lémur, un perro, un oso y un capibara. El conflicto surge de la necesidad de estos animales, que son enemigos naturales, de aprender a cooperar y formar un equipo para sobrevivir al peligro constante del océano y a las tormentas. La película es un relato de supervivencia y la superación de los instintos primarios en pos de la comunidad.</p>
+        </section>
+
+        <section id="caracteristicas">
+            <h2>Características, Estilo y Géneros</h2>
+            <p>Flow es aclamada por su estilo de narración innovador y su potente impacto visual, enmarcada principalmente en los géneros de Animación por Computadora, Aventura Animal y Supervivencia.</p>
+            <ul>
+                <li>Estilo Minimalista: La animación en 3D utiliza un diseño minimalista y texturas suaves, logrando una atmósfera inmersiva que realza la inmensidad del paisaje acuático.</li>
+                <li>Narrativa Silenciosa: La característica más notable es que la película carece casi por completo de diálogos. La historia se comunica eficazmente a través de la acción, el diseño de sonido y las expresiones corporales de los animales.</li>
+                <li>Géneros: Abarca Aventura, Supervivencia y Drama. Aunque es apta para toda la familia, la película contiene elementos tensos y temáticas dramáticas (Clasificación A, o PG/PG-13 en otros territorios por elementos temáticos).
+                    <img src="{% static 'images/flow1.jpg' %}" alt="Primer plano del gato protagonista" class="img-fluid my-3" style="border-radius: 4px;">
+                </li>
+            </ul>
+        </section>
+
+        <section id="desarrollo_premios">
+            <h2>Desarrollo y Reconocimiento Internacional</h2>
+            <p>La película es una coproducción europea, con participación de estudios de Francia, Bélgica y Hungría, lo que le otorga un alcance y calidad de producción internacional.</p>
+            <ul>
+                <li>Director: Gints Zilbalodis.</li>
+                <li>Premios y Festivales: Flow ha recibido aclamación de la crítica, destacando su selección oficial y debut en el prestigioso Festival de Cine de Cannes, donde fue elogiada por su originalidad.
+                    <img src="{% static 'images/flow2.jpg' %}" alt="Logo del Festival de Cannes o calificación de IMDb" class="img-fluid my-3" style="border-radius: 4px;">
+                </li>
+                <li>Ventas y Distribución: Su éxito en festivales ha asegurado su distribución global. Aunque la narrativa es muda, se prepara para el mercado internacional con adaptaciones de subtítulos y materiales promocionales en múltiples idiomas.</li>
+            </ul>
+        </section>
+
+        <section id="detalles_finales">
+            <h2>Detalles de Producción</h2>
+            
+            <div class="cta-box">
+                <h3>Información de Lanzamiento</h3>
+                <p>La película tuvo su estreno en 2024 con una duración aproximada de 1 hora y 25 minutos. Ha sido calificada positivamente por la crítica y tiene una alta calificación de audiencia.</p>
+                
+                <p>Es considerada una obra maestra de la animación minimalista y una fuerte candidata en la temporada de premios. Recomendada para quienes buscan una aventura emocional y visualmente rica.</p>
+                
+                <a href="https://www.imdb.com/title/tt27236894/" target="_blank" class="cta-button">
+                    Ver Calificación y Tráiler en IMDb
+                </a>
+            </div>
+        </section>
+    </div>
+</div>
+
+{% endblock content %}

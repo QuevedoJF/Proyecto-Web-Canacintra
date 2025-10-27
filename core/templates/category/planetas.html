@@ -1,0 +1,79 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}El Sistema Solar | Planetas, Sol y Composición{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">El Sistema Solar</h1>
+        <p class="lead text-center">Un vasto sistema planetario dominado por la gravedad del Sol, que alberga vida en la Tierra.</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/planetas1.jpg' %}" 
+                alt="Imagen del Sistema Solar con el Sol y los planetas" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 400px; object-fit: cover; width: 100%;"
+            >
+        </div>
+
+        <section id="definicion">
+            <h2>Composición y Estructura</h2>
+            <p>El Sistema Solar es el sistema planetario en el que se encuentran la Tierra y otros objetos astronómicos que giran directa o indirectamente en órbita alrededor de una única estrella conocida como el **Sol**. Se formó hace aproximadamente 4.6 mil millones de años a partir del colapso gravitatorio de una gran nube molecular.</p>
+            <p>Estructuralmente, el sistema se divide en dos regiones principales de planetas:</p>
+            <ul>
+                <li>Planetas Interiores (Terrestres): Son pequeños, densos y rocosos: **Mercurio, Venus, Tierra y Marte**. Se encuentran dentro del cinturón de asteroides.</li>
+                <li>Planetas Exteriores (Gigantes): Son mucho más grandes y se componen principalmente de gases (Júpiter y Saturno) o de hielo y gases ligeros (Urano y Neptuno). Se encuentran más allá del cinturón de asteroides.</li>
+            </ul>
+        </section>
+
+        <section id="sol_interiores">
+            <h2>El Sol y los Planetas Rocosos</h2>
+            <p>El **Sol** es la estrella central del sistema y constituye más del 99.8% de la masa total. Es una esfera casi perfecta de plasma caliente, cuya energía es vital para la vida en la Tierra.</p>
+            <ul>
+                <li>Mercurio: Es el planeta más pequeño y el más cercano al Sol. Carece de atmósfera significativa.</li>
+                <li>Venus: Similar en tamaño a la Tierra, posee una atmósfera extremadamente densa que provoca un efecto invernadero descontrolado, haciéndolo el planeta más caliente.</li>
+                <li>Tierra: El planeta más denso y el único conocido hasta ahora con vida. Su atmósfera y su campo magnético protegen la vida de la radiación solar.</li>
+                <li>Marte: Frecuentemente llamado el "planeta rojo" debido al óxido de hierro en su superficie. Es el foco principal de la exploración espacial actual en busca de signos de vida pasada.</li>
+            </ul>
+            <img src="{% static 'images/planetas2.jpg' %}" alt="Imagen de Mercurio, Venus, Tierra y Marte" class="img-fluid my-3" style="border-radius: 4px;">
+        </section>
+
+        <section id="gigantes_exteriores">
+            <h2>Gigantes Gaseosos y Regiones Más Allá</h2>
+            <p>Más allá del cinturón de asteroides se encuentran los gigantes gaseosos, planetas que definen las características externas del sistema.</p>
+            <ul>
+                <li>Júpiter: El planeta más grande del sistema solar, cuya masa es dos veces y media la de todos los demás planetas juntos. Posee una gran mancha roja, una tormenta persistente.</li>
+                <li>Saturno: Reconocido por su extenso y complejo sistema de anillos compuestos principalmente de hielo. Es el segundo más grande.</li>
+                <li>Urano y Neptuno: Clasificados como gigantes de hielo, son menos masivos que Júpiter y Saturno, pero significativamente más grandes que los terrestres.</li>
+            </ul>
+            <p>Más allá de Neptuno se encuentra el **Cinturón de Kuiper**, una región de objetos helados y cometas de corto período, que incluye al planeta enano **Plutón**.</p>
+            <img src="{% static 'images/planetas.jpg' %}" alt="Imagen de Júpiter o Saturno con sus anillos" class="img-fluid my-3" style="border-radius: 4px;">
+        </section>
+
+        <section id="exploracion_logros">
+            <h2>Exploración y Logros Científicos</h2>
+            
+            <div class="cta-box">
+                <h3>Vanguardia Científica</h3>
+                <p>La exploración del Sistema Solar ha sido un motor constante para la ciencia y la tecnología. Misiones clave como Voyager, Cassini (a Saturno) y las diversas misiones a Marte (rovers Curiosity y Perseverance) han ampliado inmensamente nuestro conocimiento sobre la formación de planetas y la posibilidad de vida fuera de la Tierra.</p>
+                
+                <p>Logros Notables: Las misiones Voyager 1 y 2 son los objetos hechos por el hombre que han viajado más lejos, adentrándose en el espacio interestelar. La misión New Horizons proporcionó imágenes detalladas de Plutón en 2015.</p>
+                
+                <img src="{% static 'images/espacio.jpg' %}" alt="Imagen de un rover o sonda espacial" class="img-fluid mb-4" style="border-radius: 4px; max-height: 200px;">
+                
+                <p>El futuro de la exploración se centra en establecer una presencia humana sostenible en la Luna y, eventualmente, en Marte.</p>
+
+                <a href="https://ciencia.nasa.gov/sistema-solar/" target="_blank" class="cta-button">
+                    Explora Más sobre la NASA (Enlace Teal)
+                </a>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock content %}

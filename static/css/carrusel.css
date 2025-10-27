@@ -1,7 +1,7 @@
 .carousel {
   width: 100%;
-  max-width: 1100px;      /* tamaño máximo */
-  height: 500px;          /* altura fija */
+  max-width: 1100px; /* tamaño máximo */
+  height: 500px; /* altura fija */
   margin: 40px auto;
   overflow: hidden;
   position: relative;
@@ -24,24 +24,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000; /* relleno si la imagen no cubre todo */
+  background: #000; /* Fondo para emergencia, pero la imagen lo cubrirá */
 }
 
-/* Ajuste inteligente para imágenes de cualquier tamaño */
+/* Asegura que el enlace ocupe el 100% del slide */
+.slide a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* No hay padding o margen extra aquí */
+}
+
+/* 🟢 CORRECCIÓN FINAL: Vuelve a 'cover' para que la imagen cubra todo */
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* rellena todo el espacio sin deformar */
-  object-position: center; /* centra la imagen */
+  object-fit: cover; /* ¡Esta es la clave para que la imagen cubra todo el espacio! */
+  object-position: center; /* Centra la imagen */
   display: block;
-  transition: transform 1.5s ease, filter 1s ease;
+  transition: transform 1.5s ease, filter 1s ease; /* Transición para el zoom y brillo */
   filter: brightness(0.9);
 }
 
-/* efecto leve al pasar el mouse */
+/* Efecto al pasar el mouse (ahora con zoom de nuevo) */
 .slide img:hover {
-  transform: scale(1.05);
-  filter: brightness(1);
+  transform: scale(1.05); /* Zoom leve para un efecto visual */
+  filter: brightness(1); /* Más brillante al pasar el mouse */
 }
 
 /* Texto sobre la imagen */
