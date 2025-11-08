@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-
 class Categoria(models.Model):
     id = models.BigAutoField(auto_created=True, primary_key=True,
     serialize=False, verbose_name='ID')
@@ -47,6 +46,13 @@ class Archivo(models.Model):
         managed = True
         db_table = 'archivo'
         verbose_name_plural = 'Archivo'
+
+class Perfil(models.Model): 
+    user = models.OneToOneField(User, on_delete=models.CASCADE) 
+    foto_perfil = models.ForeignKey(Archivo, null=True, blank=True, 
+    on_delete=models.SET_NULL) 
+def __str__(self): 
+    return f'Perfil de {self.user.username}' 
 
 class Publicacion(models.Model):
     id = models.BigAutoField(auto_created=True, primary_key=True,
