@@ -99,6 +99,15 @@ def literatura3(request):
 def literatura4(request): 
     return render(request, 'category/literatura4.html', {})
 
+def naturaleza1(request): 
+    return render(request, 'category/naturaleza1.html', {})
+
+def naturaleza2(request): 
+    return render(request, 'category/naturaleza2.html', {})
+
+def naturaleza3(request): 
+    return render(request, 'category/naturaleza3.html', {})
+
 #FOOTER: estas son las categoorias del footer
 def about_view(request):
     return render(request, 'core/about.html')

@@ -143,3 +143,28 @@ LOGOUT_REDIRECT_URL = 'core:login'
 
 MEDIA_URL = '/media/' 
 MEDIA_ROOT = BASE_DIR / 'media' 
+
+
+# ---- Database (development) ----
+# Using SQLite for development to avoid requiring a local MySQL server.
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+# If you want to use MySQL in development, uncomment and configure the following block,
+# ensure your MySQL server is running (e.g., XAMPP/WAMP) and update NAME/USER/PASSWORD/HOST/PORT.
+# You'll also need the 'mysqlclient' package installed: pip install mysqlclient
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'your_database_name',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#     }
+# }

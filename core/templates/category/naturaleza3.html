@@ -1,0 +1,83 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}Naturaleza: Características, Elementos e Importancia Vital{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">Naturaleza: Características, Elementos e Importancia</h1>
+        <p class="lead text-center">El universo físico, incluyendo la vida silvestre, los fenómenos naturales, la geografía y el entorno físico, libre de la intervención humana.</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/puesta_de_sol.jpg' %}" 
+                alt="Imagen de un paisaje natural que incluye agua, tierra y vida" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 400px; object-fit: cover; width: 100%;"
+            >
+        </div>
+
+        <section id="caracteristicas">
+            <h2>Características Esenciales de la Naturaleza</h2>
+            <p>La Naturaleza abarca todos los procesos y fenómenos que no han sido alterados artificialmente por el hombre. Se define por ser un sistema complejo y autosuficiente, regido por leyes físicas y biológicas.</p>
+            <ul>
+                <li>Dinamismo y Cambio: La naturaleza nunca es estática. Está en constante movimiento debido a procesos como la erosión, la actividad tectónica, los ciclos de vida y los cambios climáticos (ej., el ciclo del agua).</li>
+                <li>Ciclicidad: La mayoría de los procesos naturales ocurren en ciclos cerrados (ciclo del carbono, del nitrógeno, las estaciones), asegurando la regeneración y el equilibrio del sistema.</li>
+                <li>Autoorganización: Los ecosistemas tienden a formar estructuras y comunidades estables sin necesidad de control externo. Las poblaciones se regulan a través de cadenas alimenticias y competencia.</li>
+                <li>Imprevisibilidad: Aunque sigue leyes, la naturaleza a menudo exhibe fenómenos caóticos e impredecibles (ej., terremotos, clima extremo) que son inherentes a los sistemas complejos.</li>
+            </ul>
+        </section>
+        
+        <section id="elementos">
+            <h2>Elementos Constitutivos (Abióticos y Bióticos)</h2>
+            <p>La Naturaleza se compone de elementos vivos (bióticos) y no vivos (abióticos) que interactúan constantemente para formar ecosistemas funcionales:</p>
+            
+            <h3>Elementos Abióticos (No Vivos)</h3>
+            <p>Son los componentes físicos y químicos del medioambiente:</p>
+            <ul>
+                <li>Materia: Roca, suelo, minerales, metales y elementos químicos.</li>
+                <li>Energía: Incluye la radiación solar, el calor geotérmico, la energía eólica y las fuerzas gravitacionales.</li>
+                <li>Clima y Geografía: El agua (ríos, mares, nubes), el aire (atmósfera), la temperatura y el relieve (montañas, llanuras).</li>
+            </ul>
+
+            <h3>Elementos Bióticos (Vivos)</h3>
+            <p>Son todos los organismos vivos y sus interacciones:</p>
+            <ul>
+                <li>Productores: Plantas, algas y otros organismos que generan su propio alimento a través de la fotosíntesis (la base de la cadena alimenticia).</li>
+                <li>Consumidores: Animales que obtienen energía consumiendo otros organismos (herbívoros, carnívoros y omnívoros).</li>
+                <li>Descomponedores: Bacterias, hongos e insectos que reciclan la materia orgánica, devolviendo nutrientes esenciales al suelo.</li>
+            </ul>
+            <img src="{% static 'images/paisajes.jpg' %}" alt="Ilustración de la cadena alimenticia" class="img-fluid my-3" style="border-radius: 4px;">
+        </section>
+
+        <section id="importancia">
+            <h2>Importancia Vital y Servicios Ecosistémicos</h2>
+            <p>La naturaleza es esencial para la supervivencia humana. La preservación de los ecosistemas se traduce directamente en bienestar, salud y economía, a través de los servicios que nos provee:</p>
+            <ul>
+                <li>Soporte de Vida: Generación de oxígeno (a través de los océanos y los bosques), purificación del agua y formación de suelo fértil.</li>
+                <li>Recursos y Suministros: Fuente de alimentos (pesca, agricultura), materias primas, y la base para el desarrollo de medicinas.</li>
+                <li>Regulación Climática: Los bosques y los océanos actúan como sumideros de carbono, absorbiendo grandes cantidades de CO₂ y mitigando el cambio climático global.</li>
+                <li>Protección Natural: Los arrecifes de coral, manglares y dunas protegen las costas de inundaciones y la erosión causada por tormentas.</li>
+            </ul>
+        </section>
+
+        <section id="cta">
+            <h2>Promoviendo la Conciencia Ecológica</h2>
+            
+            <div class="cta-box">
+                <h3>El Rol de la Sociedad en la Protección Ambiental</h3>
+                <p>Comprender la interconexión de los elementos naturales es el primer paso para la conservación. Nuestra supervivencia depende de mantener la salud y el equilibrio de los ecosistemas que nos rodean.</p>
+                
+                <a href="URL_RECURSO_CONSERVACION" target="_blank" class="cta-button">
+                    Descubre Iniciativas de Conservación
+                </a>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock content %}

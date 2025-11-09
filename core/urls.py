@@ -47,6 +47,11 @@ urlpatterns = [
     path("literatura2/", views.literatura2, name="literatura2"),
     path("literatura3/", views.literatura3, name="literatura3"),
     path("literatura4/", views.literatura4, name="literatura4"),
+
+        # Naturaleza (Múltiples Vistas)
+    path("naturaleza1/", views.naturaleza1, name="naturaleza1"),
+    path("naturaleza2/", views.naturaleza2, name="naturaleza2"),
+    path("naturaleza3/", views.naturaleza3, name="naturaleza3"),
     
     # perfiles, configuración y administración.
     path('login/', auth_views.LoginView.as_view(template_name='core/login.html'), name='login'), 

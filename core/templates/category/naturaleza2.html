@@ -1,0 +1,75 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}La Biodiversidad: Naturaleza con Otro Nombre | Definición y Valor{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">La Biodiversidad: Naturaleza con Otro Nombre</h1>
+        <p class="lead text-center">La variedad de la vida en la Tierra y la base de los ecosistemas que sostienen la existencia humana.</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/paisajes1.jpg' %}" 
+                alt="Imagen que muestra una alta diversidad de especies en un ecosistema" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 400px; object-fit: cover; width: 100%;"
+            >
+        </div>
+
+        <section id="definicion">
+            <h2>¿Qué es la Biodiversidad?</h2>
+            <p>El término **Biodiversidad** (o diversidad biológica) es la contracción de la expresión "biología" y "diversidad". Hace referencia a la vasta y compleja variedad de la vida en la Tierra en todos sus niveles.</p>
+            <p>La biodiversidad no se limita a la cantidad de especies, sino que abarca tres niveles interconectados:</p>
+            <ul>
+                <li>Diversidad Genética: La variedad de genes dentro de una misma especie. Esto permite a las especies adaptarse a cambios en el entorno.</li>
+                <li>Diversidad de Especies: La variedad de seres vivos (plantas, animales, hongos, microorganismos) que habitan un lugar o el planeta. Es el nivel más conocido.</li>
+                <li>Diversidad de Ecosistemas: La variedad de hábitats o comunidades biológicas (como selvas, arrecifes, desiertos, lagos) y los procesos ecológicos que ocurren en ellos.</li>
+            </ul>
+        </section>
+
+        <section id="valor">
+            <h2>El Valor Intrínseco y los Servicios Ecosistémicos</h2>
+            <p>La biodiversidad es crucial porque proporciona los llamados "servicios ecosistémicos", que son esenciales para la supervivencia y el bienestar humano. Si la biodiversidad falla, estos servicios colapsan.</p>
+            <ul>
+                <li>Servicios de Provisión: Incluyen alimentos (pesca, agricultura), agua dulce, medicinas (sustancias extraídas de plantas y organismos) y materiales de construcción.</li>
+                <li>Servicios de Regulación: Son los que mantienen el equilibrio ambiental. Incluyen la purificación del agua, la regulación del clima (almacenamiento de carbono por los bosques) y el control de plagas y enfermedades.</li>
+                <li>Servicios Culturales: Beneficios no materiales, como la recreación (turismo de naturaleza), la inspiración estética y el conocimiento científico.</li>
+            </ul>
+            <img src="{% static 'images/rio_amazonas.jpg' %}" alt="Ilustración de la polinización o un bosque purificando aire" class="img-fluid my-3" style="border-radius: 4px;">
+        </section>
+
+        <section id="amenazas">
+            <h2>Las Principales Amenazas a la Biodiversidad</h2>
+            <p>Actualmente, el planeta experimenta una tasa de extinción de especies miles de veces superior a la tasa histórica natural, impulsada principalmente por la actividad humana. Las cinco amenazas principales son:</p>
+            <ul>
+                <li>Pérdida de Hábitat: La conversión de áreas naturales (bosques, humedales) a usos agrícolas, urbanos o industriales. Es la principal causa de extinción.</li>
+                <li>Cambio Climático: El aumento de las temperaturas y la modificación de los patrones de lluvia alteran los ecosistemas, obligando a las especies a migrar o enfrentar su desaparición.</li>
+                <li>Contaminación: La liberación de químicos, plásticos y nutrientes excesivos en el aire, el agua y el suelo.</li>
+                <li>Sobreexplotación de Recursos: La pesca excesiva, la tala incontrolada y la caza furtiva de fauna silvestre.</li>
+                <li>Especies Exóticas Invasoras: La introducción de especies ajenas a un ecosistema que compiten con las especies nativas o las depredan.</li>
+            </ul>
+        </section>
+
+        <section id="conservacion">
+            <h2>La Conservación como Tarea Global</h2>
+            
+            <div class="cta-box">
+                <h3>El Esfuerzo por la Vida Silvestre</h3>
+                <p>La conservación de la biodiversidad es una tarea ética, ecológica y económica urgente. Implica la creación de áreas protegidas (parques nacionales, reservas), la promoción de prácticas sostenibles en la agricultura y la industria, y la educación ambiental.</p>
+                
+                <p>La ciencia y la política deben trabajar juntas para reducir la huella ecológica humana y garantizar que las futuras generaciones puedan seguir beneficiándose de la "naturaleza con otro nombre".</p>
+                
+                <a href="https://www.cbd.int/convention/text/" target="_blank" class="cta-button">
+                    Explorar la Convención sobre la Diversidad Biológica (CBD)
+                </a>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock content %}

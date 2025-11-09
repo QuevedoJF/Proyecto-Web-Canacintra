@@ -1,0 +1,70 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block title %}Día Mundial de la Naturaleza | Conservación y Biodiversidad{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-page">
+
+        <h1 class="text-center">Día Mundial de la Naturaleza</h1>
+        <p class="lead text-center">Una celebración global para concientizar sobre el valor de la fauna y flora silvestres y la necesidad de combatir los delitos contra la naturaleza.</p>
+
+        <div class="text-center mb-5">
+            <img 
+                src="{% static 'images/naturaleza1.jpg' %}" 
+                alt="Imagen de fauna y flora silvestres" 
+                class="img-fluid" 
+                style="border-radius: 6px; max-height: 400px; object-fit: cover; width: 100%;"
+            >
+        </div>
+
+        <section id="que_es">
+            <h2>Significado y Origen de la Conmemoración</h2>
+            <p>El Día Mundial de la Naturaleza (o Día Mundial de la Vida Silvestre) se celebra globalmente cada **3 de marzo**. Esta fecha fue proclamada por la Asamblea General de las Naciones Unidas (ONU) en 2013.</p>
+            <p>La elección del 3 de marzo conmemora el día en que se firmó la **Convención sobre el Comercio Internacional de Especies Amenazadas de Fauna y Flora Silvestres (CITES)** en 1973. CITES es un acuerdo internacional clave que asegura que el comercio de animales y plantas silvestres no amenace su supervivencia.</p>
+            <ul>
+                <li>Fecha de Celebración: 3 de marzo.</li>
+                <li>Organismo Promotor: Naciones Unidas (ONU).</li>
+                <li>Objetivo Principal: Concienciar sobre el valor intrínseco de la vida silvestre y la necesidad de luchar contra el crimen contra la naturaleza.</li>
+            </ul>
+        </section>
+
+        <section id="temas_centrales">
+            <h2>Temas Centrales y Valor de la Biodiversidad</h2>
+            <p>La celebración anual busca destacar los múltiples beneficios que la fauna y la flora silvestre aportan a la humanidad, desde el suministro de aire y agua limpios hasta la provisión de alimentos, medicinas y materiales para la vida diaria.</p>
+            <ul>
+                <li>Valor Ecológico: Los ecosistemas saludables dependen de la diversidad de la vida silvestre. Cada especie, por pequeña que sea, juega un papel crucial en mantener el equilibrio biológico del planeta.</li>
+                <li>Impacto Socioeconómico: Millones de personas en todo el mundo dependen directamente de los recursos naturales para su subsistencia y bienestar.</li>
+                <li>Lucha contra el Crimen: Una parte fundamental de esta conmemoración es la necesidad urgente de **combatir la caza furtiva, el tráfico ilegal y el comercio ilícito** de vida silvestre, que amenazan la supervivencia de miles de especies.</li>
+            </ul>
+            <img src="{% static 'images/bosque.jpg' %}" alt="Logo de CITES o Día Mundial de la Vida Silvestre" class="img-fluid my-3" style="border-radius: 4px;">
+        </section>
+
+        <section id="servicio_informacion">
+            <h2>Rol de la Dirección General del Servicio de Información</h2>
+            <p>La Dirección General del Servicio de Información (u organismos gubernamentales y de comunicación equivalentes) juega un papel crucial en la difusión del mensaje de este día.</p>
+            <ul>
+                <li>Concientización: Utiliza sus plataformas para informar al público sobre las especies amenazadas, los desafíos de la conservación y las acciones que se pueden tomar a nivel individual y colectivo.</li>
+                <li>Difusión de Temas: Cada año, la ONU define un lema para la jornada, y los servicios de información se encargan de promover ese tema central a nivel nacional (ej., la conexión entre bosques y medios de vida sostenibles, o la recuperación de especies clave).</li>
+            </ul>
+        </section>
+
+        <section id="cta">
+            <h2>Participa en la Conservación</h2>
+            
+            <div class="cta-box">
+                <h3>El futuro de la vida silvestre está en nuestras manos</h3>
+                <p>Te invitamos a aprender sobre las especies nativas de tu región, apoyar las iniciativas de conservación y tomar decisiones de consumo responsables para reducir el impacto sobre los ecosistemas globales.</p>
+                
+                <a href="https://www.un.org/es/observances/world-wildlife-day" target="_blank" class="cta-button">
+                    Explorar el Sitio Oficial de la ONU
+                </a>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock content %}
